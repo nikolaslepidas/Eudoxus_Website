@@ -11,7 +11,7 @@
 
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0 23% 0 20%;
   overflow: hidden;
   background-color: #cfcfcf;
 }
@@ -130,9 +130,10 @@ li.dropdown {
 
 .personstable {
     position: relative;
-    width: 70%;
+    width: 75%;
     display: inline-block;
     border: 1px solid black;
+    margin-top: 5%;
 }
 
 .personstable tr td img {
@@ -167,10 +168,13 @@ li.dropdown {
     font-family: arial;
     font-weight: bolder;
     font-size: 1.2em;
+    padding-bottom: 21.3%;
+    word-break: break-all;
 }
 
 .newstable tr td {
     font-family: arial;
+    word-break: break-all;
 }
 
 .newstable tr td p {
