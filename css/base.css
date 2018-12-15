@@ -1,3 +1,12 @@
+/* Base css for the pages */
+
+/* Logo */
+.logopos {
+	float: left;
+}
+/* End of Logo */
+
+/* Navigation Bar */
 ul {
   list-style-type: none;
   margin: 0;
@@ -48,3 +57,4 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+/* End of Navigation Bar */
