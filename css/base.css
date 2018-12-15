@@ -86,7 +86,7 @@ li {
   float: left;
 }
 
-li a, .dropbtn {
+li a, .drop-button {
   display: inline-block;
   color: white;
   text-align: center;
@@ -94,7 +94,7 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+li a:hover, .dropdown:hover .drop-button {
   background-color: red;
 }
 
