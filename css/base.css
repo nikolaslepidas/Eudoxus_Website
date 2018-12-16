@@ -1,19 +1,84 @@
 /* Base css for the pages */
 
-/* Logo */
-.logopos {
-	float: left;
+body{
+  overflow-y:scroll;
 }
-/* End of Logo */
+
+/* Header */
+#header{
+  float: left;
+  width: 100%;
+}
+.logo-position {
+  float: left;
+}
+.header-right{
+  position: absolute;
+  top:8px;
+  right:100px;
+  display: inline-block;
+}
+#search{
+  display: inline-block;
+}
+#sign-in-up{
+  display: inline-block;
+}
+/* End of Header */
+
+/* Footer */
+
+.wrapper {
+  position: absolute;
+  bottom: -100px;
+  display: grid;
+ /* grid-template-columns: auto 2 ;
+  grid-template-rows:   auto ;*/
+  grid-template-columns:   auto auto auto auto auto auto ;
+  grid-gap: 10px;
+  margin: 0 auto;
+}
+.wrapper div img{
+  transform: translate(0px, -80px);
+}
+.wrapper div a{
+  font-size: 20px;
+}
+
+.wrapper div a:link{
+  color:red;
+}
+.wrapper div a:hover{
+  
+}
+
+.wrapper div a:link{
+  
+}
+
+
+.footer-text a{
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+
+/* End of Footer */
+
+
+
 
 /* LAMPRINOS */
 /* CSS for navigation bar */
 
 ul {
   list-style-type: none;
-  margin: 0 23% 0 20%;
   overflow: hidden;
   background-color: #cfcfcf;
+  margin-top:0px;
 }
 
 li {
@@ -42,7 +107,7 @@ li a:hover, .dropdown:hover .dropbtn {
   color: #ffffff;
 }
 
-li.dropdown {
+.dropdown ul li {
   display: block;
 }
 
@@ -67,129 +132,92 @@ li.dropdown {
   background-color: #686464;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown ul li:hover .dropdown-content {
   display: block;
 }
-
-
-/* LEPIDAS */
-/* Navigation Bar 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a, .drop-button {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .drop-button {
-  background-color: red;
-}
-
-li.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}*/
-/* End of Navigation Bar */
 
 /*CSS for persons' table*/
 
-.personstable {
-    position: relative;
-    width: 75%;
-    display: inline-block;
-    border: 1px solid black;
-    margin-top: 5%;
+#persons-table {
+	width:100%;
+	font-family: Arial;
+	display: table;
+	text-align:center;
+	font-weight: bold;
 }
 
-.personstable tr td img {
-    width: auto;
-    height: auto;
+#persons-table img {
+	width: 90%;
 }
 
-.personstable tr td a img {
-    width: 10%;
-    height: 10%;
+#persons-table a img {
+	width: 25%;
 }
-
-.personstable tr td {
-    text-align: center;
-    font-family: arial;
-    font-size: 1em;
-    font-weight: bold;
-}
-
 /* End of persons' table */
 
-/*CSS for news' table*/
+/* Columns */
+#right-column {
+	width:13%;
+	float:right;
+	}
 
+#central-column {
+  width:60%;
+	float:left;
+  }
+  
+#left-column {
+	width:25%;
+	float:left;
+  }
+
+/* End of Columns */  
+
+#empty-div {
+	width:25%;
+  float:left;
+  color:white;
+  }
+
+
+/*CSS for news' table*/
 .newstable {
-    position: relative;
-    width: 20%;
-    display: inline-block;
-    border: 1px solid black;
+  position: relative;
+  width: 90%;
+  display: inline-block;
+  border: 1px solid black;
+padding: 10px;
 }
 
 .newstable tr th {
-    font-family: arial;
-    font-weight: bolder;
-    font-size: 1.2em;
-    padding-bottom: 21.3%;
-    word-break: break-all;
+  font-family: arial;
+  font-weight: bolder;
+  font-size: 1.2em;
+  padding-bottom: 21.3%;
+  word-break: break-all;
 }
 
 .newstable tr td {
-    font-family: arial;
-    word-break: break-all;
+  font-family: arial;
+  word-break: break-all;
 }
 
 .newstable tr td p {
-    text-align: justify;
+  text-align: justify;
 }
 
 .newstable tr td a {
-    text-align: justify;
-    text-decoration: none;
-    font-weight: bold;
-    color: #180083;
+  text-align: justify;
+  text-decoration: none;
+  font-weight: bold;
+  color: #180083;
+}
+
+.newstable tr td a:hover {
+  text-decoration: underline;
 }
 
 .newstable tr td a:hover {
     text-decoration: underline;
 }
-
 /* End of news' table */

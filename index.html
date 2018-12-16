@@ -7,17 +7,33 @@
 		<link rel="stylesheet" href="css/base.css">
 	</head>
 	<body>
-		<div id="logopos">
-			<img src="./images/logo.png">
-		</div>
-		
-<!-- Lamprinos navbar -->
-<ul>
-	<li class="dropdown">
-		<a href="index.html" >Αρχική</a>
-	</li>
 
-	<li class="dropdown">
+<div id="header">
+	<div id="logo-position">
+		<a href="index.html">	<img src="./images/logo.png">	</a>
+	</div>	
+
+	<div class="header-right">
+		<div id="search"> 
+				<input type="text" placeholder="Search.." name ="search"	>
+		</div>
+		<div id="sign-in-up">
+			<a href="#">Είσοδος</a>
+			/
+			<a href="#">Εγγραφή</a>
+		</div>
+	</div>
+</div>
+
+<div id="empty-div">hacked</div>
+
+<div class="dropdown">	
+	<ul>
+		<li >
+			<a href="index.html" >Αρχική</a>
+		</li>
+		
+		<li >
 			<a href="#" >Φοιτητές</a>
 			<div class="dropdown-content"  class="drop-button">
 				<a href="#">Δήλωση συγγραμμάτων</a>
@@ -26,8 +42,8 @@
 				<a href="#">Συχνές ερωτήσεις</a>
 			</div>
 		</li>
-
-	<li class="dropdown">
+		
+		<li >
 			<a href="#" >Εκδότες</a>
 			<div class="dropdown-content"  class="drop-button">
 				<a href="#">Διανομή συγγραμμάτων</a>
@@ -36,7 +52,7 @@
 			</div>
 		</li>	
 		
-	<li class="dropdown">
+		<li >
 			<a href="#" >Σημεία Διανομής</a>
 			<div class="dropdown-content"  class="drop-button">
 				<a href="#">Παράδοση συγγραμμάτων</a>
@@ -45,8 +61,8 @@
 				<a href="#">Συχνές ερωτήσεις</a>
 			</div>
 		</li>
-
-	<li class="dropdown">
+		
+		<li >
 			<a href="#" >Γραμματεία</a>
 			<div class="dropdown-content"  class="drop-button">
 				<a href="#">Εισαγωγή προγράμματος σπουδών</a>
@@ -55,8 +71,8 @@
 				<a href="#">Συχνές ερωτήσεις</a>
 			</div>
 		</li>
-
-	<li class="dropdown">
+		
+		<li >
 			<a href="#" >Σημειώσεις και Βοηθήματα</a>
 			<div class="dropdown-content"  class="drop-button">
 				<a href="#">Νέα ανάρτηση/ Οι αναρτήσεις μου</a>
@@ -65,71 +81,20 @@
 				<a href="#">Συχνές ερωτήσεις</a>
 			</div>
 		</li>
-
-	<li class="dropdown">
+		
+		<li >
 			<a href="#" >Επικοινωνία</a>
 			<div class="dropdown-content"  class="drop-button">
 				<a href="#">Ηλεκτρονική φόρμα</a>
 				<a href="#">Τηλέφωνο</a>
-		</li>
-</ul>
-
-
-<!-- Lepidas navbar 
-<ul>
-	<li class="dropdown">
-		<a href="#" >Αρχική</a>
-		<div class="dropdown-content"  class="drop-button"> 
-			<a href="#">Link 1</a>
-		</div>
-	</li>
-
-	<li class="dropdown">
-			<a href="#" >Φοιτητές</a>
-			<div class="dropdown-content"  class="drop-button">
-				<a href="#">Link 1</a>
 			</div>
 		</li>
-
-	<li class="dropdown">
-			<a href="#" >Εκδότες</a>
-			<div class="dropdown-content"  class="drop-button">
-				<a href="#">Link 1</a>
-			</div>
-		</li>	
-		
-	<li class="dropdown">
-			<a href="#" >Σημεία Διανομής</a>
-			<div class="dropdown-content"  class="drop-button">
-				<a href="#">Link 1</a>
-			</div>
-		</li>
-
-	<li class="dropdown">
-			<a href="#" >Γραμματεία</a>
-			<div class="dropdown-content"  class="drop-button">
-				<a href="#">Link 1</a>
-			</div>
-		</li>
-
-	<li class="dropdown">
-			<a href="#" >Σημειώσεις και Βοηθήματα</a>
-			<div class="dropdown-content"  class="drop-button">
-				<a href="#">Link 1</a>
-			</div>
-		</li>
-
-	<li class="dropdown">
-			<a href="#" >Επικοινωνία</a>
-			<div class="dropdown-content"  class="drop-button">
-				<a href="#">Link 1</a>
-			</div>
-		</li>
-</ul>
--->
-
-	<!-- Newstable & Personstable -->
-	<div>
+	</ul>
+</div>
+<!-- End of Lamprinos navbar -->
+				
+<!-- Newstable -->
+<div id="left-column">
 		<table class="newstable">
 			<tr>
 				<th>
@@ -155,14 +120,28 @@
 				<td><p>Σας ενημερώνουμε οτι λόγω απροσδόκητου προβλήματος που οφείλεται σε νεότερη έκδοση του περιηγητή Mozilla Firefox, η χρήση της ...</p></td>
 			</tr>
 		</table>
-		
-
-		<table class="personstable">
+	</div>	
+<!-- End of Newstable -->					
+				
+<div id="central-column">
+				
+				
+				
+				
+				<div id="persons-table">
+					<table>
+						<tbody>
 			<tr>
 				<td><img src="images/person_student.png"></td>
 				<td><img src="images/person_publisher.png"></td>
 				<td><img src="images/person_ordering.png"></td>
 				<td><img src="images/person_secretariat.png"></td>
+			</tr>
+			<tr>
+				<td>Φοιτητές</td>
+				<td>Εκδόσεις</td>
+				<td>Σημεία διανομής</td>
+				<td>Γραμματεία</td>
 			</tr>
 			<tr>
 				<td><a href="#"><img src="images/dilosi_sigrammaton.png"></a></td>
@@ -188,8 +167,61 @@
 				<td>Παραγγελία συγγραμμάτων</td>
 				<td>Εισαγωγή προτεινόμενων συγγραμμάτων</td>
 			</tr>
+		</tbody>
 		</table>
-	</div>
+		</div>
+
+<!--	Footer	-->
+
+<div class="wrapper">
+		<div >
+			<a href="#" >Συχνές Ερωτήσεις</a>
+		</div>
+		<div > <img src="images/logo.png">  </div>
+		<div >
+				<a href="#" >Συχνές Ερωτήσεις</a>
+		</div>
+			<div > <img src="images/logo.png">  </div>
+		<div >
+			<a href="#" >Συχνές Ερωτήσεις</a>
+		</div>
+			<div > <img src="images/logo.png">  </div>
+
+</div>
+
+<!--	End of Footer	-->
+
+
+</div>
+
+
+<div id="right-column">
+		<table class="newstable">
+			<tr>
+				<th>
+					Διαφημίσεις
+				</th>
+			</tr>
+			<tr>
+				<td><a href="#">Πρόβλημα λειτουργίας της εφαρμογής εκδοτών μέσω Mozilla Firefox.</a></td>
+			</tr>
+			<tr>
+				<td><p>Σας ενημερώνουμε οτι λόγω απροσδόκητου προβλήματος που οφείλεται σε νεότερη έκδοση του περιηγητή Mozilla Firefox, η χρήση της ...</p></td>
+			</tr>
+			<tr>
+				<td><a href="#">Πρόβλημα λειτουργίας της εφαρμογής εκδοτών μέσω Mozilla Firefox.</a></td>
+			</tr>
+			<tr>
+				<td><p>Σας ενημερώνουμε οτι λόγω απροσδόκητου προβλήματος που οφείλεται σε νεότερη έκδοση του περιηγητή Mozilla Firefox, η χρήση της ...</p></td>
+			</tr>
+			<tr>
+				<td><a href="#">Πρόβλημα λειτουργίας της εφαρμογής εκδοτών μέσω Mozilla Firefox.</a></td>
+			</tr>
+			<tr>
+				<td><p>Σας ενημερώνουμε οτι λόγω απροσδόκητου προβλήματος που οφείλεται σε νεότερη έκδοση του περιηγητή Mozilla Firefox, η χρήση της ...</p></td>
+			</tr>
+		</table>
+</div>	
 
 </body>
 </html>
