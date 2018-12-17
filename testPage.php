@@ -18,6 +18,11 @@
 			<li>Current Page</li> 
 		</ul>
 	</div>
+
+
+
+
+
 	<?php require_once './footer.php' ?>
 
     </body>
