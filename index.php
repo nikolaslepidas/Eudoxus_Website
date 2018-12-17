@@ -53,7 +53,7 @@
 		<div id="persons-table">
 					<table>
 						<tbody>
-			<tr>
+			<tr id="img-shadow">
 				<td><img src="images/person_student.png"></td>
 				<td><img src="images/person_publisher.png"></td>
 				<td><img src="images/person_ordering.png"></td>

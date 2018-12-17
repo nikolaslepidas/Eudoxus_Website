@@ -28,10 +28,10 @@ body{
 /* End of Header */
 
 /* Footer */
-  .wrapper{
-    width: 100%;
-    float: left;
-  }
+.wrapper{
+  width: 100%;
+  float: left;
+}
 
 #footer{
   text-align: center;
@@ -49,6 +49,8 @@ body{
   overflow: hidden;
   background-color: rgb(212, 96, 42);
   margin-top:0px;
+  padding: 10px;
+  box-shadow: 3px 6px 12px #888888;
 }
 #menu{
   float: right;
