@@ -59,15 +59,16 @@ body{
 
 
 /*CSS for news' table*/
-.newstable {
+#newstable {
   position: relative;
   width: 90%;
   display: inline-block;
-  border: 1px solid black;
-padding: 10px;
+  border: 2px solid rgb(212, 96, 42);
+  border-radius: 2%;
+  padding: 10px;
 }
 
-.newstable tr th {
+#newstable tr th {
   font-family: arial;
   font-weight: bolder;
   font-size: 1.2em;
@@ -75,27 +76,23 @@ padding: 10px;
   word-break: break-all;
 }
 
-.newstable tr td {
+#newstable tr td {
   font-family: arial;
   word-break: break-all;
 }
 
-.newstable tr td p {
+#newstable tr td p {
   text-align: justify;
 }
 
-.newstable tr td a {
+#newstable tr td a {
   text-align: justify;
   text-decoration: none;
   font-weight: bold;
   color: #180083;
 }
 
-.newstable tr td a:hover {
+#newstable tr td a:hover {
   text-decoration: underline;
-}
-
-.newstable tr td a:hover {
-    text-decoration: underline;
 }
 /* End of news' table */

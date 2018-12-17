@@ -16,7 +16,7 @@
 <!-- Newstable -->
 <div id="left-column">
 	<div id="news-table">
-		<table class="newstable">
+		<table id="newstable">
 			<tr>
 				<th>
 					Ανακοινώσεις
@@ -96,8 +96,8 @@
 
 
 <div id="right-column">
-<div >
-		<table class="newstable">
+	<div >
+		<table id="newstable">
 			<tr>
 				<th>
 					Διαφημίσεις

@@ -1,6 +1,6 @@
 <div id="header">
 	<div id="logo-position">
-		<a href="index.html">	<img src="./images/logo.png">	</a>
+		<a href="index.php">	<img src="./images/logo.png">	</a>
 	</div>	
 
 	<div class="header-right">
