@@ -43,8 +43,8 @@ body{
 
 /* End of Footer */
 
-/* CSS for navigation bar
-ul {
+/* CSS for navigation bar*/
+.dropdown ul {
   list-style-type: none;
   overflow: hidden;
   background-color: rgb(212, 96, 42);
@@ -59,16 +59,13 @@ ul {
   float: right;
 }
 
-li {
-  float: left;
-}
-
-li:hover a {
-	background-color: rgb(31, 10, 0);
+/*rgba(214, 114, 55, 0.911);*/
+.dropdown li:hover a {
+	background-color: rgb(212, 96, 42);
 	color: #fff;
 }
 
-li a, .dropbtn {
+.dropdown li a, .dropbtn {
   display: block;
   color: rgb(255, 255, 255);
   text-align: center;
@@ -80,13 +77,14 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+.dropdown li a:hover, .dropdown:hover .dropbtn {
   background-color: rgba(214, 114, 55, 0.911);
   color: #ffffff;
 }
 
 .dropdown ul li {
   display: block;
+  float: left;
 }
 
 .dropdown-content {
@@ -114,4 +112,4 @@ li a:hover, .dropdown:hover .dropbtn {
 .dropdown ul li:hover .dropdown-content {
   display: block;
 }
- */
+ 
