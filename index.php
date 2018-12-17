@@ -8,93 +8,12 @@
 	</head>
 	<body>
 
-<div id="header">
-	<div id="logo-position">
-		<a href="index.html">	<img src="./images/logo.png">	</a>
-	</div>	
+	<?php require_once './header.php' ?>
 
-	<div class="header-right">
-		<div id="search"> 
-				<input type="text" placeholder="Search.." name ="search"	>
-		</div>
-		<div id="sign-in-up">
-			<a href="#">Είσοδος</a>
-			/
-			<a href="#">Εγγραφή</a>
-		</div>
-	</div>
-</div>
-
-<div id="empty-div">hacked</div>
-
-<div class="dropdown">	
-	<ul>
-		<li >
-			<a href="index.html" >Αρχική</a>
-		</li>
-		
-		<li >
-			<a href="#" >Φοιτητές</a>
-			<div class="dropdown-content"  class="drop-button">
-				<a href="#">Δήλωση συγγραμμάτων</a>
-				<a href="#">Ανταλλαγή συγγραμμάτων</a>
-				<a href="#">Οδηγίες</a>
-				<a href="#">Συχνές ερωτήσεις</a>
-			</div>
-		</li>
-		
-		<li >
-			<a href="#" >Εκδότες</a>
-			<div class="dropdown-content"  class="drop-button">
-				<a href="#">Διανομή συγγραμμάτων</a>
-				<a href="#">Οδηγίες</a>
-				<a href="#">Συχνές ερωτήσεις</a>
-			</div>
-		</li>	
-		
-		<li >
-			<a href="#" >Σημεία Διανομής</a>
-			<div class="dropdown-content"  class="drop-button">
-				<a href="#">Παράδοση συγγραμμάτων</a>
-				<a href="#">Παραγγελία συγγραμμάτων</a>
-				<a href="#">Οδηγίες</a>
-				<a href="#">Συχνές ερωτήσεις</a>
-			</div>
-		</li>
-		
-		<li >
-			<a href="#" >Γραμματεία</a>
-			<div class="dropdown-content"  class="drop-button">
-				<a href="#">Εισαγωγή προγράμματος σπουδών</a>
-				<a href="#">Εισαγωγή προτεινόμενων συγγραμμάτων</a>
-				<a href="#">Οδηγίες</a>
-				<a href="#">Συχνές ερωτήσεις</a>
-			</div>
-		</li>
-		
-		<li >
-			<a href="#" >Σημειώσεις και Βοηθήματα</a>
-			<div class="dropdown-content"  class="drop-button">
-				<a href="#">Νέα ανάρτηση/ Οι αναρτήσεις μου</a>
-				<a href="#">Αρχείο αναρτήσεων</a>
-				<a href="#">Οδηγίες</a>
-				<a href="#">Συχνές ερωτήσεις</a>
-			</div>
-		</li>
-		
-		<li >
-			<a href="#" >Επικοινωνία</a>
-			<div class="dropdown-content"  class="drop-button">
-				<a href="#">Ηλεκτρονική φόρμα</a>
-				<a href="#">Τηλέφωνο</a>
-			</div>
-		</li>
-	</ul>
-</div>
-<!-- End of Lamprinos navbar -->
 				
 <!-- Newstable -->
 <div id="left-column">
+	<div id="news-table">
 		<table class="newstable">
 			<tr>
 				<th>
@@ -121,14 +40,15 @@
 			</tr>
 		</table>
 	</div>	
+</div>	
 <!-- End of Newstable -->					
 				
-<div id="central-column">
+<div id="central-column" class="background-test">
 				
 				
 				
 				
-				<div id="persons-table">
+		<div id="persons-table">
 					<table>
 						<tbody>
 			<tr>
@@ -137,7 +57,7 @@
 				<td><img src="images/person_ordering.png"></td>
 				<td><img src="images/person_secretariat.png"></td>
 			</tr>
-			<tr>
+			<tr id="test">
 				<td>Φοιτητές</td>
 				<td>Εκδόσεις</td>
 				<td>Σημεία διανομής</td>
@@ -171,31 +91,13 @@
 		</table>
 		</div>
 
-<!--	Footer	-->
-
-<div class="wrapper">
-		<div >
-			<a href="#" >Συχνές Ερωτήσεις</a>
-		</div>
-		<div > <img src="images/logo.png">  </div>
-		<div >
-				<a href="#" >Συχνές Ερωτήσεις</a>
-		</div>
-			<div > <img src="images/logo.png">  </div>
-		<div >
-			<a href="#" >Συχνές Ερωτήσεις</a>
-		</div>
-			<div > <img src="images/logo.png">  </div>
-
-</div>
-
-<!--	End of Footer	-->
 
 
 </div>
 
 
 <div id="right-column">
+<div >
 		<table class="newstable">
 			<tr>
 				<th>
@@ -221,7 +123,23 @@
 				<td><p>Σας ενημερώνουμε οτι λόγω απροσδόκητου προβλήματος που οφείλεται σε νεότερη έκδοση του περιηγητή Mozilla Firefox, η χρήση της ...</p></td>
 			</tr>
 		</table>
+</div>
 </div>	
 
+
+<?php require_once './footer.php' ?>
+
+<!--
+<div>
+	<input type="button" value="skata">
+	<input type="date" value="Date">
+	<input type="password" value="password">
+	<input type="time" value="time">	
+</div>
+
+<div>
+	<label for="skata">skataaaa</label>
+</div>
+-->
 </body>
 </html>
