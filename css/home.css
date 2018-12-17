@@ -1,0 +1,101 @@
+/* Base css for the pages */
+
+.background-test{
+  background-color: rgb(243, 243, 233);
+}
+
+
+body{
+  overflow-y:scroll;
+  background-color: rgb(243, 243, 233);
+}
+
+/*CSS for persons' table*/
+
+#persons-table {
+	width:100%;
+	font-family: Arial;
+	display: table;
+	text-align:center;
+	font-weight: bold;
+}
+
+#persons-table img {
+	width: 90%;
+}
+
+#persons-table a img {
+	width: 25%;
+}
+
+#test td{
+  padding: 0 0  50px 0 ;
+}
+
+/* End of persons' table */
+
+/* Columns */
+#right-column {
+	width:13%;
+	float:left;
+	}
+
+#central-column {
+  width:60%;
+	float:left;
+  }
+  
+#left-column {
+	width:25%;
+	float:left;
+  }
+
+/* End of Columns */  
+
+#empty-div {
+	width:25%;
+  float:left;
+  }
+
+
+/*CSS for news' table*/
+.newstable {
+  position: relative;
+  width: 90%;
+  display: inline-block;
+  border: 1px solid black;
+padding: 10px;
+}
+
+.newstable tr th {
+  font-family: arial;
+  font-weight: bolder;
+  font-size: 1.2em;
+  padding-bottom: 21.3%;
+  word-break: break-all;
+}
+
+.newstable tr td {
+  font-family: arial;
+  word-break: break-all;
+}
+
+.newstable tr td p {
+  text-align: justify;
+}
+
+.newstable tr td a {
+  text-align: justify;
+  text-decoration: none;
+  font-weight: bold;
+  color: #180083;
+}
+
+.newstable tr td a:hover {
+  text-decoration: underline;
+}
+
+.newstable tr td a:hover {
+    text-decoration: underline;
+}
+/* End of news' table */

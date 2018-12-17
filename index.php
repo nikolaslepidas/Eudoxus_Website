@@ -3,14 +3,16 @@
 
 	<head>
 		<charset ="UTF-8">
+		
 		<title>Title</title>
 		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/home.css">
+
 	</head>
 	<body>
 
 	<?php require_once './header.php' ?>
 
-				
 <!-- Newstable -->
 <div id="left-column">
 	<div id="news-table">
@@ -90,9 +92,6 @@
 		</tbody>
 		</table>
 		</div>
-
-
-
 </div>
 
 
@@ -127,7 +126,8 @@
 </div>	
 
 
-<?php require_once './footer.php' ?>
+
+<?php require_once './footer.php'  ?>
 
 <!--
 <div>

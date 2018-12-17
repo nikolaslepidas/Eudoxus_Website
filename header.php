@@ -26,7 +26,7 @@
 <div class="dropdown">	
 	<ul>
 		<li >
-			<a href="index.html" >Αρχική</a>
+			<a href="index.php" >Αρχική</a>
 		</li>
 		
 		<li >
