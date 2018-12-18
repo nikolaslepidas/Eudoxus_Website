@@ -45,15 +45,11 @@
 </div>	
 <!-- End of Newstable -->					
 				
-<div id="central-column" class="background-test">
-				
-				
-				
-				
-		<div id="persons-table">
-					<table>
-						<tbody>
-			<tr id="img-shadow">
+<div id="central-column">
+	<div id="persons-table">
+		<table>
+			<tbody>
+			<tr>
 				<td><img src="images/person_student.png"></td>
 				<td><img src="images/person_publisher.png"></td>
 				<td><img src="images/person_ordering.png"></td>
@@ -91,7 +87,7 @@
 			</tr>
 		</tbody>
 		</table>
-		</div>
+	</div>
 </div>
 
 
