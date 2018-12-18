@@ -1,36 +1,40 @@
 /*CSS for persons' table*/
 
 #persons-table {
-	width:100%;
-	font-family: Arial;
-	display: table;
-	text-align:center;
-  font-weight: bold;
-  background-color: rgb(243, 243, 233);
+  width: auto;
+  display: table;
+  text-align: center;
 }
 
-#persons-table img {
-  width: 90%;
+#persons-table table tbody tr td img {
+  padding: 10px;
 }
 
-#persons-table a img {
+#persons_img td img{
+  width: auto;
+  border-radius: 5%
+}
+
+#icons td a img{
 	width: 25%;
 }
 
-#test td{
-  padding: 0 0  50px 0 ;
+#fonts td {
+  padding: 0 0 50px 0;
+  font-weight: bold;
+  font-family: Arial;
 }
 
 /* End of persons' table */
 
 /* Columns */
 #right-column {
-	width:13%;
+	width:15%;
 	float:right;
 	}
 
 #central-column {
-  width:60%;
+  width:50%;
 	float:left;
   }
   
