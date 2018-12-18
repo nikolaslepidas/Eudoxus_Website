@@ -1,0 +1,117 @@
+
+body{
+  overflow-y:scroll;
+  background-color: rgb(243, 243, 233);
+}
+
+/* Header */
+#header{
+  float: left;
+  width: 100%;
+  background-color: rgb(243, 243, 233);
+}
+.logo-position {
+  float: left;
+}
+.header-right{
+  position: absolute;
+  top:8px;
+  right:100px;
+  display: inline-block;
+}
+#search{
+  display: inline-block;
+}
+#sign-in-up{
+  display: inline-block;
+}
+/* End of Header */
+
+/* Footer */
+.wrapper{
+  width: 100%;
+  float: left;
+}
+
+#footer{
+  text-align: center;
+}
+#footer div{
+  display: inline-block;
+  margin: 10% auto;
+}
+
+/* End of Footer */
+
+/* CSS for navigation bar*/
+.dropdown ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: rgb(212, 96, 42);
+  margin-top:0px;
+  padding: 10px;
+  box-shadow: 3px 6px 12px #888888;
+}
+#menu{
+  float: right;
+  width: 100%;
+}
+.dropdown{
+  width: 80%;
+  float: right;
+}
+
+/*rgba(214, 114, 55, 0.911);*/
+.dropdown li:hover a {
+	background-color: rgb(212, 96, 42);
+	color: #fff;
+}
+
+.dropdown li a, .dropbtn {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-shadow: #99948d;
+  font-weight: normal;
+  font-size: 18px;
+  font-family: arial;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown li a:hover, .dropdown:hover .dropbtn {
+  background-color: rgba(214, 114, 55, 0.911);
+  color: #ffffff;
+}
+
+.dropdown ul li {
+  display: block;
+  float: left;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(212, 96, 42);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(68, 68, 68, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  background-color: rgb(212, 96, 42);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:rgba(214, 114, 55, 0.911);
+}
+
+.dropdown ul li:hover .dropdown-content {
+  display: block;
+}
+ 
