@@ -1,7 +1,32 @@
 body{
   overflow-y:scroll;
   background-color: rgb(243, 243, 233);
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Adverts */
+#adverts {
+  display: block;
+  width: 90%;
+  border: 2px solid rgb(212, 96, 42);
+  border-radius: 1%;
+  padding: 10px;
+  box-shadow: 3px 6px 12px #888888;
+}
+/**/
+
+#adverts p {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+#adverts a img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+/* End of Adverts */
 
 /* Header */
 #header{

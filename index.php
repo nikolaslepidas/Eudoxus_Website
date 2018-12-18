@@ -2,12 +2,11 @@
 <html lang="en">
 
 	<head>
-		<charset ="UTF-8">
-		
+		<meta charset ="UTF-8">
+		<meta name="viewport" content="width=device-width">
 		<title>Title</title>
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/home.css">
-
 	</head>
 	<body>
 
@@ -92,7 +91,8 @@
 
 
 <div id="right-column">
-	<div>
+	<div id="adverts">
+		<p>Χορηγοί</p>
 		<a href="#"><img src="./icons/EurywhereLogo.png"></a>
 		<a href="#"><img src="./icons/EurywhereLogo.png"></a>
 		<a href="#"><img src="./icons/EurywhereLogo.png"></a>
