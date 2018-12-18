@@ -8,7 +8,7 @@ body{
 #adverts {
   display: block;
   width: 90%;
-  border: 2px solid rgb(212, 96, 42);
+  border: 3px solid rgb(212, 96, 42);
   border-radius: 1%;
   padding: 10px;
   box-shadow: 3px 6px 12px #888888;
@@ -63,6 +63,16 @@ body{
 #footer div{
   display: inline-block;
   margin: 5% auto;
+}
+
+#footer div img {
+  width: 30%;
+}
+
+#footer div a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #180083;
 }
 
 /* End of Footer */

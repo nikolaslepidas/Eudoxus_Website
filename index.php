@@ -4,9 +4,12 @@
 	<head>
 		<meta charset ="UTF-8">
 		<meta name="viewport" content="width=device-width">
-		<title>Title</title>
+		
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/home.css">
+
+		<title>Εύδοξος - Αρχική σελίδα</title>
+
 	</head>
 	<body>
 
