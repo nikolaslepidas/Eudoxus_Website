@@ -50,6 +50,27 @@
 </div>	
 <!-- End of Newstable -->					
 
+<main id="central-column">
+	<div class="container">
+		<div class="box student">
+			<img src="./icons/student.png" alt="student" title="student">
+			<p>Φοιτητής</p>
+		</div>
+		<div class="box publisher">
+			<img src="./icons/manager.png" alt="publisher" title="publisher">
+			<p>Εκδότης</p>
+		</div>
+		<div class="box distributor">
+			<img src="./icons/book.png" alt="distributor" title="distributor">
+			<p>Διανομέας</p>
+		</div>
+		<div class="box secretariat">
+			<img src="./icons/secretary.png" alt="secretariat" title="secretariat">
+			<p>Γραμματεία</p>
+		</div>
+	</div>
+</main>
+
 <?php require_once './footer.php'  ?>
 
 </body>

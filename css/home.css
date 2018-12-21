@@ -58,3 +58,64 @@
   text-align: right;
 }
 /* End of news' table */
+
+/* Persons grid */
+div.container {
+  display:grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+  color: #444;
+  grid-template-areas: 
+    ". a b ."
+    ". c d .";
+}
+
+div.box {
+  background-color: rgb(223, 115, 65);
+  color: #fff;
+  border-radius: 5px;
+  padding: 50px;
+  text-align: center;
+}
+
+div.box:hover {
+  background-color: rgb(223, 88, 25);
+  color: #fff;
+  border-radius: 5px;
+  padding: 50px;
+  cursor: pointer;
+}
+
+div.student {
+  grid-area: a;
+  align-self: center;
+  justify-self: center;
+}
+
+div.publisher {
+  grid-area: b;
+  align-self: center;
+  justify-self: center;
+}
+
+div.distributor {
+  grid-area: c;
+  align-self: center;
+  justify-self: center;
+}
+
+div.secretariat {
+  grid-area: d;
+  align-self: center;
+  justify-self: center;
+}
+
+div.box img {
+  width: 20%;
+}
+
+div.box p {
+  font-weight: bold;
+}
+/* End of Persons grid */
