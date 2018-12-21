@@ -89,4 +89,8 @@
 #newstable tr td a:hover {
   text-decoration: underline;
 }
+
+.seemorenews {
+  text-align: right;
+}
 /* End of news' table */
