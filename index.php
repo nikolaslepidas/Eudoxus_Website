@@ -49,19 +49,6 @@
 	</div>	
 </div>	
 <!-- End of Newstable -->					
-				
-<div id="central-column">
-	<div id="persons-table">
-		<div id="up">
-			<a href="students.php"></a>
-			<a href="students.php"></a>
-		</div>
-		<div id="down">
-			<a href="students.php"></a>
-			<a href="students.php"></a>
-		</div>
-	</div>
-</div>
 
 <?php require_once './footer.php'  ?>
 
