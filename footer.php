@@ -5,7 +5,7 @@
 		<div><img src="icons/two-black-rectangular-speech-bubbles-interface-chat-symbol.png"></div>
 		<div><a href="#" >Ηλ. Φόρμα Επικοινωνίας</a></div>
 		<div><img src="icons/envelope.png"></div>
-		<div><a href="#" >210 2430436</a></div>
+		<div><a>210 2430436</a></div>
 		<div><img src="icons/call-answer.png"></div>
 	</div>
 </div>
