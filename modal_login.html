@@ -78,7 +78,7 @@ span.psw {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 30%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
@@ -131,26 +131,26 @@ span.psw {
   
   <form class="modal-content animate" action="/action_page.php">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Κλείσιμο παραθύρου">&times;</span>
+      <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
     </div>
 
     <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label for="uname"><b>Όνομα χρήστη</b></label>
+      <input type="text" placeholder="Εισαγωγή ονόματος χρήστη" name="uname" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for="psw"><b>Συνθηματικό</b></label>
+      <input type="password" placeholder="Εισαγωγή συνθηματικού" name="psw" required>
         
-      <button type="submit">Login</button>
+      <button type="submit">Σύνδεση</button>
       <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
+        <input type="checkbox" checked="checked" name="remember"> Να με θυμάσαι
       </label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Ακύρωση</button>
+      <span class="psw">Ξέχασες το <a href="#">συνθηματικό?</a></span>
     </div>
   </form>
 </div>
@@ -159,26 +159,26 @@ span.psw {
   
     <form class="modal-content animate" action="/action_page.php">
       <div class="imgcontainer">
-        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Κλείσιμο παραθύρου">&times;</span>
+        <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
       </div>
   
       <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label for="uname"><b>Όνομα χρήστη</b></label>
+        <input type="text" placeholder="Εισαγωγή ονόματος χρήστη" name="uname" required>
   
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <label for="psw"><b>Συνθηματικό</b></label>
+        <input type="password" placeholder="Εισαγωγή συνθηματικού" name="psw" required>
           
-        <button type="submit">Login</button>
+        <button type="submit">Εγγραφή</button>
         <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
+          <input type="checkbox" checked="checked" name="remember"> Να με θυμάσαι
         </label>
       </div>
   
       <div class="container" style="background-color:#f1f1f1">
-        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Ακύρωση</button>
+        <span class="psw">Ξέχασες το <a href="#">συνθηματικό?</a></span>
       </div>
     </form>
   </div>
