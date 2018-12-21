@@ -65,44 +65,5 @@
 
 <?php require_once './footer.php'  ?>
 
-
-<!--
-<tr id="icons">
-	<td><a href="#"><img src="icons/pencil-writing-on-a-paper-sheet.png"></a></td>
-	<td><a href="#"><img src="icons/delivery-van.png"></a></td>
-	<td><a href="#"><img src="icons/book.png"></a></td>
-	<td><a href="#"><img src="icons/hand-writing-with-ballpen.png"></a></td>
-</tr>
-<tr id="fonts">
-	<td>Δήλωση συγγραμμάτων</td>
-	<td>Διανομή συγγραμμάτων</td>
-	<td>Παράδοση συγγραμμάτων</td>
-	<td>Εισαγωγή προγράμματος σπουδών</td>
-</tr>
-<tr id="icons">
-	<td><a href="#"><img src="icons/books-stack-of-three.png"></a></td>
-	<td></td>
-	<td><a href="#"><img src="icons/pencil-writing-on-a-paper-sheet.png"></a></td>
-	<td><a href="#"><img src="icons/checklist.png"></a></td>
-</tr>
-<tr id="fonts">
-	<td>Ανταλλαγή συγγραμμάτων</td>
-	<td></td>
-	<td>Παραγγελία συγγραμμάτων</td>
-	<td>Εισαγωγή προτεινόμενων συγγραμμάτων</td>
-</tr>
--->
-<!--
-<div>
-	<input type="button" value="skata">
-	<input type="date" value="Date">
-	<input type="password" value="password">
-	<input type="time" value="time">	
-</div>
-
-<div>
-	<label for="skata">skataaaa</label>
-</div>
--->
 </body>
 </html>
