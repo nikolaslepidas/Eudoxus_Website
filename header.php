@@ -25,22 +25,24 @@
 
 <div class="dropdown">	
 	<ul>
-		<li >
+<!--
+	<li >
 			<a href="index.php" >Αρχική</a>
 		</li>
-		
+-->		
 		<li >
-			<a href="#" >Φοιτητές</a>
+			<a href="#" >Φοιτητής</a>
 			<div class="dropdown-content"  class="drop-button">
 				<a href="./testPage.php">Δήλωση συγγραμμάτων</a>
 				<a href="#">Ανταλλαγή συγγραμμάτων</a>
+				<a href="#">Σημειώσεις και Βοηθήματα</a> 
 				<a href="#">Οδηγίες</a>
 				<a href="#">Συχνές ερωτήσεις</a>
 			</div>
 		</li>
 		
 		<li >
-			<a href="#" >Εκδότες</a>
+			<a href="#" >Εκδότης</a>
 			<div class="dropdown-content"  class="drop-button">
 				<a href="#">Διανομή συγγραμμάτων</a>
 				<a href="#">Οδηγίες</a>
@@ -49,7 +51,7 @@
 		</li>	
 		
 		<li >
-			<a href="#" >Σημεία Διανομής</a>
+			<a href="#" >Διανομέας</a>
 			<div class="dropdown-content"  class="drop-button">
 				<a href="#">Παράδοση συγγραμμάτων</a>
 				<a href="#">Παραγγελία συγγραμμάτων</a>
@@ -67,7 +69,7 @@
 				<a href="#">Συχνές ερωτήσεις</a>
 			</div>
 		</li>
-		
+<!--		
 		<li >
 			<a href="#" >Σημειώσεις και Βοηθήματα</a>
 			<div class="dropdown-content"  class="drop-button">
@@ -77,7 +79,7 @@
 				<a href="#">Συχνές ερωτήσεις</a>
 			</div>
 		</li>
-		
+-->		
 		<li >
 			<a href="#" >Επικοινωνία</a>
 			<div class="dropdown-content"  class="drop-button">
