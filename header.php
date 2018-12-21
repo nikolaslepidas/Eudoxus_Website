@@ -8,7 +8,6 @@
 				<input type="text" placeholder="Search.." name ="search"	>
 		</div>
 		<div id="sign-in-up">
-			<!--<a href="../../../Users/Nikolas/Desktop/modal_sex.html">Είσοδος</a> -->
 			<?php require_once './modal_login.html' ?>
 			<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Είσοδος</button>
 			<!--<a href="#">Εγγραφή</a>-->
@@ -25,11 +24,6 @@
 
 <div class="dropdown">	
 	<ul>
-<!--
-	<li >
-			<a href="index.php" >Αρχική</a>
-		</li>
--->		
 		<li >
 			<a href="#" >Φοιτητής</a>
 			<div class="dropdown-content"  class="drop-button">
@@ -54,7 +48,6 @@
 			<a href="#" >Διανομέας</a>
 			<div class="dropdown-content"  class="drop-button">
 				<a href="#">Παράδοση συγγραμμάτων</a>
-				<a href="#">Παραγγελία συγγραμμάτων</a>
 				<a href="#">Οδηγίες</a>
 				<a href="#">Συχνές ερωτήσεις</a>
 			</div>
@@ -81,15 +74,9 @@
 		</li>
 -->		
 		<li >
-			<a href="#" >Επικοινωνία</a>
-<!--			
-			<div class="dropdown-content"  class="drop-button">
-				<a href="#">Ηλεκτρονική φόρμα</a>
-				<a href="#">Τηλέφωνο</a>
-			</div>
--->			
+			<a href="#" >Επικοινωνία</a>	
 		</li>
 	</ul>
 </div>
 </div>
-<!-- End of Lamprinos navbar -->
+<!-- End of navbar -->
