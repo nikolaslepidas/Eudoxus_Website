@@ -1,39 +1,3 @@
-/*CSS for persons' table
-
-#persons-table {
-  width: auto;
-  display: table;
-  text-align: center;
-}
-
-#persons-table table tbody tr td img {
-  padding: 10px;
-}
-
-#persons_img td img{
-  width: auto;
-  border-radius: 5%
-}
-
-#icons td a img{
-	width: 25%;
-}
-
-#fonts td {
-  padding: 0 0 50px 0;
-  font-weight: bold;
-  font-family: Arial;
-}
-*/
-
-/*New CSS for person's divs*/
-#persons-table {
-  
-}
-/*End of New CSS for person's divs*/
-
-/* End of persons' table */
-
 /* Columns */
 #right-column {
 	width: 15%;

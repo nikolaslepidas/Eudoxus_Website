@@ -10,12 +10,10 @@
 		<div id="sign-in-up">
 			<?php require_once './modal_login.html' ?>
 			<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Είσοδος</button>
-			<!--<a href="#">Εγγραφή</a>-->
 			<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Εγγραφή</button>
 		</div>
 	</div>
 </div>
-
 
 
 <!--<div id="empty-div">hacked</div>-->
