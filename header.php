@@ -82,10 +82,12 @@
 -->		
 		<li >
 			<a href="#" >Επικοινωνία</a>
+<!--			
 			<div class="dropdown-content"  class="drop-button">
 				<a href="#">Ηλεκτρονική φόρμα</a>
 				<a href="#">Τηλέφωνο</a>
 			</div>
+-->			
 		</li>
 	</ul>
 </div>
