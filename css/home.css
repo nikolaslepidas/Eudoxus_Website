@@ -1,4 +1,4 @@
-/*CSS for persons' table*/
+/*CSS for persons' table
 
 #persons-table {
   width: auto;
@@ -24,6 +24,13 @@
   font-weight: bold;
   font-family: Arial;
 }
+*/
+
+/*New CSS for person's divs*/
+#persons-table {
+  
+}
+/*End of New CSS for person's divs*/
 
 /* End of persons' table */
 
@@ -34,7 +41,7 @@
 }
 
 #central-column {
-  width: 50%;
+  width: 85%;
 	float: left;
 }
   
