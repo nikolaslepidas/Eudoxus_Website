@@ -60,7 +60,7 @@
 /* End of news' table */
 
 /* Persons grid */
-div.container {
+div.container_grid {
   display:grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
@@ -89,30 +89,23 @@ div.box:hover {
 
 div.student {
   grid-area: a;
-  align-self: center;
-  justify-self: center;
+
 }
 
 div.publisher {
   grid-area: b;
-  align-self: center;
-  justify-self: center;
 }
 
 div.distributor {
   grid-area: c;
-  align-self: center;
-  justify-self: center;
 }
 
 div.secretariat {
   grid-area: d;
-  align-self: center;
-  justify-self: center;
 }
 
 div.box img {
-  width: 20%;
+  width: 30%;
 }
 
 div.box p {

@@ -51,7 +51,7 @@
 <!-- End of Newstable -->					
 
 <main id="central-column">
-	<div class="container">
+	<div class="container_grid">
 		<div class="box student">
 			<img src="./icons/student.png" alt="student" title="student">
 			<p>Φοιτητής</p>
