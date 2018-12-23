@@ -1,6 +1,6 @@
 <div id="header">
 	<div id="logo-position">
-		<a href="index.php">	<img src="./images/logo.png">	</a>
+		<a href="index.php">	<img src="./images/logo.png"	alt="logo" > 	</a>
 	</div>	
 
 	<div class="header-right">
@@ -24,7 +24,7 @@
 	<ul>
 		<li >
 			<a href="#" >Φοιτητής</a>
-			<div class="dropdown-content"  class="drop-button">
+			<div class="dropdown-content drop-button">
 				<a href="./testPage.php">Δήλωση συγγραμμάτων</a>
 				<a href="#">Ανταλλαγή συγγραμμάτων</a>
 				<a href="#">Σημειώσεις και Βοηθήματα</a> 
@@ -35,7 +35,7 @@
 		
 		<li >
 			<a href="#" >Εκδότης</a>
-			<div class="dropdown-content"  class="drop-button">
+			<div class="dropdown-content drop-button">
 				<a href="#">Διανομή συγγραμμάτων</a>
 				<a href="#">Οδηγίες</a>
 				<a href="#">Συχνές ερωτήσεις</a>
@@ -44,7 +44,7 @@
 		
 		<li >
 			<a href="#" >Διανομέας</a>
-			<div class="dropdown-content"  class="drop-button">
+			<div class="dropdown-content drop-button">
 				<a href="#">Παράδοση συγγραμμάτων</a>
 				<a href="#">Οδηγίες</a>
 				<a href="#">Συχνές ερωτήσεις</a>
@@ -53,7 +53,7 @@
 		
 		<li >
 			<a href="#" >Γραμματεία</a>
-			<div class="dropdown-content"  class="drop-button">
+			<div class="dropdown-content drop-button">
 				<a href="#">Εισαγωγή προγράμματος σπουδών</a>
 				<a href="#">Εισαγωγή προτεινόμενων συγγραμμάτων</a>
 				<a href="#">Οδηγίες</a>
