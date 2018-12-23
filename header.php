@@ -72,7 +72,7 @@
 		</li>
 -->		
 		<li >
-			<a href="#" >Επικοινωνία</a>	
+			<a href="./communication_form.php" >Επικοινωνία</a>	
 		</li>
 	</ul>
 </div>

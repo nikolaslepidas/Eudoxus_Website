@@ -1,0 +1,17 @@
+div.container_grid {
+    width: 100%;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    color: #444;
+    grid-template-areas: 
+      ". a .";
+}
+  
+div.container_grid table {
+    grid-area: a;
+}
+
+div.container_grid table tbody tr td button {
+    width: 88%;
+}

@@ -6,7 +6,6 @@
 		
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/breadcrumbs.css">
-		<link rel="stylesheet" href="css/modal_login.css">
 
 		<title>Εύδοξος - Δήλωση συγγραμμάτων</title>
 
@@ -24,10 +23,6 @@
 			<li>Δήλωση συγγραμμάτων</li> 
 		</ul>
 	</div>
-
-
-
-
 
 	<?php require_once './footer.php' ?>
 
