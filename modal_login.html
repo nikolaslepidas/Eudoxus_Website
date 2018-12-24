@@ -28,7 +28,7 @@
 
 <div id="id02" class="modal">
   
-    <form class="modal-content animate" action="/action_page.php">
+    <form class="modal-content animate" >
       <div class="imgcontainer">
         <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Κλείσιμο παραθύρου">&times;</span>
         <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
@@ -37,14 +37,25 @@
       <div class="container">
         <label for="uname02"><b>Όνομα χρήστη</b></label>
         <input type="text" placeholder="Εισαγωγή ονόματος χρήστη" id="uname02" required>
+
+        <label for="email"><b>E-mail</b></label>
+        <input type="text" placeholder="Εισαγωγή e-mail" id="email" required>
   
         <label for="psw02"><b>Συνθηματικό</b></label>
         <input type="password" placeholder="Εισαγωγή συνθηματικού" id="psw02" required>
+
+        <label for="psw03"><b>Επαλήθευση συνθηματικού</b></label>
+        <input type="password" placeholder="Εισαγωγή συνθηματικού" id="psw03" required>
+
+        <label><b>Ομοιότητα συνθηματικών</b></label><br>
+        <label id="matchpass"></label>
           
-        <button type="submit">Εγγραφή</button>
+        <button id="register" type="submit">Εγγραφή</button>
         <label>
           <input type="checkbox" checked="checked" id="remember02"> Να με θυμάσαι
         </label>
+
+        <label id="registration_problems"></label>
       </div>
   
       <div class="container" style="background-color:#f1f1f1">
@@ -67,4 +78,47 @@
             modal2.style.display = "none";
         }
     }
+
+    // Show an error if two passwords do not match
+    function validatePassword() {
+      // Get the passwords
+      var psw02 = document.getElementById('psw02');
+      var psw03 = document.getElementById('psw03');
+      var matchpass = document.getElementById('matchpass');
+
+      if ((psw02.value) != (psw03.value)) {
+        matchpass.innerHTML = "Οι κωδικοί δεν είναι όμοιοι!"
+        matchpass.style.color = "red";
+        matchpass.style.fontWeight = "bold";
+        return -1;
+      } else if ((psw02.value == "") && (psw03.value == "")){
+        matchpass.innerHTML = "";
+        return -2;
+      } else {
+        matchpass.innerHTML = "Οι κωδικοί ταιριάζουν!";
+        matchpass.style.color = "green";
+        matchpass.style.fontWeight = "bold";
+        return 1;
+      }
+    }
+
+    // Get register button
+    var register = document.getElementById('register');
+    // Get registration_problems
+    var registration_problems = document.getElementById('registration_problems');
+
+    // Validate registration
+    function validateRegister() {
+      if (validatePassword() == 1) {
+        registration_problems.innerHTML = "";
+      } else if (validatePassword() == -1) {
+        registration_problems.innerHTML = "Έλεγξε ότι ταιριάζουν τα συνθηματικά που έχεις επιλέξει.";
+      } else if (validatePassword() == -2) {
+        registration_problems.innerHTML = "Παρακαλώ προσθέστε κάποιο συνθηματικό.";
+      }
+    }
+
+    register.onclick = validateRegister;
+    psw02.onkeyup = validatePassword;
+    psw03.onkeyup = validatePassword;
 </script>

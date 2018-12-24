@@ -1,4 +1,4 @@
-div.container_grid {
+div.container_com_form {
     width: 100%;
     display:grid;
     grid-template-columns: auto auto auto;
@@ -8,15 +8,15 @@ div.container_grid {
       ". a .";
 }
   
-div.container_grid table {
+div.container_com_form table {
     grid-area: a;
 }
 
-div.container_grid table tbody tr td button {
+div.container_com_form table tbody tr td button {
     width: 88%;
 }
 
-div.container_grid table tbody tr td select {
+div.container_com_form table tbody tr td select {
     width: 88%;
     height: 30px;
 }

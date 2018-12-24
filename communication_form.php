@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/modal_login.css">
         <link rel="stylesheet" href="css/communication_form.css">
+        <link rel="stylesheet" href="css/breadcrumbs.css">
 
 		<title>Εύδοξος - Αρχική σελίδα</title>
 
@@ -16,7 +17,14 @@
 
 	<?php require_once './header.php' ?>
 
-    <div class="container_grid">
+    <div class="wrapper">
+		<ul class="breadcrumb">
+			<li><a href="index.php">Αρχική</a></li>
+			<li>Επικοινωνία</li> 
+		</ul>
+	</div>
+
+    <div class="container_com_form">
     <table>
         <tbody>
         <tr>
@@ -68,7 +76,7 @@
         <tr>
             <th></th>
             <td>
-                <button type="button">Αποστολή</button>
+                <button type="submit">Αποστολή</button>
             </td>
         </tr>
         </tbody>
