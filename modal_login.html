@@ -21,30 +21,30 @@
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Ακύρωση</button>
-      <span class="psw">Ξέχασες το <a href="#">συνθηματικό?</a></span>
+      <span class="psw">Ξέχασες το <a href="#">συνθηματικό</a>;</span>
     </div>
   </form>
 </div>
 
 <div id="id02" class="modal">
   
-    <form class="modal-content animate" >
+    <form class="modal-content animate" action="/action_page.php">
       <div class="imgcontainer">
         <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Κλείσιμο παραθύρου">&times;</span>
         <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
       </div>
   
       <div class="container">
-        <label for="uname02"><b>Όνομα χρήστη</b></label>
+        <label for="uname02"><b>Όνομα χρήστη *</b></label>
         <input type="text" placeholder="Εισαγωγή ονόματος χρήστη" id="uname02" required>
 
-        <label for="email"><b>E-mail</b></label>
+        <label for="email"><b>E-mail *</b></label>
         <input type="text" placeholder="Εισαγωγή e-mail" id="email" required>
   
-        <label for="psw02"><b>Συνθηματικό</b></label>
+        <label for="psw02"><b>Συνθηματικό *</b></label>
         <input type="password" placeholder="Εισαγωγή συνθηματικού" id="psw02" required>
 
-        <label for="psw03"><b>Επαλήθευση συνθηματικού</b></label>
+        <label for="psw03"><b>Επαλήθευση συνθηματικού *</b></label>
         <input type="password" placeholder="Εισαγωγή συνθηματικού" id="psw03" required>
 
         <label><b>Ομοιότητα συνθηματικών</b></label><br>
@@ -53,14 +53,15 @@
         <button id="register" type="submit">Εγγραφή</button>
         <label>
           <input type="checkbox" checked="checked" id="remember02"> Να με θυμάσαι
-        </label>
+        </label><br>
 
-        <label id="registration_problems"></label>
+        <label><b>Όλα τα πεδία με αστερίσκο(*) είναι υποχρεωτικά.</b></label><br><br>
+        <label id="registration_problem"></label>
       </div>
   
       <div class="container" style="background-color:#f1f1f1">
         <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Ακύρωση</button>
-        <span class="psw">Ξέχασες το <a href="#">συνθηματικό?</a></span>
+        <span class="psw">Ξέχασες το <a href="#">συνθηματικό</a>;</span>
       </div>
     </form>
   </div>
@@ -104,17 +105,33 @@
 
     // Get register button
     var register = document.getElementById('register');
-    // Get registration_problems
-    var registration_problems = document.getElementById('registration_problems');
+    // Get registration_problem
+    var registration_problem = document.getElementById('registration_problem');
+    // Get sign up id
+    var sign_up_id = document.getElementById('id02');
+    // Get username
+    var username = document.getElementById('uname02');
+    // Get email
+    var email = document.getElementById('email');
+
 
     // Validate registration
     function validateRegister() {
-      if (validatePassword() == 1) {
-        registration_problems.innerHTML = "";
+      if ((validatePassword() == 1) && (username.value != "") && (email.value != "")) { // check also if the email or username are already used (database)
+        registration_problem.innerHTML = "";
+        return true;
+      } else if ((username.value == "") || (email.value == "") || (psw02.value == "") || (psw03.value == "")) {
+        registration_problem.innerHTML = "Παρακαλώ συμπλήρωσε όλα τα υποχρεωτικά πεδία.";
+        registration_problem.style.color = "red";
+        return false;
       } else if (validatePassword() == -1) {
-        registration_problems.innerHTML = "Έλεγξε ότι ταιριάζουν τα συνθηματικά που έχεις επιλέξει.";
+        registration_problem.innerHTML = "Έλεγξε ότι ταιριάζουν τα συνθηματικά που έχεις επιλέξει.";
+        registration_problem.style.color = "red";
+        return false;
       } else if (validatePassword() == -2) {
-        registration_problems.innerHTML = "Παρακαλώ προσθέστε κάποιο συνθηματικό.";
+        registration_problem.innerHTML = "Παρακαλώ προσθέστε κάποιο συνθηματικό.";
+        registration_problem.style.color = "red";
+        return false;
       }
     }
 
