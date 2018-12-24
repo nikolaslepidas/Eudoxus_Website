@@ -47,15 +47,40 @@
         <label for="psw03"><b>Επαλήθευση συνθηματικού *</b></label>
         <input type="password" placeholder="Εισαγωγή συνθηματικού" id="psw03" required>
 
-        <label><b>Ομοιότητα συνθηματικών</b></label><br>
-        <label id="matchpass"></label>
-          
+        <label for="user_team"><b>Ομάδα χρήστη *</b></label>
+        <select id="user_team">
+          <option value="none">--</option>
+          <option value="student">Φοιτητής</option>
+          <option value="publisher">Εκδότης</option>
+          <option value="distributor">Διανομέας</option>
+          <option value="sectretary">Γραμματεία</option>
+        </select>
+
+        <div id="univ" style="visibility: hidden;">
+          <label for="university"><b>Πανεπιστήμιο *</b></label>
+          <select id="university">
+              <option value="none">--</option>
+              <option value="ekpa">ΕΚΠΑ</option>
+          </select>
+        </div>
+
+        <div id="depart" style="visibility: hidden;">
+          <label for="ekpa_department"><b>Τμήμα</b></label>
+          <select id="ekpa_department">
+            <option value="none">--</option>
+            <option value="computer">Πληροφορικής & Τηλεπικοινωνιών</option>
+            <option value="maths">Μαθηματικών</option>
+            <option value="chemistry">Χημείας</option>
+          </select>
+        </div>
+
         <button id="register" type="submit">Εγγραφή</button>
         <label>
           <input type="checkbox" checked="checked" id="remember02"> Να με θυμάσαι
         </label><br>
 
         <label><b>Όλα τα πεδία με αστερίσκο(*) είναι υποχρεωτικά.</b></label><br><br>
+        <label id="matchpass"></label><br>
         <label id="registration_problem"></label>
       </div>
   
@@ -90,7 +115,6 @@
       if ((psw02.value) != (psw03.value)) {
         matchpass.innerHTML = "Οι κωδικοί δεν είναι όμοιοι!"
         matchpass.style.color = "red";
-        matchpass.style.fontWeight = "bold";
         return -1;
       } else if ((psw02.value == "") && (psw03.value == "")){
         matchpass.innerHTML = "";
@@ -98,7 +122,6 @@
       } else {
         matchpass.innerHTML = "Οι κωδικοί ταιριάζουν!";
         matchpass.style.color = "green";
-        matchpass.style.fontWeight = "bold";
         return 1;
       }
     }
@@ -135,6 +158,47 @@
       }
     }
 
+    // Get user-team
+    var user_team = document.getElementById('user_team');
+
+    // Make visible the right extra fields for registration
+    function hiddenUniversities() {
+      if (user_team.value == "none") {
+        document.getElementById('university').value = "none";
+        document.getElementById('univ').style.visibility = "hidden";
+        document.getElementById('depart').style.visibility = "hidden";
+      } else if (user_team.value == "student") {
+        document.getElementById('univ').style.visibility = "visible";
+      } else if (user_team.value == "publisher") {
+        document.getElementById('university').value = "none";
+        document.getElementById('univ').style.visibility = "hidden";
+        document.getElementById('depart').style.visibility = "hidden";
+      } else if (user_team.value == "distributor") {
+        document.getElementById('university').value = "none";
+        document.getElementById('univ').style.visibility = "hidden";
+        document.getElementById('depart').style.visibility = "hidden";
+      } else if (user_team.value == "secretary") {
+        document.getElementById('university').value = "none";
+        document.getElementById('univ').style.visibility = "hidden";
+        document.getElementById('depart').style.visibility = "hidden";
+      }
+    }
+
+    // Get user_univ
+    var university = document.getElementById('university');
+
+    // Make visible departments
+    function hiddenDepartments() {
+      if (university.value == "none") {
+        document.getElementById('ekpa_department').value = "none";
+        document.getElementById('depart').style.visibility = "hidden";    // add other universities' departments also
+      } else if (university.value == "ekpa") {
+        document.getElementById('depart').style.visibility = "visible";
+      }
+    }
+
+    university.onchange = hiddenDepartments;
+    user_team.onchange = hiddenUniversities;
     register.onclick = validateRegister;
     psw02.onkeyup = validatePassword;
     psw03.onkeyup = validatePassword;
