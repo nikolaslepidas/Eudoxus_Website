@@ -8,7 +8,8 @@
 				<input type="text" placeholder="Search.." name ="search"	>
 		</div>
 		<div id="sign-in-up">
-			<?php require_once './modal_login.html' ?>
+			<?php require_once './login.php' ?>
+			<?php require_once './signup.php' ?>
 			<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Είσοδος</button>
 			<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Εγγραφή</button>
 		</div>
@@ -78,3 +79,5 @@
 </div>
 </div>
 <!-- End of navbar -->
+
+<script src="./login_signup.js"></script>
