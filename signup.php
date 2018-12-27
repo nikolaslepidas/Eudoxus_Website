@@ -1,4 +1,3 @@
-
 <div id="id02" class="modal">
   
   <form class="modal-content animate" action="action_page.php">
@@ -63,3 +62,4 @@
     </div>
   </form>
 </div>
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Εγγραφή</button>

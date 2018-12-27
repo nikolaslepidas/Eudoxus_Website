@@ -25,3 +25,4 @@
     </div>
   </form>
 </div>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Είσοδος</button>
