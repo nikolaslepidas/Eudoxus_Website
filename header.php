@@ -8,14 +8,18 @@
 				<input type="text" placeholder="Search.." name ="search"	>
 		</div>
 		<div id="sign-in-up">
-			<?php //if(isset($_SESSION['logged_in']) {		// if logged in show me another interface in the top right of the header (username/logout)
-				//echo $_SESSION['logged_in'];
-				//require_once './username.php';		// shows username (clickable and redirect to profile page)				
-				//require_once './logout.php';			// shows logout button (just logout and after this show me again (login/singup) buttons)
-		//	} else {
+			<?php 
+			if (isset($_SESSION['logged_user'])) {		// if logged in show me another interface in the top right of the header (username/logout)
+				echo $_SESSION['logged_user'];
+				require_once './username.php';		// shows username (clickable and redirect to profile page)				
+				require_once './logout.php';			// shows logout button (just logout and after this show me again (login/singup) buttons)
+				echo 'gamieste';
+			} else {
 				require_once './login.php';
 				require_once './signup.php';
-			//}
+				echo 'gamieste dyo fores';
+				var_dump(isset($_SESSION['logged_user']));
+			}
 			?>
 		</div>
 	</div>
