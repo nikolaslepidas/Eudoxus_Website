@@ -103,6 +103,13 @@
       }
     }
 
+    function validateLogin() {
+       /* Your (php) way of checking that the form has been submitted */
+      $(function() {                       // On DOM ready
+          $('#id01').modal('show');     // Show the modal
+      });     
+    }
+
     university.onchange = hiddenDepartments;
     user_team.onchange = hiddenUniversities;
     register.onclick = validateRegister;
