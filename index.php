@@ -15,12 +15,13 @@
 
 <?php 
 require_once './header.php';
-
+/*
 if(isset($_SESSION['logged_user'])){
 //header("location: profile.php");
 	//echo "session_logged_user_is_set";
 	echo($_SESSION['logged_user']);
-}	
+}
+*/	
 ?>
 <!-- Newstable -->
 <div id="right-column">

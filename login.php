@@ -1,5 +1,5 @@
 <?php
-session_start(); // Starting Session
+//session_start(); // Starting Session
 
 if (isset($_POST['submit'])) {
 
@@ -20,10 +20,10 @@ if (isset($_POST['submit'])) {
     $row = mysqli_fetch_assoc($result);
 
     if (mysqli_num_rows($result) == 1) {
-        echo "teleia";
         $_SESSION['logged_user']=$username; // Initializing Session
-        //header("location: profile.php"); // Redirecting To Other Page
-    } 
+        //header("location: index.php"); // Redirecting To Other Page
+        header("Refresh:0");
+      } 
     else {
         echo "skata";
        //$error = "Username or Password is invalid";
