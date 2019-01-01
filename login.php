@@ -23,9 +23,11 @@ if (isset($_POST['submit'])) {
         $_SESSION['logged_user']=$username; // Initializing Session
         //header("location: index.php"); // Redirecting To Other Page
         header("Refresh:0");
-      } 
+    } 
     else {
-        echo "skata";
+      if(isset($_POST['submit'])) {
+        echo ("<script> validateLogin(); </script>");
+      }
        //$error = "Username or Password is invalid";
     }
 
@@ -50,10 +52,11 @@ if (isset($_POST['submit'])) {
       <label for="psw01"><b>Συνθηματικό</b></label>
       <input type="password" name ="password" placeholder="Εισαγωγή συνθηματικού" id="psw01" required>
         
-      <button type="submit" name="submit">Σύνδεση</button>
+      <button id="login" type="submit" name="submit">Σύνδεση</button>
       <label>
         <input type="checkbox" checked="checked" id="remember01"> Να με θυμάσαι
       </label>
+      <label id="login_problem"></label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
