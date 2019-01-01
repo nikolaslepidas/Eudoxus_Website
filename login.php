@@ -20,14 +20,23 @@ if (isset($_POST['submit'])) {
     $row = mysqli_fetch_assoc($result);
 
     if (mysqli_num_rows($result) == 1) {
-        $_SESSION['logged_user']=$username; // Initializing Session
-        //header("location: index.php"); // Redirecting To Other Page
-        header("Refresh:0");
-      } 
+      $_SESSION['logged_user']=$username; // Initializing Session
+      //header("location: index.php"); // Redirecting To Other Page
+      header("Refresh:0");
+    } 
     else {
-       //$error = "Username or Password is invalid";
+      $error = "Username or Password is invalid";
+      echo "<script> 
+      $(function(){
+        $('#id01').show();
+      });
+      </script>";
+      echo "<script> 
+      $(function(){
+        $('#nikos').text('$error');
+      });
+      </script>";
     }
-
     mysqli_close($connection); // Closing Connection
 }
 ?>
@@ -52,6 +61,8 @@ if (isset($_POST['submit'])) {
       <button type="submit" name="submit">Σύνδεση</button>
       <label>
         <input type="checkbox" checked="checked" id="remember01"> Να με θυμάσαι
+      </label>
+      <label id="nikos" style="color:red;">
       </label>
     </div>
 
