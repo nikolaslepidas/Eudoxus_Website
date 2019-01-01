@@ -25,7 +25,6 @@ if (isset($_POST['submit'])) {
         header("Refresh:0");
       } 
     else {
-        echo "skata";
        //$error = "Username or Password is invalid";
     }
 
