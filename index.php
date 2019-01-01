@@ -78,8 +78,7 @@ if(isset($_SESSION['logged_user'])){
 		</div>
 	</div>
 </main>
-<b id="logout"><a href="logout.php">Log Out</a></b>
-<?php echo $_SESSION['logged_user']; ?>
+
 <?php require_once './footer.php'  ?>
 
 </body>
