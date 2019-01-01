@@ -62,12 +62,9 @@ if (isset($_POST['submit'])) {
       <label>
         <input type="checkbox" checked="checked" id="remember01"> Να με θυμάσαι
       </label>
-<<<<<<< HEAD
       <label id="nikos" style="color:red;">
       </label>
-=======
-      <label id="login_problem"></label>
->>>>>>> a2db1bff8f8e1e93c414b02b50bb462d0334e51e
+
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
