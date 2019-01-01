@@ -20,7 +20,6 @@ if (isset($_POST['submit'])) {
     $row = mysqli_fetch_assoc($result);
 
     if (mysqli_num_rows($result) == 1) {
-<<<<<<< HEAD
       $_SESSION['logged_user']=$username; // Initializing Session
       //header("location: index.php"); // Redirecting To Other Page
       header("Refresh:0");
@@ -37,17 +36,6 @@ if (isset($_POST['submit'])) {
         $('#nikos').text('$error');
       });
       </script>";
-=======
-        $_SESSION['logged_user']=$username; // Initializing Session
-        //header("location: index.php"); // Redirecting To Other Page
-        header("Refresh:0");
-    } 
-    else {
-      if(isset($_POST['submit'])) {
-        echo ("<script> validateLogin(); </script>");
-      }
-       //$error = "Username or Password is invalid";
->>>>>>> a2db1bff8f8e1e93c414b02b50bb462d0334e51e
     }
     mysqli_close($connection); // Closing Connection
 }
