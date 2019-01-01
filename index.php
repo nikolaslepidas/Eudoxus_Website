@@ -7,15 +7,21 @@
 		
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/home.css">
-		<link rel="stylesheet" href="css/modal_login.css">
 
 		<title>Εύδοξος - Αρχική σελίδα</title>
 
 	</head>
 	<body>
 
-	<?php require_once './header.php' ?>
+<?php 
+require_once './header.php';
 
+if(isset($_SESSION['logged_user'])){
+//header("location: profile.php");
+	//echo "session_logged_user_is_set";
+	echo($_SESSION['logged_user']);
+}	
+?>
 <!-- Newstable -->
 <div id="right-column">
 	<div id="news-table">
@@ -71,7 +77,8 @@
 		</div>
 	</div>
 </main>
-
+<b id="logout"><a href="logout.php">Log Out</a></b>
+<?php echo $_SESSION['logged_user']; ?>
 <?php require_once './footer.php'  ?>
 
 </body>
