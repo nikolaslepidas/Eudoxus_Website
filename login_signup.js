@@ -18,22 +18,18 @@
     function hiddenUniversities() {
       if (userGroup.value == "none") {
         document.getElementById('university').value = "none";
-        document.getElementById('univ').style.visibility = "hidden";
-        document.getElementById('depart').style.visibility = "hidden";
+        document.getElementById('univ').style.display = "hidden";
+        document.getElementById('depart').style.display = "hidden";
       } else if (userGroup.value == "student") {
-        document.getElementById('univ').style.visibility = "visible";
+        document.getElementById('univ').style.display = "block";
       } else if (userGroup.value == "publisher") {
         document.getElementById('university').value = "none";
-        document.getElementById('univ').style.visibility = "hidden";
-        document.getElementById('depart').style.visibility = "hidden";
-      } else if (userGroup.value == "distributor") {
+        document.getElementById('univ').style.display = "none";
+        document.getElementById('depart').style.display = "hidden";
+      } else {
         document.getElementById('university').value = "none";
-        document.getElementById('univ').style.visibility = "hidden";
-        document.getElementById('depart').style.visibility = "hidden";
-      } else if (userGroup.value == "secretary") {
-        document.getElementById('university').value = "none";
-        document.getElementById('univ').style.visibility = "hidden";
-        document.getElementById('depart').style.visibility = "hidden";
+        document.getElementById('univ').style.display = "none";
+        document.getElementById('depart').style.display = "hidden";
       }
     }
 
@@ -44,9 +40,9 @@
     function hiddenDepartments() {
       if (university.value == "none") {
         document.getElementById('ekpa_department').value = "none";
-        document.getElementById('depart').style.visibility = "hidden";    // add other universities' departments also
+        document.getElementById('depart').style.display = "none";    // add other universities' departments also
       } else if (university.value == "ekpa") {
-        document.getElementById('depart').style.visibility = "visible";
+        document.getElementById('depart').style.display = "block";
       }
     }
 

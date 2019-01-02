@@ -172,7 +172,7 @@ if (($userGroup = $_POST['userGroup']) == 'student') {
         <option value="sectretary">Γραμματεία</option>
       </select>
 <!---->
-      <div id="univ" style="visibility: hidden;">
+      <div id="univ" style="display: none;">
         <label for="university"><b>Πανεπιστήμιο *</b></label>
         <select id="university" name="university">
             <option value="none">--</option>
@@ -180,7 +180,7 @@ if (($userGroup = $_POST['userGroup']) == 'student') {
         </select>
       </div>
 
-      <div id="depart" style="visibility: hidden;">
+      <div id="depart" style="display: none;">
         <label for="ekpa_department"><b>Τμήμα *</b></label>
         <select id="ekpa_department" name="ekpa_department">
           <option value="none">--</option>
