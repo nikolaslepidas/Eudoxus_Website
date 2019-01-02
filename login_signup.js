@@ -14,35 +14,43 @@
     // Get user-team
     var userGroup = document.getElementById('userGroup');
 
-    // Make visible the right extra fields for registration
-    function hiddenUniversities() {
-      if (userGroup.value == "none") {
-        document.getElementById('university').value = "none";
-        document.getElementById('univ').style.display = "hidden";
-        document.getElementById('depart').style.display = "hidden";
-      } else if (userGroup.value == "student") {
-        document.getElementById('univ').style.display = "block";
-      } else if (userGroup.value == "publisher") {
-        document.getElementById('university').value = "none";
-        document.getElementById('univ').style.display = "none";
-        document.getElementById('depart').style.display = "hidden";
-      } else {
-        document.getElementById('university').value = "none";
-        document.getElementById('univ').style.display = "none";
-        document.getElementById('depart').style.display = "hidden";
-      }
-    }
+    // Get vars for publisher
+    var publisher_fields = document.getElementById('publisher_fields');
 
     // Get user_univ
     var university = document.getElementById('university');
+    var univ = document.getElementById('univ');
+    var depart = document.getElementById('depart');
+
+
+    // Make visible the right extra fields for registration
+    function hiddenUniversities() {
+      if (userGroup.value == "none") {
+        university.value = "none";
+        univ.style.display = "none";
+        depart.style.display = "none";
+      } else if (userGroup.value == "student") {
+        univ.style.display = "block";
+        publisher_fields.style.display = "none";
+      } else if (userGroup.value == "publisher") {
+        publisher_fields.style.display = "block";
+        university.value = "none";
+        univ.style.display = "none";
+        depart.style.display = "none";
+      } else {
+        university.value = "none";
+        univ.style.display = "none";
+        depart.style.display = "none";
+      }
+    }
 
     // Make visible departments
     function hiddenDepartments() {
       if (university.value == "none") {
         document.getElementById('ekpa_department').value = "none";
-        document.getElementById('depart').style.display = "none";    // add other universities' departments also
+        depart.style.display = "none";    // add other universities' departments also
       } else if (university.value == "ekpa") {
-        document.getElementById('depart').style.display = "block";
+        depart.style.display = "block";
       }
     }
 

@@ -63,9 +63,14 @@ if (isset($_POST['register'])) {
           //userGroup = publisher
           } else if (($userGroup = $_POST['userGroup']) == 'publisher') {
     
+            $name = $_POST['name'];
+            $city = $_POST['city'];
+            $phone = $_POST['phone'];
+
             $query = "insert into user (email,username,password,userGroup) values ('$email', '$username', '$password', '$userGroup')";
-            //$query = "insert into publisher (email,name,city,phone) values ('$email', '$', '', '')"
             mysqli_query($connection, $query);
+            $query = "insert into publisher (email,name,city,phone) values ('$email', '$name', '$city', '$phone')";
+            mysqli_query($connection, $query);           
     
           //userGroup none
           } else if (($userGroup = $_POST['userGroup']) == 'none') {
@@ -171,7 +176,7 @@ if (($userGroup = $_POST['userGroup']) == 'student') {
         <option value="distributor">Διανομέας</option>
         <option value="sectretary">Γραμματεία</option>
       </select>
-<!---->
+
       <div id="univ" style="display: none;">
         <label for="university"><b>Πανεπιστήμιο *</b></label>
         <select id="university" name="university">
@@ -188,6 +193,15 @@ if (($userGroup = $_POST['userGroup']) == 'student') {
           <option value="maths">Μαθηματικών</option>
           <option value="chemistry">Χημείας</option>
         </select>
+      </div>
+
+      <div id="publisher_fields" style="display: none;">
+        <label for="name"><b>Όνομα εκδοτικού οίκου *</b></label>
+        <input type="text" name="name" placeholder="Εισαγωγή ονόματος εκδοτικού οίκου" id="name" required>
+        <label for="city"><b>Πόλη εκδοτικού οίκου *</b></label>
+        <input type="text" name="city" placeholder="Εισαγωγή πόλης εκδοτικού οίκου" id="city" required>
+        <label for="phone"><b>Τηλέφωνο εκδοτικού οίκου *</b></label>
+        <input type="text" name="phone" placeholder="Εισαγωγή τηλεφώνου εκδοτικού οίκου" id="phone" required>
       </div>
 
       <button id="register" type="submit" name="register">Εγγραφή</button>
