@@ -7,8 +7,8 @@ if (isset($_POST['submit'])) {
     $username=$_POST['username'];
     $password=$_POST['password'];
 
-    echo $username;
-    echo $password;
+    //echo $username;
+    //echo $password;
 
     // Connect to the database
     require_once 'mysql_connector.php';
@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
       header("Refresh:0");
     } 
     else {
-      $error = "Username or Password is invalid";
+      $error = "Δεν βρέθηκε χρήστης με τον συνδυασμό ονόματος χρήστη και συνθηματικού που δώσατε.";
       echo "<script> 
       $(function(){
         $('#id01').show();
@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
       </script>";
       echo "<script> 
       $(function(){
-        $('#nikos').text('$error');
+        $('#login_problem').text('$error');
       });
       </script>";
     }
@@ -62,7 +62,8 @@ if (isset($_POST['submit'])) {
       <label>
         <input type="checkbox" checked="checked" id="remember01"> Να με θυμάσαι
       </label>
-      <label id="nikos" style="color:red;">
+      <br>
+      <label id="login_problem" style="color:red;">
       </label>
 
     </div>
