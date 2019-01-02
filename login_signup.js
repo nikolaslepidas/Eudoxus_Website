@@ -12,25 +12,25 @@
     }
 
     // Get user-team
-    var user_team = document.getElementById('user_team');
+    var userGroup = document.getElementById('userGroup');
 
     // Make visible the right extra fields for registration
     function hiddenUniversities() {
-      if (user_team.value == "none") {
+      if (userGroup.value == "none") {
         document.getElementById('university').value = "none";
         document.getElementById('univ').style.visibility = "hidden";
         document.getElementById('depart').style.visibility = "hidden";
-      } else if (user_team.value == "student") {
+      } else if (userGroup.value == "student") {
         document.getElementById('univ').style.visibility = "visible";
-      } else if (user_team.value == "publisher") {
+      } else if (userGroup.value == "publisher") {
         document.getElementById('university').value = "none";
         document.getElementById('univ').style.visibility = "hidden";
         document.getElementById('depart').style.visibility = "hidden";
-      } else if (user_team.value == "distributor") {
+      } else if (userGroup.value == "distributor") {
         document.getElementById('university').value = "none";
         document.getElementById('univ').style.visibility = "hidden";
         document.getElementById('depart').style.visibility = "hidden";
-      } else if (user_team.value == "secretary") {
+      } else if (userGroup.value == "secretary") {
         document.getElementById('university').value = "none";
         document.getElementById('univ').style.visibility = "hidden";
         document.getElementById('depart').style.visibility = "hidden";
@@ -51,6 +51,6 @@
     }
 
     university.onchange = hiddenDepartments;
-    user_team.onchange = hiddenUniversities;
+    userGroup.onchange = hiddenUniversities;
     psw02.onkeyup = validatePassword;
     psw03.onkeyup = validatePassword;

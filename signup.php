@@ -11,38 +11,27 @@ if (isset($_POST['register'])) {
     if ($_POST['password'] == $_POST['confirm_password']) {
 
       $username = $_POST['username'];
+      $email = $_POST['email'];
+      $password = $_POST['password'];
 
-      if (isset($_POST['email'])) {
-        $email = $_POST['email'];
-        $query = "select * from users where email = '$email'";
-        $result = mysqli_query($connection, $query);
-        mysqli_data_seek($result,0);
-        $row = mysqli_fetch_assoc($result);
+      $query = "select * from user where email='$email'";
+      $result = mysqli_query($connection, $query);
+      mysqli_data_seek($result, 0);
+      $row = mysqli_fetch_assoc($result);
 
-        //unique email used
-        if (mysqli_num_rows($result) == 0) {
+      if (mysqli_num_rows($result) == 0) {
+        
+          //userGroup = student
+          if (($userGroup = $_POST['userGroup']) == 'student') {
 
-          $password = $_POST['password'];
-
-          //user_team = student
-          if (($user_team = $_POST['user_team']) == 'student') {
-/*
-            $query = "select * from universities";
-            $result = mysqli_query($connection, $query);
-
-            $opt = "<select name='universities'>";
-            while ($row = mysqli_fetch_assoc($result)) {
-              $opt .= "<option value='".$row['univ_value']."'>".$row['univ_name']."</option>";
-            }
-            $opt .= "</select>";
-*/
-/**/
             if (($university = $_POST['university']) != 'none') {
 
               if (($department = $_POST['ekpa_department']) != 'none') {
 
-                $query = "insert into users (email,username,password,user_team,university,department) values ('$email', '$username', '$password', '$user_team', '$university', '$department')";
-                mysqli_query($connection, $query);
+                $query1 = "insert into user (email,username,password,userGroup) values ('$email', '$username', '$password', '$userGroup')";
+                $query2 = "insert into student (email,university,department) values ('$email', '$university', '$department')";
+                mysqli_query($connection, $query1);
+                mysqli_query($connection, $query2);
 
               } else {
                 $error = 'Παρακαλώ επιλέξτε τμήμα.';
@@ -70,15 +59,16 @@ if (isset($_POST['register'])) {
               });
               </script>";
             }
-/**/
-          //user_team = publisher
-          } else if (($user_team = $_POST['user_team']) == 'publisher') {
+
+          //userGroup = publisher
+          } else if (($userGroup = $_POST['userGroup']) == 'publisher') {
     
-            $query = "insert into users (email,username,password,user_team) values ('$email', '$username', '$password', '$user_team')";
+            $query = "insert into user (email,username,password,userGroup) values ('$email', '$username', '$password', '$userGroup')";
+            //$query = "insert into publisher (email,name,city,phone) values ('$email', '$', '', '')"
             mysqli_query($connection, $query);
     
-          //user_team none
-          } else if (($user_team = $_POST['user_team']) == 'none') {
+          //userGroup none
+          } else if (($userGroup = $_POST['userGroup']) == 'none') {
             $error = 'Παρακαλώ επιλέξτε ομάδα χρηστών.';
             echo "<script> 
             $(function(){
@@ -91,7 +81,6 @@ if (isset($_POST['register'])) {
             });
             </script>";
           }
-
         } else {
           $error = 'Το email που εκχωρήσατε χρησιμοποιείται ήδη.';
           echo "<script> 
@@ -105,28 +94,26 @@ if (isset($_POST['register'])) {
           });
           </script>";
         }
+      } else {
+        $error = 'Παρακαλώ ελέγξτε ότι ταιριάζουν οι κωδικοί που επιλέξατε';
+          echo "<script> 
+          $(function(){
+            $('#id02').show();
+          });
+          </script>";
+          echo "<script> 
+          $(function(){
+            $('#registration_problem').text('$error');
+          });
+          </script>";
       }
-    } else {
-      $error = 'Παρακαλώ ελέγξτε ότι ταιριάζουν οι κωδικοί που επιλέξατε';
-        echo "<script> 
-        $(function(){
-          $('#id02').show();
-        });
-        </script>";
-        echo "<script> 
-        $(function(){
-          $('#registration_problem').text('$error');
-        });
-        </script>";
     }
-
-  }
   mysqli_close($connection);
 }
 /*
 
 //extra fields for students
-if (($user_team = $_POST['user_team']) == 'student') {
+if (($userGroup = $_POST['userGroup']) == 'student') {
   $query = "select * from universities";
   $result = mysqli_query($connection, $query);
 
@@ -138,6 +125,16 @@ if (($user_team = $_POST['user_team']) == 'student') {
 } else {
   echo "skata";
 }
+*/
+/*
+            $query = "select * from universities";
+            $result = mysqli_query($connection, $query);
+
+            $opt = "<select name='universities'>";
+            while ($row = mysqli_fetch_assoc($result)) {
+              $opt .= "<option value='".$row['univ_value']."'>".$row['univ_name']."</option>";
+            }
+            $opt .= "</select>";
 */
 // Closing Connection
 
@@ -166,8 +163,8 @@ if (($user_team = $_POST['user_team']) == 'student') {
       <label for="psw03"><b>Επαλήθευση συνθηματικού *</b></label>
       <input type="password" name="confirm_password" placeholder="Εισαγωγή συνθηματικού" id="psw03" required>
 
-      <label for="user_team"><b>Ομάδα χρήστη *</b></label>
-      <select id="user_team" name="user_team" required>
+      <label for="userGroup"><b>Ομάδα χρήστη *</b></label>
+      <select id="userGroup" name="userGroup" required>
         <option value="none">--</option>
         <option value="student">Φοιτητής</option>
         <option value="publisher">Εκδότης</option>

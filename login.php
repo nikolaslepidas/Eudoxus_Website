@@ -3,24 +3,28 @@
 
 if (isset($_POST['login'])) {
 
-    // Define $username and $password
-    $username=$_POST['username'];
+    // Define $email and $password
+    $email=$_POST['email'];
     $password=$_POST['password'];
 
-    //echo $username;
+    //echo $email;
     //echo $password;
 
     // Connect to the database
     require_once 'mysql_connector.php';
 
     // SQL query to fetch information of registerd users and finds user match.
-    $query = "select * from users where  username='$username' and password='$password'";
+    $query = "select * from user where email='$email' and password='$password'";
     $result=mysqli_query($connection,$query);
     mysqli_data_seek($result,0);
     $row = mysqli_fetch_assoc($result);
 
     if (mysqli_num_rows($result) == 1) {
-      $_SESSION['logged_user']=$username; // Initializing Session
+      $query = "select username from user where email='$email'";
+      $result = mysqli_query($connection, $query);
+      mysqli_data_seek($result, 0);
+      $username = mysqli_fetch_assoc($result);
+      $_SESSION['logged_user']=implode($username); // Initializing Session_ IMPLODE CONVERTS AN ARRAY OF ONE ELEMENT TO A STRING OF THIS ELEMENT
       //header("location: index.php"); // Redirecting To Other Page
       header("Refresh:0");
     } 
@@ -52,8 +56,8 @@ if (isset($_POST['login'])) {
     </div>
 
     <div class="container">
-      <label for="uname01"><b>Όνομα χρήστη</b></label>
-      <input type="text" name="username" placeholder="Εισαγωγή ονόματος χρήστη" id="uname01" required>
+      <label for="email"><b>Email χρήστη</b></label>
+      <input type="email" name="email" placeholder="Εισαγωγή email" id="email" required>
 
       <label for="psw01"><b>Συνθηματικό</b></label>
       <input type="password" name ="password" placeholder="Εισαγωγή συνθηματικού" id="psw01" required>
