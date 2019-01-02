@@ -121,7 +121,7 @@ if (isset($_POST['register'])) {
     }
 
   }
-
+  mysqli_close($connection);
 }
 /*
 
@@ -140,7 +140,7 @@ if (($user_team = $_POST['user_team']) == 'student') {
 }
 */
 // Closing Connection
-mysqli_close($connection);
+
 
 ?>
 
