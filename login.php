@@ -1,7 +1,7 @@
 <?php
 //session_start(); // Starting Session
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['login'])) {
 
     // Define $username and $password
     $username=$_POST['username'];
@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
     require_once 'mysql_connector.php';
 
     // SQL query to fetch information of registerd users and finds user match.
-    $query = "select * from user where  username='$username' and password='$password'";
+    $query = "select * from users where  username='$username' and password='$password'";
     $result=mysqli_query($connection,$query);
     mysqli_data_seek($result,0);
     $row = mysqli_fetch_assoc($result);
@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
       <label for="psw01"><b>Συνθηματικό</b></label>
       <input type="password" name ="password" placeholder="Εισαγωγή συνθηματικού" id="psw01" required>
         
-      <button id="login" type="submit" name="submit">Σύνδεση</button>
+      <button id="login" type="submit" name="login">Σύνδεση</button>
       <label>
         <input type="checkbox" checked="checked" id="remember01"> Να με θυμάσαι
       </label>
