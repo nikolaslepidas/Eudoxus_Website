@@ -31,12 +31,10 @@
   font-weight: bolder;
   font-size: 1.2em;
   padding-bottom: 21.3%;
-  word-break: break-all;
 }
 
 #newstable tr td {
   font-family: arial;
-  word-break: break-all;
 }
 
 #newstable tr td p {
