@@ -57,7 +57,7 @@ if (isset($_POST['login'])) {
 
     <div class="container">
       <label for="login_email"><b>Email χρήστη</b></label>
-      <input type="email" name="email" placeholder="Εισαγωγή email" id="login_email" required>
+      <input type="email" name="login_email" placeholder="Εισαγωγή email" id="login_email" required>
 
       <label for="psw01"><b>Συνθηματικό</b></label>
       <input type="password" name ="password" placeholder="Εισαγωγή συνθηματικού" id="psw01" required>

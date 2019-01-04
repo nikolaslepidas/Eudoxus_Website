@@ -67,9 +67,9 @@ if (isset($_POST['register'])) {
             $city = $_POST['city'];
             $phone = $_POST['phone'];
 
-            $query = "insert into user (email,username,password,userGroup) values ('$email', '$username', '$password', '$userGroup')";
+            $query = "insert into user (email,username,password,userGroup) values ('$register_email', '$username', '$password', '$userGroup')";
             mysqli_query($connection, $query);
-            $query = "insert into publisher (email,name,city,phone) values ('$email', '$name', '$city', '$phone')";
+            $query = "insert into publisher (email,name,city,phone) values ('$register_email', '$name', '$city', '$phone')";
             mysqli_query($connection, $query);           
     
           //userGroup none
