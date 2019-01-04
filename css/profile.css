@@ -1,0 +1,23 @@
+/* Grid for profile template */
+div.container_grid_profile {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      ". a .";
+}
+  
+div.box {
+    background-color: rgb(223, 115, 65);
+    color: #fff;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+}
+  
+div.user_profile {
+    grid-area: a;
+  
+}
+/* End of Grid for profile template */
