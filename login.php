@@ -4,7 +4,7 @@
 if (isset($_POST['login'])) {
 
     // Define $email and $password
-    $email=$_POST['email'];
+    $login_email=$_POST['login_email'];
     $password=$_POST['password'];
 
     //echo $email;
@@ -14,13 +14,13 @@ if (isset($_POST['login'])) {
     require_once 'mysql_connector.php';
 
     // SQL query to fetch information of registerd users and finds user match.
-    $query = "select * from user where email='$email' and password='$password'";
+    $query = "select * from user where email='$login_email' and password='$password'";
     $result=mysqli_query($connection,$query);
     mysqli_data_seek($result,0);
     $row = mysqli_fetch_assoc($result);
 
     if (mysqli_num_rows($result) == 1) {
-      $query = "select username from user where email='$email'";
+      $query = "select username from user where email='$login_email'";
       $result = mysqli_query($connection, $query);
       mysqli_data_seek($result, 0);
       $username = mysqli_fetch_assoc($result);
@@ -56,8 +56,8 @@ if (isset($_POST['login'])) {
     </div>
 
     <div class="container">
-      <label for="email"><b>Email χρήστη</b></label>
-      <input type="email" name="email" placeholder="Εισαγωγή email" id="email" required>
+      <label for="login_email"><b>Email χρήστη</b></label>
+      <input type="email" name="email" placeholder="Εισαγωγή email" id="login_email" required>
 
       <label for="psw01"><b>Συνθηματικό</b></label>
       <input type="password" name ="password" placeholder="Εισαγωγή συνθηματικού" id="psw01" required>

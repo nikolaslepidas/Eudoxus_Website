@@ -31,6 +31,9 @@
         depart.style.display = "none";
       } else if (userGroup.value == "student") {
         univ.style.display = "block";
+        document.getElementById('name').required = false;
+        document.getElementById('city').required = false;
+        document.getElementById('phone').required = false;
         publisher_fields.style.display = "none";
       } else if (userGroup.value == "publisher") {
         publisher_fields.style.display = "block";
@@ -56,5 +59,3 @@
 
     university.onchange = hiddenDepartments;
     userGroup.onchange = hiddenUniversities;
-    psw02.onkeyup = validatePassword;
-    psw03.onkeyup = validatePassword;

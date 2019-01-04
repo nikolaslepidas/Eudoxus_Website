@@ -11,10 +11,10 @@ if (isset($_POST['register'])) {
     if ($_POST['password'] == $_POST['confirm_password']) {
 
       $username = $_POST['username'];
-      $email = $_POST['email'];
+      $register_email = $_POST['register_email'];
       $password = $_POST['password'];
 
-      $query = "select * from user where email='$email'";
+      $query = "select * from user where email='$register_email'";
       $result = mysqli_query($connection, $query);
       mysqli_data_seek($result, 0);
       $row = mysqli_fetch_assoc($result);
@@ -28,10 +28,10 @@ if (isset($_POST['register'])) {
 
               if (($department = $_POST['ekpa_department']) != 'none') {
 
-                $query1 = "insert into user (email,username,password,userGroup) values ('$email', '$username', '$password', '$userGroup')";
-                $query2 = "insert into student (email,university,department) values ('$email', '$university', '$department')";
-                mysqli_query($connection, $query1);
-                mysqli_query($connection, $query2);
+                $query = "insert into user (email,username,password,userGroup) values ('$register_email', '$username', '$password', '$userGroup')";
+                mysqli_query($connection, $query);
+                $query = "insert into student (email,university,department) values ('$register_email', '$university', '$department')";
+                mysqli_query($connection, $query);
 
               } else {
                 $error = 'Παρακαλώ επιλέξτε τμήμα.';
@@ -159,8 +159,8 @@ if (($userGroup = $_POST['userGroup']) == 'student') {
       <label for="uname02"><b>Όνομα χρήστη *</b></label>
       <input type="text" name="username" placeholder="Εισαγωγή ονόματος χρήστη" id="uname02" required>
 
-      <label for="email"><b>E-mail *</b></label>
-      <input type="email" name="email" placeholder="Εισαγωγή e-mail" id="email" required>
+      <label for="register_email"><b>E-mail *</b></label>
+      <input type="email" name="register_email" placeholder="Εισαγωγή e-mail" id="register_email" required>
 
       <label for="psw02"><b>Συνθηματικό *</b></label>
       <input type="password" name="password" placeholder="Εισαγωγή συνθηματικού" id="psw02" required>
