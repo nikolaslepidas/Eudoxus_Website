@@ -28,9 +28,9 @@
 <div class="dropdown">	
 	<ul>
 		<li >
-			<a href="#" >Φοιτητής</a>
+			<a href="student.php" >Φοιτητής</a>
 			<div class="dropdown-content drop-button">
-				<a href="./testPage.php">Δήλωση συγγραμμάτων</a>
+				<a href="./bookOrder1.php">Δήλωση συγγραμμάτων</a>
 				<a href="#">Ανταλλαγή συγγραμμάτων</a>
 				<a href="#">Σημειώσεις και Βοηθήματα</a> 
 				<a href="#">Οδηγίες</a>
@@ -39,7 +39,7 @@
 		</li>
 		
 		<li >
-			<a href="#" >Εκδότης</a>
+			<a href="publisher.php" >Εκδότης</a>
 			<div class="dropdown-content drop-button">
 				<a href="#">Διανομή συγγραμμάτων</a>
 				<a href="#">Οδηγίες</a>
