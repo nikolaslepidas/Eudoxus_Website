@@ -4,9 +4,6 @@
 	</div>	
 
 	<div class="header-right">
-		<div id="search"> 
-				<input type="text" placeholder="Search.." name ="search">
-		</div>
 		<div id="sign-in-up">
 			<?php 
 			session_start();
@@ -76,6 +73,9 @@
 			</div>
 		</li>
 -->		
+		<li >
+			<a href="./search.php" >Αναζήτηση</a>	
+		</li>
 		<li >
 			<a href="./communication_form.php" >Επικοινωνία</a>	
 		</li>
