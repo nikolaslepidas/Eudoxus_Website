@@ -130,7 +130,7 @@ body{
 /* This is the css for the login and the sign up modals */
 
 /* Full-width input fields */
-input[type=text], input[type=password], input[type=email], select{
+.container input[type=text], .container input[type=password], .container input[type=email], .container select{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;

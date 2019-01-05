@@ -4,7 +4,7 @@
 	</div>	
 
 	<div class="header-right">
-		<div id="search"> 
+		<div id="search" class="container"> 
 				<input type="text" placeholder="Search.." name ="search"	>
 		</div>
 		<div id="sign-in-up">
