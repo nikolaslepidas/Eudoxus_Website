@@ -29,7 +29,7 @@
 
 
 <div class="padding_needed_for_footer">
-<h2> Βασική Λειτουργία Διανομέα </h2>
+<h2> Λειτουργία Διανομέα </h2>
 
 <button class="accordion">Παράδοση Συγγραμμάτων </button>
 <div class="panel">

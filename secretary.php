@@ -30,7 +30,7 @@
 
 
 <div class="padding_needed_for_footer">
-<h2> Βασικές Λειτουργίες Γραμματείας </h2>
+<h2> Λειτουργίες Γραμματείας - Πληροφορίες </h2>
 
 <button class="accordion">Εισαγωγή Προγράμματος Σπουδών </button>
 <div class="panel">
