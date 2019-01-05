@@ -48,7 +48,7 @@
 		</li>	
 		
 		<li >
-			<a href="#" >Διανομέας</a>
+			<a href="bookStore.php" >Διανομέας</a>
 			<div class="dropdown-content drop-button">
 				<a href="#">Παράδοση συγγραμμάτων</a>
 				<a href="#">Οδηγίες</a>
@@ -57,7 +57,7 @@
 		</li>
 		
 		<li >
-			<a href="#" >Γραμματεία</a>
+			<a href="secretary.php" >Γραμματεία</a>
 			<div class="dropdown-content drop-button">
 				<a href="#">Εισαγωγή προγράμματος σπουδών</a>
 				<a href="#">Εισαγωγή προτεινόμενων συγγραμμάτων</a>

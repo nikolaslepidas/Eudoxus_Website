@@ -57,19 +57,19 @@ require_once './header.php';
 <main id="central-column">
 	<div class="container_grid">
 		<div class="box student">
-			<img src="./icons/student.png" alt="student" title="student">
+			<a href="student.php"> <img src="./icons/student.png" alt="student" title="student"> </a>
 			<p>Φοιτητής</p>
 		</div>
 		<div class="box publisher">
-			<img src="./icons/manager.png" alt="publisher" title="publisher">
+			<a href="publisher.php"> <img src="./icons/manager.png" alt="publisher" title="publisher"> </a>
 			<p>Εκδότης</p>
 		</div>
 		<div class="box distributor">
-			<img src="./icons/book.png" alt="distributor" title="distributor">
+			<a href="bookStore.php"> <img src="./icons/book.png" alt="distributor" title="distributor"> </a>
 			<p>Διανομέας</p>
 		</div>
 		<div class="box secretariat">
-			<img src="./icons/secretary.png" alt="secretariat" title="secretariat">
+			<a href="secretary.php"> <img src="./icons/secretary.png" alt="secretariat" title="secretariat"> </a>
 			<p>Γραμματεία</p>
 		</div>
 	</div>

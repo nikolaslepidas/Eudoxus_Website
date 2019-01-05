@@ -27,7 +27,7 @@
 			<li>Δήλωση συγγραμμάτων</li> 
 		</ul>
 	</div>
-<div id="testara">
+<div class="testara">
 <button class="accordion">1ο Εξάμηνο</button>
 <div class="panel">
 <form id="form1" class="bookForm"  >

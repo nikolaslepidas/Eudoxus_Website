@@ -86,7 +86,7 @@ div.box:hover {
 }
 
 div.student {
-  grid-area: a;
+  grid-area: a !important; 
 
 }
 
