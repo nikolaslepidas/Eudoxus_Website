@@ -21,7 +21,7 @@
 			<li><a href="#">Page2</a></li>
 			<li><a href="#">Page3</a></li>
 			-->
-			<li>Αναζήτηση</li> 
+			<li>Αναζήτηση Σημείων Διανομής</li> 
 		</ul>
 	</div>
 
@@ -31,7 +31,7 @@
         <tbody>
         <tr>
             <th>
-                Τίτλος:
+                Επωνυμία:
             </th>
             <td>
                 <input name="uname" type="text" id="unameid" style="width:88%;">
@@ -39,7 +39,7 @@
         </tr>
         <tr>
             <th>
-                Συγγραφέας:
+                Νομός:
             </th>
             <td>
                 <input name="uname" type="text" id="telid" style="width:88%;">
@@ -47,15 +47,7 @@
         </tr>
         <tr>
             <th>
-                Εκδόσεις:
-            </th>
-            <td>
-                <input name="uname" type="text" id="emailid" style="width:88%;">
-            </td>
-        </tr>
-        <tr>
-            <th>
-                ISBN:
+                Πόλη:
             </th>
             <td>
                 <input name="uname" type="text" id="emailid" style="width:88%;">

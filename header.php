@@ -74,7 +74,12 @@
 		</li>
 -->		
 		<li >
-			<a href="./search.php" >Αναζήτηση</a>	
+			<a href="./search_books.php" >Αναζήτηση</a>
+			<div class="dropdown-content drop-button">
+				<a href="search_books.php">Συγγραμμάτων</a>
+				<a href="search_bookStores.php">Σημείων Διανομής</a>
+				<a href="search_publishers.php">Εκδοτών</a>
+			</div>	
 		</li>
 		<li >
 			<a href="./communication_form.php" >Επικοινωνία</a>	
