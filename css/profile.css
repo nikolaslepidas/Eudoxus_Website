@@ -3,21 +3,54 @@ div.container_grid_profile {
     width: 100%;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto;
     grid-template-areas: 
       ". a .";
 }
   
-div.box {
-    background-color: rgb(223, 115, 65);
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-}
-  
 div.user_profile {
     grid-area: a;
-  
+    background-color: rgb(199,199,199,0.685);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.user_profile label {
+    font-weight: bold;
+    color: #000;
+    width: 100%;
+}
+
+div.user_profile img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+/* Full-width input fields */
+.container_grid_profile input[type=text], .container_grid_profile input[type=password], .container_grid_profile input[type=email], .container_grid_profile select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+div.user_profile button {
+    background-color: rgb(212, 96, 42);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
 }
 /* End of Grid for profile template */

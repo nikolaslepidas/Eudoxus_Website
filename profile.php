@@ -23,21 +23,35 @@
 	</div>
 
 	<div class="container_grid_profile">
-		<div class="box user">
-            <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png" alt="user" title="user"/>
-            
-            <div class="user_fields">
 
-                <label for="profile_email"><b>Νέο e-mail</b></label>
-                <input type="email" name="profile_email" placeholder="Εισαγωγή e-mail" id="profile_email">
+		<div class="user_profile">
+			<img src="./icons/student.png" alt="user" title="user"/>
+			
+			<div class="user_fields">
 
-                <label for="old_profile_password"><b>Παλιό συνθηματικό</b></label>
-                <input type="password" name="old_profile_password" placeholder="Εισαγωγή παλιού συνθηματικού" id="old_profile_password">
+				<label></label>
 
-                <label for="new_profile_password"><b>Νέο συνθηματικό</b></label>
-                <input type="password" name="new_profile_password" placeholder="Εισαγωγή νέου συνθηματικού" id="new_profile_password">
+			</div>
 
-            </div>
+<!---->
+			<form method="post">
+
+				<div class="user_fields">
+
+					<label for="profile_email"><b>Νέο e-mail</b></label>
+					<input type="email" name="profile_email" placeholder="Εισαγωγή e-mail" id="profile_email">
+
+					<label for="old_profile_password"><b>Παλιό συνθηματικό</b></label>
+					<input type="password" name="old_profile_password" placeholder="Εισαγωγή παλιού συνθηματικού" id="old_profile_password">
+
+					<label for="new_profile_password"><b>Νέο συνθηματικό</b></label>
+					<input type="password" name="new_profile_password" placeholder="Εισαγωγή νέου συνθηματικού" id="new_profile_password">
+
+				</div>
+				
+				<button type="submit" name="edit_profile">Αλλαγή</button>
+
+			</form>
 
 		</div>
 	</div>
