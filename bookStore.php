@@ -28,7 +28,7 @@
 	</div>
 
 
-<div class="testara">
+<div class="padding_needed_for_footer">
 <h2> Βασική Λειτουργία Διανομέα </h2>
 
 <button class="accordion">Παράδοση Συγγραμμάτων </button>

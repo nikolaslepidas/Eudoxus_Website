@@ -29,7 +29,7 @@
 
 
 
-<div class="testara">
+<div class="padding_needed_for_footer">
 <h2> Βασική Λειτουργία Εκδότη </h2>
 
 <button class="accordion">Διανομή Συγγραμμάτων </button>

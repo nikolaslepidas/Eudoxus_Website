@@ -1,5 +1,5 @@
 <!--	Footer	-->
-<div class="wrapper">
+<div class="wrapper-footer">
 	<div id="footer">
 		<div><a href="#" >Συχνές Ερωτήσεις</a></div>
 		<div><img src="icons/chat.png"  alt="Συχνές Ερωτήσεις"></div>

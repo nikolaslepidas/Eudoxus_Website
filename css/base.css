@@ -27,12 +27,17 @@ body{
 }
 /* End of Header */
 
-/* Footer */
 .wrapper{
   width: 100%;
   float: left;  
-  bottom: 0;
-  position:sticky;
+}
+
+/* Footer */
+.wrapper-footer{
+  width: 100%;
+  float: left;  
+  bottom: 0; 
+  position:fixed;
 }
 
 #footer{

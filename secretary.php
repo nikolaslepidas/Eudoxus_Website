@@ -29,7 +29,7 @@
 
 
 
-<div class="testara">
+<div class="padding_needed_for_footer">
 <h2> Βασικές Λειτουργίες Γραμματείας </h2>
 
 <button class="accordion">Εισαγωγή Προγράμματος Σπουδών </button>
