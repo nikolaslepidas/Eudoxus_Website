@@ -5,7 +5,7 @@
 
 	<div class="header-right">
 		<div id="search"> 
-				<input type="text" placeholder="Search.." name ="search"	>
+				<input type="text" placeholder="Search.." name ="search">
 		</div>
 		<div id="sign-in-up">
 			<?php 
