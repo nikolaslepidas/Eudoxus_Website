@@ -30,7 +30,9 @@ body{
 /* Footer */
 .wrapper{
   width: 100%;
-  float: left;
+  float: left;  
+  bottom: 0;
+  position:sticky;
 }
 
 #footer{
@@ -40,7 +42,7 @@ body{
 }
 #footer div{
   display: inline-block;
-  margin: 5% 0;
+  margin: 1% 0;
 }
 
 #footer div img {
