@@ -138,7 +138,7 @@ body{
 /* This is the css for the login and the sign up modals */
 
 /* Full-width input fields */
-input[type=text], input[type=password], input[type=email], select{
+ input[type=text], input[type=password], input[type=email]{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -146,8 +146,18 @@ input[type=text], input[type=password], input[type=email], select{
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
+ 
+.container select {
+  width: 100% !important;
+  height: auto !important;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+ }
 
 /* Set a style for all buttons */
+
 button {
   background-color: rgb(212, 96, 42);
   color: white;

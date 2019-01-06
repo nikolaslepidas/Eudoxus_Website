@@ -56,7 +56,7 @@
                 Ομάδα χρήστη:
             </th>
             <td>
-            <select>
+            <select required>
                 <option value="student">Φοιτητής</option>
                 <option value="publisher">Εκδότης</option>
                 <option value="distributor">Διανομέας</option>

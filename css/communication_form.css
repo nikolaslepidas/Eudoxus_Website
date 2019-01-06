@@ -17,6 +17,11 @@ div.container_com_form table tbody tr td button {
 }
 
 div.container_com_form table tbody tr td select {
-    width: 88%;
-    height: 30px;
+    width: 88% !important;
+    height: auto !important;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
+
