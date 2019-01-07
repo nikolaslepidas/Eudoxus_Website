@@ -36,7 +36,7 @@
 <div class="panel">
 <p> Ο υπεύθυνος του εκδοτικού οίκου ή ο αυτοεκδότης μπορεί μέσω του Εύδοξου να αντιστοιχίσει τα συγγράμματα σε σημεία διανομής. </p>
 </div>
-
+<br/>
 <div class="container_grid_publisher_options">
 
 	<div class="container_publisher">

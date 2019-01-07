@@ -57,7 +57,7 @@
 	<div class="panel">
 		<p> Ο φοιτητής μπορεί να έχει πρόσβαση σε σημειώσεις και βοηθήματα που αναρτώνται στον Εύδοξο και να αναρτήσει ο ίδιος δικές του σημειώσεις.  </p>
 	</div>
-
+<br/>
 	<div class="container_grid_student_options">
 
 		<div class="container_student">
