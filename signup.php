@@ -30,7 +30,7 @@ if (isset($_POST['register'])) {
 
                 $query = "insert into user (email,username,password,userGroup) values ('$register_email', '$username', '$password', '$userGroup')";
                 mysqli_query($connection, $query);
-                $query = "insert into student (email,university,department) values ('$register_email', '$university', '$department')";
+                $query = "insert into student (user_email,university,department) values ('$register_email', '$university', '$department')";
                 mysqli_query($connection, $query);
 
               } else {
@@ -69,7 +69,7 @@ if (isset($_POST['register'])) {
 
             $query = "insert into user (email,username,password,userGroup) values ('$register_email', '$username', '$password', '$userGroup')";
             mysqli_query($connection, $query);
-            $query = "insert into publisher (email,name,city,phone) values ('$register_email', '$name', '$city', '$phone')";
+            $query = "insert into publisher (user_email,brand_name,city,phone) values ('$register_email', '$name', '$city', '$phone')";
             mysqli_query($connection, $query);           
     
           //userGroup none
