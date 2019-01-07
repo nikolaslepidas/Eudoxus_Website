@@ -1,23 +1,23 @@
-#student_info{
+#publisher_info{
     float: left;
     padding: 0 auto;
 }
 
-div.container_grid_student_options {
+div.container_grid_publisher_options {
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 5px;
 }
   
-div.container_student {
+div.container_publisher {
     background-color: rgb(212, 96, 42);
     color: white;
     border-radius: 5px;
     padding: 10px;
 }
 
-div.container_grid_student_options img {
+div.container_grid_publisher_options img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -25,11 +25,11 @@ div.container_grid_student_options img {
     width: 25%;
 }
 
-div.container_grid_student_options span {
+div.container_grid_publisher_options span {
     font-size: 1.1em;
 }
 
-div.container_student:hover {
+div.container_publisher:hover {
     background-color: rgba(212, 96, 42, 0.966);
     color: white;
     border-radius: 5px;

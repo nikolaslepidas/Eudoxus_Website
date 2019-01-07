@@ -60,22 +60,32 @@
 
 	<div class="container_grid_student_options">
 
-	<div class="container_student student_dhlwsi">
-		<a href="./bookOrder1.php"><img src="./icons/dhlwsi.png" alt="Δήλωση συγγραμμάτων" title="Δήλωση συγγραμμάτων"></a>
-		<span>Θέλω να πάρω συγγράμματα μέσω νέας δήλωσης!</span>
-	</div>
+		<div class="container_student">
+			<a href="./bookOrder1.php"><img src="./icons/dhlwsi.png" alt="Δήλωση συγγραμμάτων" title="Δήλωση συγγραμμάτων"></a>
+			<span>Θέλω να πάρω συγγράμματα μέσω νέας δήλωσης!</span>
+		</div>
 
-	<div class="container_student student_antallagi">
-	<a href="#"><img src="./icons/exchange_book.png" alt="Ανταλλαγή συγγραμμάτων" title="Ανταλλαγή συγγραμμάτων"></a>
-		<span>Θέλω να πάρω συγγράμματα μέσω ανταλλαγής!</span>
-	</div>
+		<div class="container_student">
+		<a href="#"><img src="./icons/exchange_book.png" alt="Ανταλλαγή συγγραμμάτων" title="Ανταλλαγή συγγραμμάτων"></a>
+			<span>Θέλω να πάρω συγγράμματα μέσω ανταλλαγής!</span>
+		</div>
 
-	<div class="container_student student_dwrean_syggrammata">
-	<a href="#"><img src="./icons/product.png" alt="Διάθεση σημειώσεων/βοηθημάτων" title="Διάθεση σημειώσεων/βοηθημάτων"></a>
-		<span>Θέλω να διαθέσω δωρεάν σημειώσεις/βοηθήματα!</span>
-	</div>
+		<div class="container_student">
+		<a href="#"><img src="./icons/product.png" alt="Διάθεση σημειώσεων/βοηθημάτων" title="Διάθεση σημειώσεων/βοηθημάτων"></a>
+			<span>Θέλω να διαθέσω δωρεάν σημειώσεις/βοηθήματα!</span>
+		</div>
 
-</div>
+		<div class="container_student">
+		<a href="#"><img src="./icons/instructions.png" alt="Οδηγίες" title="Οδηγίες"></a>
+			<span>Θέλω να μάθω πώς μπορώ να δηλώσω συγγράμματα και όχι μόνο!</span>
+		</div>
+
+		<div class="container_student">
+		<a href="#"><img src="./icons/question_mark.png" alt="Συχνές ερωτήσεις" title="Συχνές ερωτήσεις"></a>
+			<span>Θέλω να ρωτήσω πως μπορώ να ανταλλάξω συγγράμματα!</span>
+		</div>
+
+	</div>
 
 </div>
 
