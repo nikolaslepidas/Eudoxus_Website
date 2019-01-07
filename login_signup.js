@@ -29,6 +29,7 @@
         university.value = "none";
         univ.style.display = "none";
         depart.style.display = "none";
+        publisher_fields.style.display = "none";
       } else if (userGroup.value == "student") {
         univ.style.display = "block";
         document.getElementById('name').required = false;
@@ -41,6 +42,7 @@
         univ.style.display = "none";
         depart.style.display = "none";
       } else {
+        publisher_fields.style.display = "none";
         university.value = "none";
         univ.style.display = "none";
         depart.style.display = "none";
