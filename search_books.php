@@ -46,7 +46,6 @@ if (isset($_POST['book_search'])){
         }
     }
 
-    
     if (isset($_POST['book_publisher'])){
         $book_publisher = $_POST['book_publisher'];
         if (empty($book_publisher)){
@@ -61,19 +60,24 @@ if (isset($_POST['book_search'])){
         }
     }
 
-    $query = "select * from book where title like '$book_title' and isbn like '$book_isbn' 
-    and writer like '$book_writer' and publisher like '$book_publisher';";
+    if (!((strcmp($book_title,"%") == 0) && (strcmp($book_isbn,"%") == 0) && (strcmp($book_publisher,"%") == 0) && (strcmp($book_writer,"%") == 0))){
 
-    echo $query;
-    $result=mysqli_query($connection,$query);
-    //echo var_dump($result);
-    mysqli_data_seek($result, 0);
-    $row = mysqli_fetch_assoc($result);
-    echo $row['title'];
-    echo $row['isbn'];
-    echo $row['publisher'];
-    echo $row['writer'];
-
+        $query = "select * from book where title like '$book_title' and isbn like '$book_isbn' 
+        and writer like '$book_writer' and publisher like '$book_publisher';";
+    
+        echo $query;
+        $result=mysqli_query($connection,$query);
+        //echo var_dump($result);
+        mysqli_data_seek($result, 0);
+    
+        for($i=0;$i<mysqli_num_rows($result);$i++){
+            $row = mysqli_fetch_assoc($result);
+            echo $row['title'];
+            echo $row['isbn'];
+            echo $row['publisher'];
+            echo $row['writer'];
+        }
+    }
 }
 
 ?>
