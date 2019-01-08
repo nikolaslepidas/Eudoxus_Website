@@ -15,30 +15,14 @@ div.user_profile {
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 700px;
-}
-
-div.user_fields_for_edit {
-    width: 100%;
 }
 
 div.user_fields label {
     font-weight: bold;
-    margin: 10%;
+    padding: 10px;
     color: #000;
-    width: 100%;
-}
-
-div.user_fields_for_edit label {
-    font-weight: bold;
-    float: left;
-    color: #000;
-    width: 100%;
-}
-
-div.user_profile span {
-    float: right;
-    margin-right: 10%;
+    width: auto;
+    height: auto;
 }
 
 div.user_profile img {
