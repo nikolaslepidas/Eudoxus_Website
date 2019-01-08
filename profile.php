@@ -56,7 +56,7 @@
 				<img src='./icons/secretary.png' alt='user' title='user' style='display: block;' id='secretary_img_profile'/>
 				";
 			}
-		?>
+			?>
 			<div class="user_fields">
 
 			<table>
@@ -67,7 +67,7 @@
 					<label for="new_username">Όνομα χρήστη:</label>
 				</td>
 				<td>
-					<?php
+					<?php	
 					if (isset($_POST['edit_username'])) {		// an patithei to epeksergasia
 						echo "
 						<input name='new_username' placeholder='$row[username]'/>
@@ -77,6 +77,25 @@
 						</td>
 						";
 					} else {
+						if (isset($_POST['change_username'])) {		// an patithei to allagi
+							$new_username = $_POST['new_username'];
+							if (strcmp($new_username,"")){
+								$query0 = "SET SQL_SAFE_UPDATES = 0;";
+								mysqli_query($connection, $query0);
+								$query = "
+								UPDATE user SET username = '$new_username' where email = '$row[email]';
+								";
+								mysqli_query($connection, $query);
+								$query2 = "select * from user where email = '$row[email]';";
+								$result_edit_username = mysqli_query($connection, $query2);
+								mysqli_data_seek($result_edit_username,0);
+								$row = mysqli_fetch_assoc($result_edit_username);	
+							}
+							else{
+								$error = "Not valid user name";
+								echo $error;	
+							}
+						}
 						echo "
 						<p name='profile_username' id='profile_username'>$row[username]</p>
 						</td>
@@ -84,14 +103,6 @@
 							<button type='submit' name='edit_username' id='edit_username'>Επεξεργασία</button>
 						</td>
 						";
-					}
-					if (isset($_POST['change_username'])) {		// an patithei to allagi
-						$new_username = $_POST['new_username'];
-						$query = "
-						SET SQL_SAFE_UPDATES = 0;
-						UPDATE user SET username = '$new_username' where email = '$row[email]';
-						";
-						$result_edit_username = mysqli_query($connection, $query);
 					}
 					?>
 				</tr>
