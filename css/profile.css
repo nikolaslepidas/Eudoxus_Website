@@ -49,4 +49,8 @@ div.user_profile img {
     width: 25%;
 }
 
+.padding_needed_for_footer_edit_profile{
+    padding: 0 0 15% 0;
+}
+
 /* End of Grid for profile template */
