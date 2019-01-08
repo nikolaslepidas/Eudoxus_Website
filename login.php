@@ -7,6 +7,8 @@ if (isset($_POST['login'])) {
     $login_email=$_POST['login_email'];
     $password=$_POST['password'];
 
+    $_SESSION['user_email'] = $login_email;
+
     //echo $email;
     //echo $password;
 
