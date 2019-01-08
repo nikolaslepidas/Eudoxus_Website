@@ -1,6 +1,7 @@
 div.present_book {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto ;
+    grid-gap: 10px;
     justify-items: center;    /* centralize tables */
 }
 
@@ -9,7 +10,7 @@ div.book {
     border-radius: 5%;
     text-align: center;
     padding: 10px;
-    border: 3px solid rgb(212, 96, 42);
+    /*border: 3px solid rgb(212, 96, 42);*/ 
     box-shadow: 3px 6px 12px #888888;
 }
 
@@ -27,4 +28,8 @@ div.rows_of_results p {
     font-size: 1.0em;
     font-weight: bold;
     text-align: center;
+}
+
+div.book td{
+    width: 300px !important;
 }

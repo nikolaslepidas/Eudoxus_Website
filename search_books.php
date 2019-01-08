@@ -120,7 +120,16 @@ if (isset($_POST['book_search'])){
         //echo var_dump($result);
         mysqli_data_seek($result, 0);
         
-        $count = 0;
+        $count = mysqli_num_rows($result);
+
+        echo "</div>
+        <div class='rows_of_results'>
+        
+        <p>Αριθμός αποτελεσμάτων: $count</p>
+        <hr>
+        </div>
+        </div>
+        ";
 
         echo "<div class='padding_needed_for_footer'>
         <div class='present_book'>";
@@ -159,20 +168,10 @@ if (isset($_POST['book_search'])){
             </table>
 
             </div>
-            
             ";
-    
-            $count += 1;
         }
 
-        echo "</div>
-        <div class='rows_of_results'>
-        
-        <p>Αριθμός αποτελεσμάτων: $count</p>
 
-        </div>
-        </div>
-        ";
     }
 }
 
