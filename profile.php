@@ -80,14 +80,11 @@
 						if (isset($_POST['change_username'])) {		// an patithei to allagi
 							$new_username = $_POST['new_username'];
 							if (strcmp($new_username,"")){
-								$query0 = "SET SQL_SAFE_UPDATES = 0;";
-								mysqli_query($connection, $query0);
-								$query = "
-								UPDATE user SET username = '$new_username' where email = '$row[email]';
-								";
-								mysqli_query($connection, $query);
-								$query2 = "select * from user where email = '$row[email]';";
-								$result_edit_username = mysqli_query($connection, $query2);
+								//$query0 = "SET SQL_SAFE_UPDATES = 0;";
+								$query_update_username = " update user set username = '$new_username' where email = '$row[email]'; ";
+								mysqli_query($connection, $query_update_username);
+								$query_get_all_data = "select * from user where email = '$row[email]';";
+								$result_edit_username = mysqli_query($connection, $query_get_all_data);
 								mysqli_data_seek($result_edit_username,0);
 								$row = mysqli_fetch_assoc($result_edit_username);	
 								$_SESSION['logged_user'] = $new_username;
@@ -114,15 +111,67 @@
 					<label for="profile_email">E-mail:</label>
 				</td>
 				<td>
-					<?php
+				<?php	
+					if (isset($_POST['edit_email'])) {		// an patithei to epeksergasia
+						echo "
+						<input name='new_email_from_input' placeholder='$row[email]'/>
+						</td>
+						<td>
+							<button type='submit' name='change_email' id='change_email'>Αλλαγή</button>
+						</td>
+						";
+					} else {
+						if (isset($_POST['change_email'])) {
+							$new_email = $_POST['new_email_from_input'];
+							if (strcmp($new_email,"")){
+								$query_for_unique_email	= "select * from user where email = '$new_email';" ;
+								$results_for_unique_email = mysqli_query($connection, $query_for_unique_email);
+								mysqli_data_seek($results_for_unique_email, 0);
+								if (mysqli_num_rows($results_for_unique_email) == 0){
+
+									if (!strcmp($row['userGroup'],"student")){
+										mysqli_query($connection, "SET FOREIGN_KEY_CHECKS=0;");
+										$query_update_user_email = " update student set user_email = '$new_email' where user_email = '$row[email]'; ";
+										mysqli_query($connection, $query_update_user_email);
+										$query_update_email = "update user set email = '$new_email' where email = '$row[email]';";
+										$result_edit_email = mysqli_query($connection, $query_update_email);
+										mysqli_query($connection, "SET FOREIGN_KEY_CHECKS=1;");
+
+									}elseif (!strcmp($row['userGroup'],"publisher")){
+										mysqli_query($connection, "SET FOREIGN_KEY_CHECKS=0;");
+										$query_update_user_email = " update publisher set user_email = '$new_email' where user_email = '$row[email]'; ";
+										mysqli_query($connection, $query_update_user_email);
+										$query_update_email = "update user set email = '$new_email' where email = '$row[email]';";
+										$result_edit_email = mysqli_query($connection, $query_update_email);
+										mysqli_query($connection, "SET FOREIGN_KEY_CHECKS=1;");
+									}
+
+									$query_get_all_data= "select * from user where email='$new_email'";
+									$new_result = mysqli_query($connection, $query_get_all_data);
+									mysqli_data_seek($new_result,0);
+									$row = mysqli_fetch_assoc($new_result);	
+									$_SESSION['user_email'] = $new_email;
+
+								}else{
+									$error = "The email address you gave was already in our fucking database bitch. GIVE A NEW ONE";
+									echo $error;
+								}
+								
+							}
+							else{
+								$error = "The email address you gave was empty, please give a non empty email address";
+								echo $error;	
+							}
+						}
 						echo "
 						<p name='profile_email' id='profile_email'>$row[email]</p>
+						</td>
+						<td>
+							<button type='submit' name='edit_email' id='edit_email'>Επεξεργασία</button>
+						</td>
 						";
+					}
 					?>
-				</td>
-				<td>
-					<button type="submit" name="edit_email">Επεξεργασία</button>
-				</td>
 				</tr>
 
 				<tr>
