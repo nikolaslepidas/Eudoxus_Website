@@ -90,6 +90,8 @@
 								$result_edit_username = mysqli_query($connection, $query2);
 								mysqli_data_seek($result_edit_username,0);
 								$row = mysqli_fetch_assoc($result_edit_username);	
+								$_SESSION['logged_user'] = $new_username;
+								header("Refresh:0");
 							}
 							else{
 								$error = "Not valid user name";
