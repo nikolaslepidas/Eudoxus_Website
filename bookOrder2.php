@@ -65,12 +65,12 @@
                 echo "
                 <button class='accordion'>$checked_courses[$j]</button>
                 <div class='panel'>
-                <form id='form1' class='bookForm' action='bookOrder2.php' method='post' >
+                <form id='form1' class='bookForm' action='bookOrder3.php' method='post' >
                 ";
                 for($i=0;$i<$count;$i++){
-                    $row = mysqli_fetch_row($books_for_course);
+                    $row = mysqli_fetch_assoc($books_for_course);
                     echo "
-                        <input type='radio' name='grammiki_algebra' value='ΓΡΑΜΜΙΚΗ ΑΛΓΕΒΡΑ' >$row[1]<br>
+                        <input type='radio' name='$row[greeklishTitle]' value='$row[bookTitle]' >$row[bookTitle]<br>
                     ";
                 }
                 echo "
@@ -85,11 +85,7 @@
             <form class='button' action='bookOrder1.php' method='get'>
             <button class='next-previous-buttons' > Προηγούμενο</button>
             </form>
-                <!--
-                    <form class='button' action='#' method='get'>
-                    <button class='next-previous-buttons' type='submit' > Επόμενο</button>
-                    </form>-->
-                    <button id='button-next1' class='next-previous-buttons' form='form1' value='submit'> Επόμενο</button>
+                    <button id='button-next1' class='next-previous-buttons' form='form1' value='submit'> Οριστικοποίηση</button>
                     </div> <!-- end of testara-->
             ";
 

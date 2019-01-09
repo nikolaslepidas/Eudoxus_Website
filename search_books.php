@@ -150,7 +150,7 @@ if (isset($_POST['book_search'])){
                 <tbody>
                     <tr>
                         <td><p>Τίτλος:</p></td>
-                        <td>$row[title]</td>
+                        <td>$row[bookTitle]</td>
                     </tr>
                     <tr>
                         <td><p>ISBN:</p></td>
