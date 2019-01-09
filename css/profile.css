@@ -7,7 +7,7 @@ div.container_grid_profile {
       ". a .";
     padding: 0 0 10% 0;
 }
-  
+
 div.user_profile {
     grid-area: a;
     background-color: rgb(199,199,199,0.685);
@@ -17,9 +17,6 @@ div.user_profile {
     margin-left: auto;
     margin-right: auto;
 }
-
-
-
 
 div.user_fields label {
     font-weight: bold;
@@ -36,5 +33,4 @@ div.user_profile img {
     margin-bottom: 10%;
     width: 25%;
 }
-
 /* End of Grid for profile template */

@@ -28,6 +28,7 @@
 		<?php
 			// Connect to the database
 			require_once 'mysql_connector.php';
+			$error = "";
 
 			// SQL query to fetch information of registerd users and finds user match.
 			$query = "select * from user where email='$_SESSION[user_email]'";
@@ -93,8 +94,7 @@
 								header("Refresh:0");
 							}
 							else{
-								$error = "Not valid user name";
-								echo $error;	
+								$error = "Μη αποδεκτό όνομα χρήστη.";	
 							}
 						}
 						echo "
@@ -156,14 +156,12 @@
 									$_SESSION['user_email'] = $new_email;
 
 								}else{
-									$error = "The email address you gave was already in our fucking database bitch. GIVE A NEW ONE";
-									echo $error;
+									$error = "Το email χρησιμοποιείται ήδη.";
 								}
 								
 							}
 							else{
-								$error = "The email address you gave was empty, please give a non empty email address";
-								echo $error;	
+								$error = "Μη αποδεκτό email.";	
 							}
 						}
 						echo "
@@ -209,9 +207,8 @@
 							if (strcmp($new_password,"") || strcmp($old_password,"")) {
 								$query_update_user_password = "update user set password = '$new_password' where email = '$row[email]' && password = '$old_password';";
 								$result_edit_password = mysqli_query($connection, $query_update_user_password);
-								if ($result_edit_password === false) {		// not working properly
-									$error = "Something went wrong!";
-									echo $error;
+								if (mysqli_affected_rows($connection) == 0) {	// h update epityxganei. opote prepei na elegksw apla poses eggrafes ephreazotai apo to update gia na vrw an o palios kwdikos einai lanthasmenos
+									$error = "Έλεξγε τον τωρινό κωδικό που πληκτρολόγησες.";
 								} else {
 									$query_get_all_data= "select * from user where email='$row[email]'";
 									$new_result = mysqli_query($connection, $query_get_all_data);
@@ -220,8 +217,7 @@
 								}
 							}
 							else{
-								$error = "Not valid password";
-								echo $error;	
+								$error = "Μη αποδεκτός κωδικός.";	
 							}
 						}
 						echo "
@@ -300,8 +296,7 @@
 							</td>
 							<td></td>
 							</tr>
-							</div>
-							";
+							</div>";
 						}
 					} else if ($userGroup == 'Εκδότης') {
 						$query = "select * from publisher where user_email = '$_SESSION[user_email]';";
@@ -336,8 +331,7 @@
 									$result_edit_brand_name = mysqli_query($connection, $query_update_brand_name);
 
 									if ($result_edit_brand_name === false) {		// not working properly
-										$error = "Something went wrong!";
-										echo $error;
+										$error = "Ουπς! Κάτι πήγε λάθος με τη βάση δεδομένων!";
 									} else {	
 										// Get all changes
 										$query_get_all_data= "select * from publisher where user_email = '$row[user_email]';";
@@ -347,8 +341,7 @@
 									}
 								}
 								else{
-									$error = "Not valid brand_name";
-									echo $error;	
+									$error = "Μη αποδεκτό όνομα εκδοτικού οίκου.";	
 								}
 							}
 							echo "
@@ -385,9 +378,8 @@
 									$query_update_city = "update publisher set city = '$new_city' where user_email = '$row[user_email]';";
 									$result_edit_city = mysqli_query($connection, $query_update_city);
 
-									if ($result_edit_city === false) {		// not working properly
-										$error = "Something went wrong!";
-										echo $error;
+									if ($result_edit_city === false) {
+										$error = "Ουπς! Κάτι πήγε λάθος με τη βάση δεδομένων!";
 									} else {	
 										// Get all changes
 										$query_get_all_data= "select * from publisher where user_email = '$row[user_email]';";
@@ -397,8 +389,7 @@
 									}
 								}
 								else{
-									$error = "Not valid city";
-									echo $error;	
+									$error = "Μη αποδεκτό όνομα πόλης.";
 								}
 							}
 							echo "
@@ -435,9 +426,8 @@
 									$query_update_phone = "update publisher set phone = '$new_phone' where user_email = '$row[user_email]';";
 									$result_edit_phone = mysqli_query($connection, $query_update_phone);
 
-									if ($result_edit_phone === false) {		// not working properly
-										$error = "Something went wrong!";
-										echo $error;
+									if ($result_edit_phone === false) {
+										$error = "Ουπς! Κάτι πήγε λάθος με τη βάση δεδομένων!";
 									} else {	
 										// Get all changes
 										$query_get_all_data= "select * from publisher where user_email = '$row[user_email]';";
@@ -446,9 +436,8 @@
 										$row = mysqli_fetch_assoc($new_result);	
 									}
 								}
-								else{
-									$error = "Not valid phone";
-									echo $error;	
+								else {
+									$error = "Μη αποδεκτός αριθμός τηλεφώνου.";
 								}
 							}
 							echo "
@@ -468,10 +457,12 @@
 
 			</table>
 
-			</div>
+			<?php
+			if ($error != "") {
+				echo "<label id='edit_problem' style='color:red; font-size: 0.9em;'>$error</label>";
+			}
+			?>
 
-			<div class="edit_profile_button" style="display: none;">
-				<a href="./edit_profile.php"><button type="button">Επεξεργασία</button></a>
 			</div>
 
 		</div>
