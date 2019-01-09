@@ -26,6 +26,10 @@ div.user_fields label {
     height: auto;
 }
 
+div.user_fields input {
+    padding: 10px;
+}
+
 div.user_profile img {
     display: block;
     margin-left: auto;
