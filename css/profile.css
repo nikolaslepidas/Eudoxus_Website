@@ -5,6 +5,7 @@ div.container_grid_profile {
     grid-template-columns: auto;
     grid-template-areas: 
       ". a .";
+    padding: 0 0 10% 0;
 }
   
 div.user_profile {
@@ -16,6 +17,9 @@ div.user_profile {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+
 
 div.user_fields label {
     font-weight: bold;

@@ -209,7 +209,6 @@
 							if (strcmp($new_password,"") || strcmp($old_password,"")) {
 								$query_update_user_password = "update user set password = '$new_password' where email = '$row[email]' && password = '$old_password';";
 								$result_edit_password = mysqli_query($connection, $query_update_user_password);
-								echo var_dump($result_edit_password);		// this line is for debugging
 								if ($result_edit_password === false) {		// not working properly
 									$error = "Something went wrong!";
 									echo $error;
@@ -336,11 +335,16 @@
 									$query_update_brand_name = "update publisher set brand_name = '$new_brand_name' where user_email = '$row[user_email]';";
 									$result_edit_brand_name = mysqli_query($connection, $query_update_brand_name);
 
-									// Get all changes
-									$query_get_all_data= "select * from publisher where user_email = '$row[user_email]';";
-									$new_result = mysqli_query($connection, $query_get_all_data);
-									mysqli_data_seek($new_result,0);
-									$row = mysqli_fetch_assoc($new_result);	
+									if ($result_edit_brand_name === false) {		// not working properly
+										$error = "Something went wrong!";
+										echo $error;
+									} else {	
+										// Get all changes
+										$query_get_all_data= "select * from publisher where user_email = '$row[user_email]';";
+										$new_result = mysqli_query($connection, $query_get_all_data);
+										mysqli_data_seek($new_result,0);
+										$row = mysqli_fetch_assoc($new_result);	
+									}
 								}
 								else{
 									$error = "Not valid brand_name";
@@ -381,11 +385,16 @@
 									$query_update_city = "update publisher set city = '$new_city' where user_email = '$row[user_email]';";
 									$result_edit_city = mysqli_query($connection, $query_update_city);
 
-									// Get all changes
-									$query_get_all_data= "select * from publisher where user_email = '$row[user_email]';";
-									$new_result = mysqli_query($connection, $query_get_all_data);
-									mysqli_data_seek($new_result,0);
-									$row = mysqli_fetch_assoc($new_result);	
+									if ($result_edit_city === false) {		// not working properly
+										$error = "Something went wrong!";
+										echo $error;
+									} else {	
+										// Get all changes
+										$query_get_all_data= "select * from publisher where user_email = '$row[user_email]';";
+										$new_result = mysqli_query($connection, $query_get_all_data);
+										mysqli_data_seek($new_result,0);
+										$row = mysqli_fetch_assoc($new_result);	
+									}
 								}
 								else{
 									$error = "Not valid city";
@@ -426,11 +435,16 @@
 									$query_update_phone = "update publisher set phone = '$new_phone' where user_email = '$row[user_email]';";
 									$result_edit_phone = mysqli_query($connection, $query_update_phone);
 
-									// Get all changes
-									$query_get_all_data= "select * from publisher where user_email = '$row[user_email]';";
-									$new_result = mysqli_query($connection, $query_get_all_data);
-									mysqli_data_seek($new_result,0);
-									$row = mysqli_fetch_assoc($new_result);	
+									if ($result_edit_phone === false) {		// not working properly
+										$error = "Something went wrong!";
+										echo $error;
+									} else {	
+										// Get all changes
+										$query_get_all_data= "select * from publisher where user_email = '$row[user_email]';";
+										$new_result = mysqli_query($connection, $query_get_all_data);
+										mysqli_data_seek($new_result,0);
+										$row = mysqli_fetch_assoc($new_result);	
+									}
 								}
 								else{
 									$error = "Not valid phone";
