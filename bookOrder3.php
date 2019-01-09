@@ -62,7 +62,7 @@
                 echo "
                 <button class='accordion'>$checked_books[$j]</button>
                 <div class='panel'>
-                <form id='form1' class='bookForm' action='bookOrder3.php' method='post' >
+                <div class='bookForm' >
                         <table>
                             <tbody>
                                 <tr>
@@ -116,7 +116,7 @@
                                 
                             </tbody>
                         </table>
-                    </form>
+                    </div>
                     </div>
                     
                 ";
@@ -124,16 +124,19 @@
 
         }
             echo "
-            <form class='button' action='bookOrder1.php' method='get'>
-            <button class='next-previous-buttons' > Προηγούμενο</button>
+            <form class='button' action='myBooks.php' method='get'>
+            <button class='next-previous-buttons' > Δηλωθέντα συγγράμματα </button>
             </form>
-                    <button id='button-next1' class='next-previous-buttons' form='form1' value='submit'> Οριστικοποίηση</button>
+                    <button id='button-next1' class='next-previous-buttons'> Εκτύπωση </button>
                     </div> <!-- end of testara-->
+               
             ";
 
     }else{
+        /*
         echo "no post request got here";
         echo var_dump($_POST);
+        */
     }
 ?>
 

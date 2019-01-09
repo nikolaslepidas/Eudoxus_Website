@@ -52,6 +52,10 @@
             //echo "select * from course where title='$checked_courses[$j]';";
             mysqli_data_seek($course_info_from_db,0);
             $row = mysqli_fetch_assoc($course_info_from_db);
+
+            //now we have to match this course with the student
+            $insertion=mysqli_query($connection,"insert into student_has_course values ('$_SESSION[user_email]',$row[idcourse]);");
+            echo var_dump($insertion);
             $query="select * from book, course_has_book, course where isbn=book_isbn and course_idcourse=idcourse and idcourse=$row[idcourse];";
             //echo $query;
             $books_for_course=mysqli_query($connection,$query);
@@ -83,7 +87,7 @@
         }
             echo "
             <form class='button' action='bookOrder1.php' method='get'>
-            <button class='next-previous-buttons' > Προηγούμενο</button>
+            <button class='next-previous-buttons' > Ακύρωση</button>
             </form>
                     <button id='button-next1' class='next-previous-buttons' form='form1' value='submit'> Οριστικοποίηση</button>
                     </div> <!-- end of testara-->

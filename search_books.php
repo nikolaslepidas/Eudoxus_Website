@@ -112,7 +112,7 @@ if (isset($_POST['book_search'])){
 
     if (!((strcmp($book_title,"%") == 0) && (strcmp($book_isbn,"%") == 0) && (strcmp($book_publisher,"%") == 0) && (strcmp($book_writer,"%") == 0))){
 
-        $query = "select * from book where title like '$book_title' and isbn like '$book_isbn' 
+        $query = "select * from book where bookTitle like '$book_title' and isbn like '$book_isbn' 
         and writer like '$book_writer' and publisher like '$book_publisher';";
     
         //echo $query;
