@@ -48,8 +48,8 @@
             //echo "~";
             require_once './mysql_connector.php';
             
-            $book_info_from_db=mysqli_query($connection,"select * from book where greeklishTitle='$checked_books[$j]';");
-            //echo "select * from book where greeklishTitle='$checked_books[$j]';";
+            $book_info_from_db=mysqli_query($connection,"select * from book where bookTitle='$checked_books[$j]';");
+            //echo "select * from book where bookTitle='$checked_books[$j]';";
             mysqli_data_seek($book_info_from_db,0);
             $row = mysqli_fetch_assoc($book_info_from_db);
             $query="select * from book, bookstore, bookstore_has_book where bookstore_idbookstore=idbookstore and isbn=book_isbn  and isbn=$row[isbn];";
@@ -58,70 +58,64 @@
             mysqli_data_seek($bookstore_for_books,0);
             //echo $checked_books_length;
             //echo var_dump($bookstore_for_books);
-            //$row = mysqli_fetch_assoc($bookstore_for_books);
+            $row = mysqli_fetch_assoc($bookstore_for_books);
                 echo "
                 <button class='accordion'>$checked_books[$j]</button>
                 <div class='panel'>
                 <form id='form1' class='bookForm' action='bookOrder3.php' method='post' >
-                ";
-                    //$row = mysqli_fetch_assoc($bookstore_for_books);
-                    echo "
                         <table>
                             <tbody>
                                 <tr>
                                     <td>
-                                    
+                                        <p> Όνομα: </p>
                                     </td>
 
                                     <td>
-                                    
+                                        <p> $row[name] </p>
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>
-                                    
+                                        <p> Νομός: </p>
                                     </td>
 
                                     <td>
-                                    
+                                        <p> $row[county] </p>
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>
-                                    
+                                        <p> Πόλη: </p>
                                     </td>
 
                                     <td>
-                                    
+                                        <p> $row[city] </p>
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>
-                                    
+                                        <p> Διεύθυνση: </p>
                                     </td>
 
-                                    <td>
-                                    
+                                    <td> 
+                                        <p> $row[address] </p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                    
+                                        <p> Τηλέφωνο: </p>
                                     </td>
 
                                     <td>
-                                    
+                                        <p> $row[phone] </p>
                                     </td>
                                 </tr>
                                 
                             </tbody>
                         </table>
-                    ";
-
-                echo "
                     </form>
                     </div>
                     
