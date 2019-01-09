@@ -27,13 +27,12 @@
 <div class="padding_needed_for_footer">
 <button class="accordion">1ο Εξάμηνο</button>
 <div class="panel">
-<form id="form1" class="bookForm"  >
-    <input type="checkbox" name="Grammiki_Algebra" value="ΓΡΑΜΜΙΚΗ ΑΛΓΕΒΡΑ" checked> ΓΡΑΜΜΙΚΗ ΑΛΓΕΒΡΑ<br>
-    <input type="checkbox" name="Diakrita_Mathimatika" value="ΔΙΑΚΡΙΤΑ ΜΑΘΗΜΑΤΙΚΑ" > ΔΙΑΚΡΙΤΑ ΜΑΘΗΜΑΤΙΚΑ<br>
-    <input type="checkbox" name="vehicle3" value="ΕΙΣΑΓΩΓΗ ΣΤΗΝ ΠΛΗΡΟΦΟΡΙΚΗ ΚΑΙ ΣΤΙΣ ΤΗΛΕΠΙΚΟΙΝΩΝΙΕΣ">  ΕΙΣΑΓΩΓΗ ΣΤΗΝ ΠΛΗΡΟΦΟΡΙΚΗ ΚΑΙ ΣΤΙΣ ΤΗΛΕΠΙΚΟΙΝΩΝΙΕΣ <br>
-    <input type="checkbox" name="vehicle1" value="ΕΙΣΑΓΩΓΗ ΣΤΟΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟ"> ΕΙΣΑΓΩΓΗ ΣΤΟΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟ<br>
-    <input type="checkbox" name="Logiki_Sxediasi" value="ΛΟΓΙΚΗ ΣΧΕΔΙΑΣΗ" > ΛΟΓΙΚΗ ΣΧΕΔΙΑΣΗ<br>
-    <input type="checkbox" name="vehicle3" value="ΕΡΓΑΣΤΗΡΙΟ ΛΟΓΙΚΗΣ ΣΧΕΔΙΑΣΗΣ"> ΕΡΓΑΣΤΗΡΙΟ ΛΟΓΙΚΗΣ ΣΧΕΔΙΑΣΗΣ<br>
+<form id="form1" class="bookForm" action="bookOrder2.php" method="post" >
+    <input type="checkbox" name="grammiki_algebra" value="ΓΡΑΜΜΙΚΗ ΑΛΓΕΒΡΑ" checked> ΓΡΑΜΜΙΚΗ ΑΛΓΕΒΡΑ<br>
+    <input type="checkbox" name="diakrita_mathimatika" value="ΔΙΑΚΡΙΤΑ ΜΑΘΗΜΑΤΙΚΑ" > ΔΙΑΚΡΙΤΑ ΜΑΘΗΜΑΤΙΚΑ<br>
+    <input type="checkbox" name="eisagogi_stin_pliroforiki_kai_stis_tilepikoinonies" value="ΕΙΣΑΓΩΓΗ ΣΤΗΝ ΠΛΗΡΟΦΟΡΙΚΗ ΚΑΙ ΣΤΙΣ ΤΗΛΕΠΙΚΟΙΝΩΝΙΕΣ">  ΕΙΣΑΓΩΓΗ ΣΤΗΝ ΠΛΗΡΟΦΟΡΙΚΗ ΚΑΙ ΣΤΙΣ ΤΗΛΕΠΙΚΟΙΝΩΝΙΕΣ <br>
+    <input type="checkbox" name="eisagogi_ston_programmatismo" value="ΕΙΣΑΓΩΓΗ ΣΤΟΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟ"> ΕΙΣΑΓΩΓΗ ΣΤΟΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟ<br>
+    <input type="checkbox" name="logiki_sxediasi" value="ΛΟΓΙΚΗ ΣΧΕΔΙΑΣΗ" > ΛΟΓΙΚΗ ΣΧΕΔΙΑΣΗ<br>
 </form>
 </div>
 
@@ -93,7 +92,7 @@
 <form class="button" action="bookOrder2.php" method="get">
     <button class="next-previous-buttons" type="submit" > Επόμενο</button>
 </form>-->
-<button id="button-next1" class="next-previous-buttons" > Επόμενο</button>
+<button id="button-next1" class="next-previous-buttons" form="form1" value="submit"> Επόμενο</button>
 </div> <!-- end of testara-->
 
 
@@ -118,13 +117,16 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
+/*
 submitForms = function(){
-    console.log("i am in submitForms funtion");
-    window.alert("i am in submitForms funtion");
-    document.getElementById("form2").submit();
+    //console.log("i am in submitForms funtion");
+    //window.alert("i am in submitForms funtion");
+    //document.getElementById("form2").submit();
     document.getElementById("form1").submit();
+    window.location = "bookOrder2.php";
 }
-
+*/
+/*
 $(function(){
     $("#button-next1").on("click", function(){
       var data1 = $("#form1").serialize() + "&" + $("#form2").serialize();
@@ -141,10 +143,8 @@ $(function(){
       });
     window.location = "bookOrder2.php";
   });
-
-
 });
-
+*/
 
 </script>
 
