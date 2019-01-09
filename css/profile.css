@@ -2,11 +2,12 @@
 div.container_grid_profile {
     width: 100%;
     display: grid;
-    grid-template-columns: 300px;
+    grid-template-columns: auto;
     grid-template-areas: 
       ". a .";
+    padding: 0 0 10% 0;
 }
-  
+
 div.user_profile {
     grid-area: a;
     background-color: rgb(199,199,199,0.685);
@@ -15,7 +16,18 @@ div.user_profile {
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 700px;
+}
+
+div.user_fields label {
+    font-weight: bold;
+    padding: 10px;
+    color: #000;
+    width: auto;
+    height: auto;
+}
+
+div.user_fields input {
+    padding: 10px;
 }
 
 div.user_profile img {
@@ -25,18 +37,4 @@ div.user_profile img {
     margin-bottom: 10%;
     width: 25%;
 }
-
-div.user_fields label {
-    font-weight: bold;
-    margin: 10%;
-    color: #000;
-    width: 100%;
-}
-
-div.user_profile span {
-    float: right;
-    margin-right: 10%;
-}
-
-
 /* End of Grid for profile template */

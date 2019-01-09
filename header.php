@@ -8,7 +8,7 @@
 			<?php 
 			session_start();
 			if (isset($_SESSION['logged_user'])) {		// if logged in show me another interface in the top right of the header (username/logout)
-				require_once './username.php';
+				require './username.php';
 			} else {
 				require_once './login.php';
 				require_once './signup.php';
