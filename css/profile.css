@@ -2,7 +2,7 @@
 div.container_grid_profile {
     width: 100%;
     display: grid;
-    grid-template-columns: 300px;
+    grid-template-columns: auto;
     grid-template-areas: 
       ". a .";
 }

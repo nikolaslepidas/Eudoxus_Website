@@ -62,6 +62,8 @@
 			<table>
 				<tbody>
 				<form method='post'>
+
+				<!-- Change username -->
 				<tr>
 				<td>
 					<label for="new_username">Όνομα χρήστη:</label>
@@ -106,6 +108,7 @@
 					?>
 				</tr>
 
+				<!-- Change email -->
 				<tr>
 				<td>
 					<label for="profile_email">E-mail:</label>
@@ -174,6 +177,69 @@
 					?>
 				</tr>
 
+				<!-- Change password -->
+				<tr>
+					<?php	
+					if (isset($_POST['edit_password'])) {		// an patithei to epeksergasia
+						echo "
+						<td>
+							<label for='old_password'>Συνθηματικό χρήστη:</label>
+						</td>
+						<td>
+							<input name='old_password' placeholder='Εισάγετε τον τωρινό κωδικό'/>
+						</td>
+						<td></td>
+						</tr>
+
+						<tr>
+						<td>
+							<label for'new_password'>Νέο Συνθηματικό χρήστη:</label>
+						</td>
+						<td>
+							<input name='new_password' placeholder='Εισάγετε τον νέο κωδικό'/>
+						</td>
+						<td>
+							<button type='submit' name='change_password' id='change_password'>Αλλαγή</button>
+						</td>
+						";
+					} else {
+						if (isset($_POST['change_password'])) {		// an patithei to allagi
+							$old_password = $_POST['old_password'];
+							$new_password = $_POST['new_password'];
+							if (strcmp($new_password,"") || strcmp($old_password,"")) {
+								$query_update_user_password = "update user set password = '$new_password' where email = '$row[email]' && password = '$old_password';";
+								$result_edit_password = mysqli_query($connection, $query_update_user_password);
+								echo var_dump($result_edit_password);		// this line is for debugging
+								if ($result_edit_password === false) {		// not working properly
+									$error = "Something went wrong!";
+									echo $error;
+								} else {
+									$query_get_all_data= "select * from user where email='$row[email]'";
+									$new_result = mysqli_query($connection, $query_get_all_data);
+									mysqli_data_seek($new_result,0);
+									$row = mysqli_fetch_assoc($new_result);	
+								}
+							}
+							else{
+								$error = "Not valid password";
+								echo $error;	
+							}
+						}
+						echo "
+						<td>
+							<label for='profile_password'>Συνθηματικό χρήστη:</label>
+						</td>
+						<td>
+							<p type='password' name='profile_password' id='profile_password'>********</p>
+						</td>
+						<td>
+							<button type='submit' name='edit_password' id='edit_password'>Επεξεργασία</button>
+						</td>
+						";
+					}
+					?>
+				</tr>
+
 				<tr>
 				<td>
 					<label for="profile_userGroup">Ομάδα χρήστη:</label>
@@ -191,7 +257,7 @@
 				<?php
 
 					if ($userGroup == 'Φοιτητής') {
-						$query = "select * from student where user_email = '$_SESSION[user_email]'";
+						$query = "select * from student where user_email = '$row[email]'";
 						$result=mysqli_query($connection,$query);
 						mysqli_data_seek($result,0);
 						$row = mysqli_fetch_assoc($result);
@@ -239,7 +305,7 @@
 							";
 						}
 					} else if ($userGroup == 'Εκδότης') {
-						$query = "select * from publisher where user_email = '$_SESSION[user_email]'";
+						$query = "select * from publisher where user_email = '$_SESSION[user_email]';";
 						$result=mysqli_query($connection,$query);
 						mysqli_data_seek($result,0);
 						$row = mysqli_fetch_assoc($result);
@@ -247,17 +313,140 @@
 						echo "
 						<div id='publisher_fields_for_profile'>
 	
-						<label for='profile_publisher_name'>Όνομα εκδοτικού οίκου:</label>
-						<span name='profile_publisher_name' id='profile_publisher_name'> $row[brand_name] </span><br><br>
-	
-						<label for='profile_publisher_city'>Πόλη εκδοτικού οίκου:</label>
-						<span name='profile_publisher_city' id='profile_publisher_city'> $row[city] </span><br><br>
-	
-						<label for='profile_publisher_phone'>Τηλέφωνο εκδοτικού οίκου:</label>
-						<span name='profile_publisher_phone' id='profile_publisher_phone'> $row[phone] </span><br><br>
-	
-						</div>
-						";
+						<tr>
+						<td>
+							<label for='profile_publisher_name'>Όνομα εκδοτικού οίκου:</label>
+						</td>
+						<td>";
+
+						// Change branch name
+						if (isset($_POST['edit_brand_name'])) {		// an patithei to epeksergasia
+							echo "
+							<input name='new_brand_name' placeholder='$row[brand_name]'/>
+							</td>
+							<td>
+								<button type='submit' name='change_brand_name' id='change_brand_name'>Αλλαγή</button>
+							</td>
+							</tr>
+							";
+						} else {
+							if (isset($_POST['change_brand_name'])) {		// an patithei to allagi
+								$new_brand_name = $_POST['new_brand_name'];
+								if (strcmp($new_brand_name,"")){
+									$query_update_brand_name = "update publisher set brand_name = '$new_brand_name' where user_email = '$row[user_email]';";
+									$result_edit_brand_name = mysqli_query($connection, $query_update_brand_name);
+
+									// Get all changes
+									$query_get_all_data= "select * from publisher where user_email = '$row[user_email]';";
+									$new_result = mysqli_query($connection, $query_get_all_data);
+									mysqli_data_seek($new_result,0);
+									$row = mysqli_fetch_assoc($new_result);	
+								}
+								else{
+									$error = "Not valid brand_name";
+									echo $error;	
+								}
+							}
+							echo "
+								<p name='profile_publisher_name' id='profile_publisher_name'>$row[brand_name]</p>
+							</td>
+							<td>
+								<button type='submit' name='edit_brand_name' id='edit_brand_name'>Επεξεργασία</button>
+							</td>
+							</tr>
+							";
+						}
+
+						echo "
+						<tr>
+						<td>
+							<label for='profile_publisher_city'>Πόλη εκδοτικού οίκου:</label>
+						</td>
+						<td>";
+
+						// Change city
+						if (isset($_POST['edit_city'])) {		// an patithei to epeksergasia
+							echo "
+							<input name='new_city' placeholder='$row[city]'/>
+							</td>
+							<td>
+								<button type='submit' name='change_city' id='change_city'>Αλλαγή</button>
+							</td>
+							</tr>
+							";
+						} else {
+							if (isset($_POST['change_city'])) {		// an patithei to allagi
+								$new_city = $_POST['new_city'];
+								if (strcmp($new_city,"")){
+									$query_update_city = "update publisher set city = '$new_city' where user_email = '$row[user_email]';";
+									$result_edit_city = mysqli_query($connection, $query_update_city);
+
+									// Get all changes
+									$query_get_all_data= "select * from publisher where user_email = '$row[user_email]';";
+									$new_result = mysqli_query($connection, $query_get_all_data);
+									mysqli_data_seek($new_result,0);
+									$row = mysqli_fetch_assoc($new_result);	
+								}
+								else{
+									$error = "Not valid city";
+									echo $error;	
+								}
+							}
+							echo "
+								<p name='profile_publisher_city' id='profile_publisher_city'>$row[city]</p>
+							</td>
+							<td>
+								<button type='submit' name='edit_city' id='edit_city'>Επεξεργασία</button>
+							</td>
+							</tr>
+							";
+						}
+
+						echo "
+						<tr>
+						<td>
+							<label for='profile_publisher_phone'>Τηλέφωνο εκδοτικού οίκου:</label>
+						</td>
+						<td>";
+
+						// Change phone
+						if (isset($_POST['edit_phone'])) {		// an patithei to epeksergasia
+							echo "
+							<input name='new_phone' placeholder='$row[phone]'/>
+							</td>
+							<td>
+								<button type='submit' name='change_phone' id='change_phone'>Αλλαγή</button>
+							</td>
+							</tr>
+							";
+						} else {
+							if (isset($_POST['change_phone'])) {		// an patithei to allagi
+								$new_phone = $_POST['new_phone'];
+								if (strcmp($new_phone,"")){
+									$query_update_phone = "update publisher set phone = '$new_phone' where user_email = '$row[user_email]';";
+									$result_edit_phone = mysqli_query($connection, $query_update_phone);
+
+									// Get all changes
+									$query_get_all_data= "select * from publisher where user_email = '$row[user_email]';";
+									$new_result = mysqli_query($connection, $query_get_all_data);
+									mysqli_data_seek($new_result,0);
+									$row = mysqli_fetch_assoc($new_result);	
+								}
+								else{
+									$error = "Not valid phone";
+									echo $error;	
+								}
+							}
+							echo "
+								<p name='profile_publisher_phone' id='profile_publisher_phone'>$row[phone]</p>
+							</td>
+							<td>
+								<button type='submit' name='edit_phone' id='edit_phone'>Επεξεργασία</button>
+							</td>
+							</tr>
+							</div>
+							";
+						}
 					}
 				?>
 				</form>
