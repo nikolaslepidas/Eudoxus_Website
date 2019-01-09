@@ -23,6 +23,7 @@ div.container_grid_student_options img {
     margin-right: auto;
     margin-bottom: 10%;
     width: 25%;
+    cursor: pointer;
 }
 
 div.container_grid_student_options span {
@@ -34,6 +35,5 @@ div.container_student:hover {
     color: white;
     border-radius: 5px;
     padding: 10px;
-    cursor: pointer;
 }
   
