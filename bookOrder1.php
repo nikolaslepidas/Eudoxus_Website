@@ -16,7 +16,43 @@
 	</head>
 	<body>
 
-	<?php require_once './header.php' ?>
+	<?php require_once './header.php'; ?>
+
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (isset($_POST['cancel_courses'])){
+            require_once './mysql_connector.php';
+            $file = fopen("checked_courses.txt","r");
+            $checked_courses = array();
+            while(! feof($file)){
+                array_push($checked_courses,trim(fgets($file)));
+            }
+            $checked_courses_length = count($checked_courses);
+    
+            for ($i=0;$i<$checked_courses_length-1;$i++){
+                echo $checked_courses[$i];
+           /**/
+                $course_info_from_db=mysqli_query($connection,"select * from course where title='$checked_courses[$i]';");
+                    //echo "select * from course where title='$checked_courses[$j]';";
+                    mysqli_data_seek($course_info_from_db,0);
+                    $row = mysqli_fetch_assoc($course_info_from_db);
+                    echo var_dump($row);
+                    $query = "delete from student_has_course where student_user_email='$_SESSION[user_email]' and course_idcourse=$row[idcourse];";
+                    echo $query;
+                    $course_deletion = mysqli_query($connection,$query);
+                    echo var_dump($course_deletion);
+            
+            }   
+
+            fclose($file);
+            unlink('checked_courses.txt');
+        }
+    }else{
+        if(file_exists("checked_courses.txt")){
+            unlink('checked_courses.txt');
+        }
+    }
+?>
 	<div class="wrapper">
 		<ul class="breadcrumb">
 			<li><a href="index.php">Αρχική</a></li>
