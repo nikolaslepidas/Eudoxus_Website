@@ -77,6 +77,7 @@
 				</form>
 				<form method="post" action="#">
 					<button type="submit">Συχνές ερωτήσεις</button>
+				</form>
 			</div>
 		</li>
 		
@@ -96,6 +97,7 @@
 				</form>
 				<form method="post" action="#">
 					<button type="submit">Συχνές ερωτήσεις</button>
+				</form>
 			</div>
 		</li>
 
@@ -104,14 +106,15 @@
 				<button type="submit">Αναζήτηση</button>
 			</form>
 			<div class="dropdown-content drop-button">
-				<form method="post" action="search_books.php">
+				<form method="post" action="./search_books.php">
 					<button type="submit">Συγγραμμάτων</button>
 				</form>
-				<form method="post" action="search_bookStores.php">
+				<form method="post" action="./search_bookStores.php">
 					<button type="submit">Σημείων Διανομής</button>
 				</form>
-				<form method="post" action="search_publishers.php">
+				<form method="post" action="./search_publishers.php">
 					<button type="submit">Εκδοτών</button>
+				</form>
 			</div>	
 		</li>
 		<li >

@@ -41,12 +41,12 @@
 
 		<button class="container_publisher">
 			<img src="./icons/instructions.png" alt="Οδηγίες" title="Οδηγίες">
-			<span>Θέλω να μάθω πώς μπορώ να δηλώσω συγγράμματα και όχι μόνο!</span>
+			<span>Θέλω να μάθω πώς μπορώ να διανείμω συγγράμματα και όχι μόνο!</span>
 		</button>
 
 		<button class="container_publisher">
 			<img src="./icons/question_mark.png" alt="Συχνές ερωτήσεις" title="Συχνές ερωτήσεις">
-			<span>Θέλω να ρωτήσω πως μπορώ να ανταλλάξω συγγράμματα!</span>
+			<span>Θέλω να ρωτήσω πως μπορώ να διανείμω συγγράμματα μέσω του Ευδόξου!</span>
 		</button>
 
 	</div>

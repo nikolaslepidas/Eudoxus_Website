@@ -7,8 +7,9 @@
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/breadcrumbs.css">
 		<link rel="stylesheet" href="css/communication_form.css">
-		<link rel="stylesheet" href="css/student.css">
+		<link rel="stylesheet" href="css/bookStore.css">
 		<link rel="stylesheet" href="css/bookOrder.css">
+
 
 		<title>Εύδοξος - Διανομέας</title>
 
@@ -19,24 +20,48 @@
 	<div class="wrapper">
 		<ul class="breadcrumb">
 			<li><a href="index.php">Αρχική</a></li>
-			<!--
-			<li><a href="#">Page2</a></li>
-			<li><a href="#">Page3</a></li>
-			-->
 			<li>Διανομέας</li> 
 		</ul>
 	</div>
 
 
 <div class="padding_needed_for_footer">
-<h2> Λειτουργία Διανομέα </h2>
+	<h2> Λειτουργία Διανομέα </h2>
 
-<button class="accordion">Παράδοση Συγγραμμάτων </button>
-<div class="panel">
-<p> Ο φοιτητής μπορεί να δηλώσει τα συγγράμματα που επιθυμεί να λάβει για το κάθε εξάμηνο.  </p>
+	<button class="accordion">Παράδοση Συγγραμμάτων </button>
+	<div class="panel">
+	<p> Ο φοιτητής μπορεί να δηλώσει τα συγγράμματα που επιθυμεί να λάβει για το κάθε εξάμηνο.  </p>
+	</div>
+	<br/>
+
+	<div class="container_grid_bookStore_options">
+
+		<button class="container_bookStore">
+			<img src="./icons/book.png" alt="Διανομή συγγραμμάτων" title="Διανομή συγγραμμάτων">
+			<span>Θέλω να διανείμω συγγράμματα στους φοιτητές!</span>
+		</button>
+
+		<button class="container_bookStore">
+			<img src="./icons/instructions.png" alt="Οδηγίες" title="Οδηγίες">
+			<span>Θέλω να μάθω πώς μπορώ να διανείμω συγγράμματα και όχι μόνο!</span>
+		</button>
+
+		<button class="container_bookStore">
+			<img src="./icons/question_mark.png" alt="Συχνές ερωτήσεις" title="Συχνές ερωτήσεις">
+			<span>Θέλω να ρωτήσω πως μπορώ να μοιράσω συγγράμματα μέσω του Ευδόξου!</span>
+		</button>
+
+	</div>
+
 </div>
 
-</div>
+
+
+
+
+
+
+
 
 <script>
 var acc = document.getElementsByClassName("accordion");
