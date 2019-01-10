@@ -1,20 +1,12 @@
 <!--	Footer	-->
-<div class="container_grid_for_footer">
-		<button class="footer_button">
-			<span>Συχνές Ερωτήσεις</span>
-			<img src="icons/chat.png" alt="Συχνές Ερωτήσεις" title="Συχνές Ερωτήσεις">
-		</button>
-
-		<form method="post" action="./communication_form.php">
-		<button type="submit" class="footer_button">
-			<span>Ηλ. Φόρμα Επικοινωνίας</span>
-			<img src="icons/envelope.png" alt="Ηλ. Φόρμα Επικοινωνίας" title="Ηλ. Φόρμα Επικοινωνίας">
-		</button>
-		</form>
-
-		<button class="footer_button">
-			<span>210 2430436</span>
-			<img src="icons/call-answer.png" alt="Τηλέφωνο" title="Τηλέφωνο">
-		</button>
+<div class="wrapper-footer">
+	<div id="footer">
+		<div><a href="#" >Συχνές Ερωτήσεις</a></div>
+		<div><img src="icons/chat.png"  alt="Συχνές Ερωτήσεις"></div>
+		<div><a href="./communication_form.php" >Ηλ. Φόρμα Επικοινωνίας</a></div>
+		<div><img src="icons/envelope.png"  alt="Ηλ. Φόρμα Επικοινωνίας"></div>
+		<div><a href="tel:+302102430436">210 2430436</a></div>
+		<div><img src="icons/call-answer.png"  alt="Τηλέφωνο"></div>
+	</div>
 </div>
 <!--	End of Footer	-->
