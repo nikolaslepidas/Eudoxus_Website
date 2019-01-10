@@ -26,7 +26,7 @@
 
 
 <div class="padding_needed_for_footer">
-	<h2> Λειτουργίες Γραμματείας - Πληροφορίες </h2>
+	<span class="subtitle">Λειτουργίες Γραμματείας - Πληροφορίες</span>
 
 	<button class="accordion">Εισαγωγή Προγράμματος Σπουδών </button>
 	<div class="panel">

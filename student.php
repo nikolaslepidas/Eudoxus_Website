@@ -14,7 +14,6 @@
 
 	</head>
 	<body>
-
 	<?php require_once './header.php' ?>
 	<div class="wrapper">
 		<ul class="breadcrumb">
@@ -24,7 +23,7 @@
 	</div>
 
 <div class="padding_needed_for_footer">
-	<h2> Λειτουργίες Φοιτητή - Πληροφορίες</h2>
+	<span class="subtitle">Λειτουργίες Φοιτητή - Πληροφορίες</span>
 
 	<button class="accordion">Δήλωση Συγγραμμάτων </button>
 	<div class="panel">
@@ -56,7 +55,7 @@
 		<p> Ο φοιτητής μπορεί να έχει πρόσβαση σε σημειώσεις και βοηθήματα που αναρτώνται στον Εύδοξο και να αναρτήσει ο ίδιος δικές του σημειώσεις.  </p>
 	</div>
 	<br/>
-	
+
 	<div class="container_grid_student_options">
 
 		<form method="post" action="./bookOrder1.php">
@@ -98,6 +97,7 @@
 </div>
 
 <script>
+	
 var acc = document.getElementsByClassName("accordion");
 var i;
 

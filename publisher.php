@@ -24,7 +24,7 @@
 	</div>
 
 <div class="padding_needed_for_footer">
-	<h2> Λειτουργία Εκδότη </h2>
+<span class="subtitle">Λειτουργία Εκδότη</span>
 
 	<button class="accordion">Διανομή Συγγραμμάτων </button>
 	<div class="panel">

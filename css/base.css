@@ -1,5 +1,5 @@
 body{
-  overflow-y:scroll;
+  overflow-y: auto;
   background-color: rgb(243, 243, 233);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -8,6 +8,7 @@ body{
 #header{
   float: left;
   width: 100%;
+  top: 0;
   background-color: rgb(243, 243, 233);
 }
 .logo-position {
@@ -28,6 +29,11 @@ body{
 }
 /* End of Header */
 
+span.subtitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .wrapper{
   width: 100%;
   float: left;  
@@ -35,21 +41,35 @@ body{
 
 /* Footer */
 div.container_grid_for_footer {
-  width: 100%;
+  width: 50%;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: auto auto auto;
   bottom: 0 !important;
   position: fixed;
-}
-
-
-div.footer{
   margin-right: auto;
   margin-left: auto;
 }
 
-div.footer img {
-  width: 80px;
+button.footer_button {
+  background-color: rgb(243, 243, 233) !important;
+  padding: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  cursor: pointer;
+  width: 50% !important;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+button.footer_button img {
+  width: 5%;
+}
+
+button.footer_button span {
+  text-align: justify;
+  text-decoration: none;
+  font-weight: bold;
+  color: #180083;
 }
 /* End of Footer */
 
@@ -132,6 +152,24 @@ a:hover {
 }
 /* End of css for all a tags */
 
+/* Set a style for all buttons */
+button {
+  background-color: rgb(212, 96, 42);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  outline:none;
+}
+
+button:hover {
+  opacity: 0.98;
+  outline:none;
+}
+/* End of set a style for all buttons */
+
 /* Full-width input fields */
  input[type=text], input[type=password], input[type=email]{
   width: 100%;
@@ -150,24 +188,6 @@ a:hover {
   border: 1px solid #ccc;
   box-sizing: border-box;
  }
-
-/* Set a style for all buttons */
-
-button {
-  background-color: rgb(212, 96, 42);
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  outline:none;
-}
-
-button:hover {
-  opacity: 0.98;
-  outline:none;
-}
 
 /* Extra styles for the cancel button */
 .cancelbtn {
