@@ -64,48 +64,42 @@ body{
 /* End of Footer */
 
 /* CSS for navigation bar*/
-.dropdown ul {
-  list-style-type: none;
-  overflow: hidden;
-  background-color: rgb(212, 96, 42);
-  margin-top:0px;
-  padding: 10px;
-  box-shadow: 3px 6px 12px #888888;
-}
 #menu{
   float: right;
   width: 100%;
 }
+
 .dropdown{
   width: auto;
 }
 
-/*rgba(214, 114, 55, 0.911);*/
-.dropdown li:hover a {
-	background-color: rgb(212, 96, 42);
-	color: #fff;
-}
-
-.dropdown li a, .dropbtn {
-  display: block;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  text-shadow: #99948d;
-  font-weight: normal;
-  font-size: 18px;
-  font-family: arial;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.dropdown li a:hover, .dropdown:hover .dropbtn {
-  background-color: rgba(214, 114, 55, 0.966);
-  color: #ffffff;
+.dropdown ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: rgb(212, 96, 42);
+  margin-top:0px !important;
+  box-shadow: 3px 6px 12px #888888;
 }
 
 .dropdown ul li {
   display: block;
   float: left;
+}
+
+.dropdown ul li button {
+  font-size: 18px;
+  font-family: arial;
+  padding: 20px 20px !important;
+  margin: 0px !important;
+}
+
+.dropdown ul li button:hover {
+  background-color: rgba(201, 86, 33, 0.603) !important;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: arial;
+  padding: 20px 20px !important;
+  margin: 0px !important;
 }
 
 .dropdown-content {
@@ -117,24 +111,17 @@ body{
   z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content button {
+  display: block;
   color: rgb(255, 255, 255);
   background-color: rgb(212, 96, 42);
   padding: 12px 16px;
-  text-decoration: none;
-  display: block;
   text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: rgba(214, 114, 55, 0.966);
 }
 
 .dropdown ul li:hover .dropdown-content {
   display: block;
 }
- 
-
 /* This is the css for the login and the sign up modals */
 
 /* Full-width input fields */

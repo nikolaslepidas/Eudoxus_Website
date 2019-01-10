@@ -25,64 +25,99 @@
 <div class="dropdown">	
 	<ul>
 		<li >
-			<a href="student.php" >Φοιτητής</a>
-			<div class="dropdown-content drop-button">
-				<a href="./bookOrder1.php">Δήλωση συγγραμμάτων</a>
-				<a href="#">Ανταλλαγή συγγραμμάτων</a>
-				<a href="#">Σημειώσεις και Βοηθήματα</a> 
-				<a href="#">Οδηγίες</a>
-				<a href="#">Συχνές ερωτήσεις</a>
+			<form method="post" action="./student.php">
+				<button type="submit">Φοιτητής</button>
+			</form>
+			<div class="dropdown-content">
+				<form method="post" action="./bookOrder1.php">
+					<button type="submit">Δήλωση συγγραμμάτων</button>
+				</form>
+				<form method="post" action="#">
+					<button type="submit">Ανταλλαγή συγγραμμάτων</button>
+				</form>
+				<form method="post" action="#">
+					<button type="submit">Σημειώσεις και Βοηθήματα</button>
+				</form>
+				<form method="post" action="#">
+					<button type="submit">Οδηγίες</button>
+				</form>
+				<form method="post" action="#">
+					<button type="submit">Συχνές ερωτήσεις</button>
+				</form>
 			</div>
 		</li>
 		
 		<li >
-			<a href="publisher.php" >Εκδότης</a>
-			<div class="dropdown-content drop-button">
-				<a href="#">Διανομή συγγραμμάτων</a>
-				<a href="#">Οδηγίες</a>
-				<a href="#">Συχνές ερωτήσεις</a>
+			<form method="post" action="./publisher.php">
+				<button type="submit">Εκδότης</button>
+			</form>
+			<div class="dropdown-content">
+				<form method="post" action="#">
+					<button type="submit">Διανομή συγγραμμάτων</button>
+				</form>
+				<form method="post" action="#">
+					<button type="submit">Οδηγίες</button>
+				</form>
+				<form method="post" action="#">
+					<button type="submit">Συχνές ερωτήσεις</button>
+				</form>
 			</div>
 		</li>	
 		
 		<li >
-			<a href="bookStore.php" >Διανομέας</a>
-			<div class="dropdown-content drop-button">
-				<a href="#">Παράδοση συγγραμμάτων</a>
-				<a href="#">Οδηγίες</a>
-				<a href="#">Συχνές ερωτήσεις</a>
+			<form method="post" action="./bookStore.php">
+				<button type="submit">Διανομέας</button>
+			</form>
+			<div class="dropdown-content">
+				<form method="post" action="#">
+					<button type="submit">Παράδοση συγγραμμάτων</button>
+				</form>
+				<form method="post" action="#">
+					<button type="submit">Οδηγίες</button>
+				</form>
+				<form method="post" action="#">
+					<button type="submit">Συχνές ερωτήσεις</button>
 			</div>
 		</li>
 		
 		<li >
-			<a href="secretary.php" >Γραμματεία</a>
-			<div class="dropdown-content drop-button">
-				<a href="#">Εισαγωγή προγράμματος σπουδών</a>
-				<a href="#">Εισαγωγή προτεινόμενων συγγραμμάτων</a>
-				<a href="#">Οδηγίες</a>
-				<a href="#">Συχνές ερωτήσεις</a>
+			<form method="post" action="./secretary.php">
+				<button type="submit">Γραμματεία</button>
+			</form>
+			<div class="dropdown-content">
+				<form method="post" action="#">
+					<button type="submit">Εισαγωγή προγράμματος σπουδών</button>
+				</form>
+				<form method="post" action="#">
+					<button type="submit">Εισαγωγή προτεινόμενων συγγραμμάτων</button>
+				</form>
+				<form method="post" action="#">
+					<button type="submit">Οδηγίες</button>
+				</form>
+				<form method="post" action="#">
+					<button type="submit">Συχνές ερωτήσεις</button>
 			</div>
 		</li>
-<!--		
+
 		<li >
-			<a href="#" >Σημειώσεις και Βοηθήματα</a>
-			<div class="dropdown-content"  class="drop-button">
-				<a href="#">Νέα ανάρτηση/ Οι αναρτήσεις μου</a>
-				<a href="#">Αρχείο αναρτήσεων</a>
-				<a href="#">Οδηγίες</a>
-				<a href="#">Συχνές ερωτήσεις</a>
-			</div>
-		</li>
--->		
-		<li >
-			<a href="./search_books.php" >Αναζήτηση</a>
+			<form method="post" action="./search_books.php">
+				<button type="submit">Αναζήτηση</button>
+			</form>
 			<div class="dropdown-content drop-button">
-				<a href="search_books.php">Συγγραμμάτων</a>
-				<a href="search_bookStores.php">Σημείων Διανομής</a>
-				<a href="search_publishers.php">Εκδοτών</a>
+				<form method="post" action="search_books.php">
+					<button type="submit">Συγγραμμάτων</button>
+				</form>
+				<form method="post" action="search_bookStores.php">
+					<button type="submit">Σημείων Διανομής</button>
+				</form>
+				<form method="post" action="search_publishers.php">
+					<button type="submit">Εκδοτών</button>
 			</div>	
 		</li>
 		<li >
-			<a href="./communication_form.php" >Επικοινωνία</a>	
+			<form method="post" action="./communication_form.php">
+				<button type="submit">Επικοινωνία</button>
+			</form>
 		</li>
 	</ul>
 </div>
