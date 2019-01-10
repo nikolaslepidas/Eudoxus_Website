@@ -155,7 +155,7 @@ button {
 }
 
 button:hover {
-  opacity: 0.98;
+  opacity: 0.95;
   outline:none;
 }
 /* End of set a style for all buttons */

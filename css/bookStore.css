@@ -47,3 +47,7 @@ div.container_grid_bookStore_options button {
 div.container_grid_bookStore_options button:hover {
     background-color: none !important;
 }
+
+div.panel p {
+    text-align: justify;
+}
