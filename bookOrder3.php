@@ -64,6 +64,8 @@
                 <button class='accordion'>$checked_books[$j]</button>
                 <div class='panel'>
                 <div class='bookForm' >
+                        <p style='font-weight:bold;'> Σημείο Διανομής </p>
+                        <hr>
                         <table>
                             <tbody>
                                 <tr>
