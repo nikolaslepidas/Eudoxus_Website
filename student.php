@@ -23,8 +23,6 @@
 		</ul>
 	</div>
 
-
-
 <div class="padding_needed_for_footer">
 	<h2> Λειτουργίες Φοιτητή - Πληροφορίες</h2>
 
@@ -57,7 +55,8 @@
 	<div class="panel">
 		<p> Ο φοιτητής μπορεί να έχει πρόσβαση σε σημειώσεις και βοηθήματα που αναρτώνται στον Εύδοξο και να αναρτήσει ο ίδιος δικές του σημειώσεις.  </p>
 	</div>
-<br/>
+	<br/>
+	
 	<div class="container_grid_student_options">
 
 		<form method="post" action="./bookOrder1.php">
