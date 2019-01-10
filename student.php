@@ -74,23 +74,23 @@
 			</button>
 		</form>
 
-		<button class="container_student" type="submit" name="myBooks">
-		<a href="#"><img src="./icons/exchange_book.png" alt="Ανταλλαγή συγγραμμάτων" title="Ανταλλαγή συγγραμμάτων"></a>
+		<button class="container_student">
+			<img src="./icons/exchange_book.png" alt="Ανταλλαγή συγγραμμάτων" title="Ανταλλαγή συγγραμμάτων">
 			<span>Θέλω να πάρω συγγράμματα μέσω ανταλλαγής!</span>
 		</button>
 
-		<button class="container_student" type="submit" name="myBooks">
-		<a href="#"><img src="./icons/product.png" alt="Διάθεση σημειώσεων/βοηθημάτων" title="Διάθεση σημειώσεων/βοηθημάτων"></a>
+		<button class="container_student">
+			<img src="./icons/product.png" alt="Διάθεση σημειώσεων/βοηθημάτων" title="Διάθεση σημειώσεων/βοηθημάτων">
 			<span>Θέλω να διαθέσω δωρεάν σημειώσεις/βοηθήματα!</span>
 		</button>
 
-		<button class="container_student" type="submit" name="myBooks">
-		<a href="#"><img src="./icons/instructions.png" alt="Οδηγίες" title="Οδηγίες"></a>
+		<button class="container_student">
+			<img src="./icons/instructions.png" alt="Οδηγίες" title="Οδηγίες">
 			<span>Θέλω να μάθω πώς μπορώ να δηλώσω συγγράμματα και όχι μόνο!</span>
 		</button>
 
-		<button class="container_student" type="submit" name="myBooks">
-		<a href="#"><img src="./icons/question_mark.png" alt="Συχνές ερωτήσεις" title="Συχνές ερωτήσεις"></a>
+		<button class="container_student">
+			<img src="./icons/question_mark.png" alt="Συχνές ερωτήσεις" title="Συχνές ερωτήσεις">
 			<span>Θέλω να ρωτήσω πως μπορώ να ανταλλάξω συγγράμματα!</span>
 		</button>
 
