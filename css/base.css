@@ -91,10 +91,12 @@ body{
   font-family: arial;
   padding: 20px 20px !important;
   margin: 0px !important;
+  transition: 0.3s;
+  outline:none;
 }
 
 .dropdown ul li button:hover {
-  background-color: rgba(201, 86, 33, 0.603) !important;
+  background-color: rgba(201, 86, 33, 0.9) !important;
   color: #ffffff;
   font-size: 18px;
   font-family: arial;
@@ -117,6 +119,8 @@ body{
   background-color: rgb(212, 96, 42);
   padding: 12px 16px;
   text-align: left;
+  transition: 0.3s;
+  outline:none;
 }
 
 .dropdown ul li:hover .dropdown-content {
@@ -153,10 +157,12 @@ button {
   border: none;
   cursor: pointer;
   width: 100%;
+  outline:none;
 }
 
 button:hover {
   opacity: 0.98;
+  outline:none;
 }
 
 /* Extra styles for the cancel button */
