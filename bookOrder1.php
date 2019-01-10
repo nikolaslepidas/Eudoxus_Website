@@ -178,7 +178,7 @@ $(function(){
           alert("Teleiaaaaaa");
         },
         error: function(){
-            alert("skataaaaa");
+            alert("Asximaaaaa");
         }
       });
     window.location = "bookOrder2.php";
@@ -214,6 +214,7 @@ $(function(){
         
         for (j = 0; j < checkboxes.length; j++) {
             if (checkboxes[j].value == '$course_record[title]'){
+                checkboxes[j].checked=true;
                 checkboxes[j].disabled=true;
             }    
         }
