@@ -57,26 +57,10 @@ div.footer_button {
 div.footer_button img {
   width: 40px;
 }
-/*
-.wrapper-footer{
-  width: 100%;
-  float: left;  
-  bottom: 0; 
-  position:fixed;
-}
 
-#footer{
-  text-align: left;
-  width: 80%;
-  float: right;
+div.footer_button a {
+  padding: 20px !important;
 }
-#footer div{
-  display: inline-block;
-  margin: 1% 0;
-}
-
-*/
-
 /* End of Footer */
 
 
