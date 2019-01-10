@@ -34,34 +34,25 @@ body{
 }
 
 /* Footer */
-.wrapper-footer{
+div.container_grid_for_footer {
   width: 100%;
-  float: left;  
-  bottom: 0; 
-  position:fixed;
+  display: grid;
+  grid-template-columns: auto;
+  bottom: 0 !important;
+  position: fixed;
 }
 
-#footer{
-  text-align: left;
-  width: 80%;
-  float: right;
-}
-#footer div{
-  display: inline-block;
-  margin: 1% 0;
+
+div.footer{
+  margin-right: auto;
+  margin-left: auto;
 }
 
-#footer div img {
-  width: 30%;
+div.footer img {
+  width: 80px;
 }
-
-#footer div a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #180083;
-}
-
 /* End of Footer */
+
 
 /* CSS for navigation bar*/
 #menu{
@@ -127,6 +118,19 @@ body{
   display: block;
 }
 /* This is the css for the login and the sign up modals */
+
+/* Css for all a tags */
+a {
+  text-align: justify;
+  text-decoration: none;
+  font-weight: bold;
+  color: #180083;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* End of css for all a tags */
 
 /* Full-width input fields */
  input[type=text], input[type=password], input[type=email]{
