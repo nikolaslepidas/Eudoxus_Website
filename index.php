@@ -56,22 +56,37 @@ require_once './header.php';
 
 <main id="central-column">
 	<div class="container_grid">
-		<div class="box student">
-			<a href="student.php"> <img src="./icons/student.png" alt="student" title="student"> </a>
-			<p>Φοιτητής</p>
-		</div>
-		<div class="box publisher">
-			<a href="publisher.php"> <img src="./icons/manager.png" alt="publisher" title="publisher"> </a>
-			<p>Εκδότης</p>
-		</div>
-		<div class="box distributor">
-			<a href="bookStore.php"> <img src="./icons/book.png" alt="distributor" title="distributor"> </a>
-			<p>Διανομέας</p>
-		</div>
-		<div class="box secretariat">
-			<a href="secretary.php"> <img src="./icons/secretary.png" alt="secretariat" title="secretariat"> </a>
-			<p>Γραμματεία</p>
-		</div>
+
+		<form method="post" action="student.php">
+		<button type="submit" class="box">
+			<img src="./icons/student.png" alt="student" title="student">
+			<span>Φοιτητής</span>
+		</button>
+		</form>
+
+		<form method="post" action="publisher.php">
+		<button type="submit" class="box">
+			<img src="./icons/manager.png" alt="publisher" title="publisher">
+			<span>Εκδότης</span>
+		</button>
+		</form>
+
+		<form method="post" action="bookStore.php">
+		<button type="submit" class="box">
+			<img src="./icons/book.png" alt="distributor" title="distributor">
+			<span>Διανομέας</span>
+		</button>
+		</form>
+
+		<form method="post" action="secretary.php">
+		<button type="submit" class="box">
+			<img src="./icons/secretary.png" alt="secretariat" title="secretariat">
+			<span>Γραμματεία</span>
+		</button>
+		</form>
+
+
+
 	</div>
 </main>
 

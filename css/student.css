@@ -1,6 +1,5 @@
 #student_info{
     float: left;
-    padding: 0 auto;
 }
 
 div.container_grid_student_options {
@@ -23,12 +22,13 @@ button.container_student img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     width: 25%;
 }
 
 button.container_student span {
-    padding: 10px;
+    padding: 15px;
     font-size: 1.2em;
 }
 

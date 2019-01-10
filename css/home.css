@@ -61,55 +61,38 @@
 div.container_grid {
   display:grid;
   grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  grid-gap: 10px;
+  grid-gap: 5px;
   color: #444;
-  grid-template-areas: 
-    ". a b ."
-    ". c d .";
+  margin: 0 10% !important;
 }
 
-div.box {
-  background-color: rgb(223, 115, 65);
+button.box {
+  background-color: rgb(212, 96, 42);
   color: #fff;
   border-radius: 5px;
-  padding: 50px;
-  text-align: center;
+  padding: 50px !important;
+  margin: 0% !important;
 }
 
-div.box:hover {
-  background-color: rgb(223, 88, 25);
+button.box:hover {
+  background-color: rgba(212, 96, 42, 0.966);
   color: #fff;
   border-radius: 5px;
-  padding: 50px;
+  padding: 50px !important;
+  margin: 0% !important;
 }
 
-div.student {
-  grid-area: a !important; 
-
-}
-
-div.publisher {
-  grid-area: b;
-}
-
-div.distributor {
-  grid-area: c;
-}
-
-div.secretariat {
-  grid-area: d;
-}
-
-div.box img {
+button.box img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
-  cursor: pointer;
+  margin-bottom: 2%;
+  width: 25%;
 }
 
-div.box p {
+button.box span {
+  font-size: 1.1em;
   font-weight: bold;
+  text-align: center;
 }
 /* End of Persons grid */
