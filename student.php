@@ -60,30 +60,39 @@
 <br/>
 	<div class="container_grid_student_options">
 
-		<div class="container_student">
-			<a href="./bookOrder1.php"><img src="./icons/dhlwsi.png" alt="Δήλωση συγγραμμάτων" title="Δήλωση συγγραμμάτων"></a>
-			<span>Θέλω να πάρω συγγράμματα μέσω νέας δήλωσης!</span>
-		</div>
+		<form method="post" action="./bookOrder1.php">
+			<button class="container_student" type="submit" name="myOrder">
+				<img src="./icons/dhlwsi.png" alt="Δήλωση συγγραμμάτων" title="Δήλωση συγγραμμάτων">
+				<span>Θέλω να πάρω συγγράμματα μέσω νέας δήλωσης!</span>
+			</button>
+		</form>
 
-		<div class="container_student">
+		<form method="post" action="./myBooks.php">
+			<button class="container_student" type="submit" name="myBooks">
+				<img src="./icons/books-stack-of-three.png" alt="Δηλωθέντα συγγράμματα" title="Δηλωθέντα συγγράμματα">
+				<span>Θέλω να δω τα συγγράμματα που έχω ήδη δηλώσει!</span>
+			</button>
+		</form>
+
+		<button class="container_student" type="submit" name="myBooks">
 		<a href="#"><img src="./icons/exchange_book.png" alt="Ανταλλαγή συγγραμμάτων" title="Ανταλλαγή συγγραμμάτων"></a>
 			<span>Θέλω να πάρω συγγράμματα μέσω ανταλλαγής!</span>
-		</div>
+		</button>
 
-		<div class="container_student">
+		<button class="container_student" type="submit" name="myBooks">
 		<a href="#"><img src="./icons/product.png" alt="Διάθεση σημειώσεων/βοηθημάτων" title="Διάθεση σημειώσεων/βοηθημάτων"></a>
 			<span>Θέλω να διαθέσω δωρεάν σημειώσεις/βοηθήματα!</span>
-		</div>
+		</button>
 
-		<div class="container_student">
+		<button class="container_student" type="submit" name="myBooks">
 		<a href="#"><img src="./icons/instructions.png" alt="Οδηγίες" title="Οδηγίες"></a>
 			<span>Θέλω να μάθω πώς μπορώ να δηλώσω συγγράμματα και όχι μόνο!</span>
-		</div>
+		</button>
 
-		<div class="container_student">
+		<button class="container_student" type="submit" name="myBooks">
 		<a href="#"><img src="./icons/question_mark.png" alt="Συχνές ερωτήσεις" title="Συχνές ερωτήσεις"></a>
 			<span>Θέλω να ρωτήσω πως μπορώ να ανταλλάξω συγγράμματα!</span>
-		</div>
+		</button>
 
 	</div>
 

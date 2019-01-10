@@ -10,7 +10,7 @@ div.container_grid_student_options {
     grid-gap: 5px;
 }
   
-div.container_student {
+button.container_student {
     background-color: rgb(212, 96, 42);
     color: white;
     border-radius: 5px;
@@ -23,17 +23,24 @@ div.container_grid_student_options img {
     margin-right: auto;
     margin-bottom: 10%;
     width: 25%;
-    cursor: pointer;
 }
 
-div.container_grid_student_options span {
+button.container_student span {
     font-size: 1.1em;
 }
 
-div.container_student:hover {
+button.container_student:hover {
     background-color: rgba(212, 96, 42, 0.966);
     color: white;
     border-radius: 5px;
-    padding: 10px;
 }
   
+button.container_student button {
+    background-color: none !important;
+    padding: 0 !important;
+    cursor: pointer;
+}
+
+button.container_student button:hover {
+    background-color: none !important;
+}
