@@ -41,36 +41,42 @@ span.subtitle {
 
 /* Footer */
 div.container_grid_for_footer {
-  width: 50%;
+  width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto;
   bottom: 0 !important;
   position: fixed;
-  margin-right: auto;
-  margin-left: auto;
 }
 
-button.footer_button {
-  background-color: rgb(243, 243, 233) !important;
+div.footer_button {
   padding: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  cursor: pointer;
-  width: 50% !important;
   margin-right: auto;
   margin-left: auto;
 }
 
-button.footer_button img {
-  width: 5%;
+div.footer_button img {
+  width: 40px;
+}
+/*
+.wrapper-footer{
+  width: 100%;
+  float: left;  
+  bottom: 0; 
+  position:fixed;
 }
 
-button.footer_button span {
-  text-align: justify;
-  text-decoration: none;
-  font-weight: bold;
-  color: #180083;
+#footer{
+  text-align: left;
+  width: 80%;
+  float: right;
 }
+#footer div{
+  display: inline-block;
+  margin: 1% 0;
+}
+
+*/
+
 /* End of Footer */
 
 
