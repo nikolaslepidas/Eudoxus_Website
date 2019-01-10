@@ -52,6 +52,10 @@
             //echo "select * from book where bookTitle='$checked_books[$j]';";
             mysqli_data_seek($book_info_from_db,0);
             $row = mysqli_fetch_assoc($book_info_from_db);
+            
+            //insertion of isbn to table student_has_book
+            $insertion=mysqli_query($connection,"update student_has_book set book_isbn=$row[isbn];");
+
             $query="select * from book, bookstore, bookstore_has_book where bookstore_idbookstore=idbookstore and isbn=book_isbn  and isbn=$row[isbn];";
             //echo $query;
             $bookstore_for_books=mysqli_query($connection,$query);
@@ -124,8 +128,8 @@
 
         }
             echo "
-            <form class='button' action='myBooks.php' method='get'>
-            <button class='next-previous-buttons' > Δηλωθέντα συγγράμματα </button>
+            <form class='button' action='myBooks.php' method='post'>
+            <button name='myBooks' class='next-previous-buttons' > Δηλωθέντα συγγράμματα </button>
             </form>
                     <button id='button-next1' class='next-previous-buttons'> Εκτύπωση </button>
                     </div> <!-- end of testara-->

@@ -37,7 +37,7 @@
                     mysqli_data_seek($course_info_from_db,0);
                     $row = mysqli_fetch_assoc($course_info_from_db);
                     echo var_dump($row);
-                    $query = "delete from student_has_course where student_user_email='$_SESSION[user_email]' and course_idcourse=$row[idcourse];";
+                    $query = "delete from student_has_book where student_user_email='$_SESSION[user_email]' and course_idcourse=$row[idcourse];";
                     echo $query;
                     $course_deletion = mysqli_query($connection,$query);
                     echo var_dump($course_deletion);

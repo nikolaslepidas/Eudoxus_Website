@@ -55,10 +55,6 @@
             mysqli_data_seek($course_info_from_db,0);
             $row = mysqli_fetch_assoc($course_info_from_db);
 
-            //now we have to match this course with the student
-            $insertion=mysqli_query($connection,"insert into student_has_course values ('$_SESSION[user_email]',$row[idcourse]);");
-            echo var_dump($insertion);
-            //end of insertion
             $query="select * from book, course_has_book, course where isbn=book_isbn and course_idcourse=idcourse and idcourse=$row[idcourse];";
             //echo $query;
             $books_for_course=mysqli_query($connection,$query);
@@ -75,10 +71,17 @@
                 <form id='form1' class='bookForm' action='bookOrder3.php' method='post' >
                 ";
                 for($i=0;$i<$count;$i++){
-                    $row = mysqli_fetch_assoc($books_for_course);
+                    $row1 = mysqli_fetch_assoc($books_for_course);
                     echo "
-                        <input type='radio' name='$row[greeklishTitle]' value='$row[bookTitle]' >$row[bookTitle]<br>
+                    <input type='radio' name='$row1[greeklishTitle]' value='$row1[bookTitle]' >$row1[bookTitle]<br>
                     ";
+                    if ($i == 0){
+                        //now we have to match this course with the student
+                        $insertion=mysqli_query($connection,"insert into student_has_book (student_user_email,course_idcourse,book_isbn) values ('$_SESSION[user_email]',$row[idcourse],$row1[isbn]);");
+                        echo var_dump($insertion);
+                        echo "insert into student_has_book (student_user_email,course_idcourse,book_isbn) values ('$_SESSION[user_email]',$row[idcourse],$row1[isbn]);";
+                        //end of insertion
+                    }
                 }
                 echo "
                     </form>
