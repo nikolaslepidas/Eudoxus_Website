@@ -26,7 +26,7 @@
 
     <?php 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $books = array("vasiki_theoria_tis_grammikis_algevras","grammiki_algevra_kai_efarmoges");
+        $books = array("grammiki_algevra_kai_efarmoges","theoria_tis_grammikis_algevras","eisagogi_sti_grammiki_algevra");
         $books_length = count($books);
         $checked_books = array();
 
