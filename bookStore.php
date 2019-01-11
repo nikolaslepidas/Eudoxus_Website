@@ -10,8 +10,6 @@
 		<link rel="stylesheet" href="css/bookStore.css">
 		<link rel="stylesheet" href="css/bookOrder.css">
 
-		<script src="accordion.js"></script>
-
 		<title>Εύδοξος - Διανομέας</title>
 
 	</head>
@@ -63,3 +61,5 @@
 
     </body>
 </html>
+
+<script src="./accordion.js"></script>

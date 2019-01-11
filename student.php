@@ -102,3 +102,5 @@
 
     </body>
 </html>
+
+<script src="./accordion.js"></script>

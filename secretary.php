@@ -10,8 +10,6 @@
 		<link rel="stylesheet" href="css/secretary.css">
 		<link rel="stylesheet" href="css/bookOrder.css">
 
-		<script src="./accordion.js"></script>
-
 		<title>Εύδοξος - Γραμματεία</title>
 
 	</head>
@@ -69,3 +67,5 @@
 
     </body>
 </html>
+
+<script src="./accordion.js"></script>

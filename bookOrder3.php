@@ -9,8 +9,6 @@
 		<link rel="stylesheet" href="css/communication_form.css">
         <link rel="stylesheet" href="css/bookOrder.css">
 
-        <script src="accordion.js"></script>
-
 		<title>Εύδοξος - Δήλωση συγγραμμάτων</title>
 
 	</head>
@@ -150,3 +148,5 @@
 
     </body>
 </html>
+
+<script src="./accordion.js"></script>
