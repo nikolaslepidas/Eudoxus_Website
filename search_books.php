@@ -14,8 +14,10 @@
         
 	</head>
 	<body>
+
     <?php require_once './header.php'; ?>
-	<div class="wrapper">
+    <!-- Breadcrumb -->
+    <div class="wrapper">
 		<ul class="breadcrumb">
 			<li><a href="index.php">Αρχική</a></li>
 			<li>Αναζήτηση Συγγραμμάτων</li> 

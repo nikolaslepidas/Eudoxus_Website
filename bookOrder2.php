@@ -9,12 +9,15 @@
 		<link rel="stylesheet" href="css/communication_form.css">
         <link rel="stylesheet" href="css/bookOrder.css">
 
+        <script src="accordion.js"></script>
+
 		<title>Εύδοξος - Δήλωση συγγραμμάτων</title>
 
 	</head>
 	<body>
 
-	<?php require_once './header.php' ?>
+    <?php require_once './header.php' ?>
+    <!-- Breadcrumb -->
 	<div class="wrapper">
 		<ul class="breadcrumb">
             <li><a href="index.php">Αρχική</a></li>
@@ -106,20 +109,3 @@
 
     </body>
 </html>
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight){
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-</script>

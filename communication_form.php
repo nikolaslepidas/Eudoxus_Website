@@ -17,6 +17,7 @@
 
 	<?php require_once './header.php' ?>
 
+    <!-- Breadcrumb -->
     <div class="wrapper">
 		<ul class="breadcrumb">
 			<li><a href="index.php">Αρχική</a></li>
@@ -85,5 +86,5 @@
 
     <?php require_once './footer.php'  ?>
 
-</body>
+    </body>
 </html>

@@ -14,6 +14,7 @@
 	<body>
 
 	<?php require_once './header.php' ?>
+	<!-- Breadcrumb -->
 	<div class="wrapper">
 		<ul class="breadcrumb">
 			<li><a href="index.php">Αρχική</a></li>
@@ -178,7 +179,7 @@
 				<!-- Change password -->
 				<tr>
 					<?php	
-					if (isset($_POST['edit_password'])) {		// an patithei to epeksergasia
+					if (isset($_POST['edit_password'])) {
 						echo "
 						<td>
 							<label for='old_password'>Συνθηματικό χρήστη:</label>
@@ -201,13 +202,16 @@
 						</td>
 						";
 					} else {
-						if (isset($_POST['change_password'])) {		// an patithei to allagi
+						if (isset($_POST['change_password'])) {
 							$old_password = $_POST['old_password'];
 							$new_password = $_POST['new_password'];
 							if (strcmp($new_password,"") || strcmp($old_password,"")) {
 								$query_update_user_password = "update user set password = '$new_password' where email = '$row[email]' && password = '$old_password';";
 								$result_edit_password = mysqli_query($connection, $query_update_user_password);
-								if (mysqli_affected_rows($connection) == 0) {	// h update epityxganei. opote prepei na elegksw apla poses eggrafes ephreazotai apo to update gia na vrw an o palios kwdikos einai lanthasmenos
+								// when update sql query succeeds it returns the number of the affected rows so 
+								// we see how many are the affected rows in order to understand if update succeeded
+								// or not
+								if (mysqli_affected_rows($connection) == 0) {	
 									$error = "Έλεξγε τον τωρινό κωδικό που πληκτρολόγησες.";
 								} else {
 									$query_get_all_data= "select * from user where email='$row[email]'";
@@ -314,7 +318,7 @@
 						<td>";
 
 						// Change branch name
-						if (isset($_POST['edit_brand_name'])) {		// an patithei to epeksergasia
+						if (isset($_POST['edit_brand_name'])) {
 							echo "
 							<input name='new_brand_name' placeholder='$row[brand_name]'/>
 							</td>
@@ -324,13 +328,13 @@
 							</tr>
 							";
 						} else {
-							if (isset($_POST['change_brand_name'])) {		// an patithei to allagi
+							if (isset($_POST['change_brand_name'])) {
 								$new_brand_name = $_POST['new_brand_name'];
 								if (strcmp($new_brand_name,"")){
 									$query_update_brand_name = "update publisher set brand_name = '$new_brand_name' where user_email = '$row[user_email]';";
 									$result_edit_brand_name = mysqli_query($connection, $query_update_brand_name);
 
-									if ($result_edit_brand_name === false) {		// not working properly
+									if ($result_edit_brand_name === false) {
 										$error = "Ουπς! Κάτι πήγε λάθος με τη βάση δεδομένων!";
 									} else {	
 										// Get all changes
@@ -362,7 +366,7 @@
 						<td>";
 
 						// Change city
-						if (isset($_POST['edit_city'])) {		// an patithei to epeksergasia
+						if (isset($_POST['edit_city'])) {
 							echo "
 							<input name='new_city' placeholder='$row[city]'/>
 							</td>
@@ -372,7 +376,7 @@
 							</tr>
 							";
 						} else {
-							if (isset($_POST['change_city'])) {		// an patithei to allagi
+							if (isset($_POST['change_city'])) {
 								$new_city = $_POST['new_city'];
 								if (strcmp($new_city,"")){
 									$query_update_city = "update publisher set city = '$new_city' where user_email = '$row[user_email]';";
@@ -410,7 +414,7 @@
 						<td>";
 
 						// Change phone
-						if (isset($_POST['edit_phone'])) {		// an patithei to epeksergasia
+						if (isset($_POST['edit_phone'])) {
 							echo "
 							<input name='new_phone' placeholder='$row[phone]'/>
 							</td>
@@ -420,7 +424,7 @@
 							</tr>
 							";
 						} else {
-							if (isset($_POST['change_phone'])) {		// an patithei to allagi
+							if (isset($_POST['change_phone'])) {
 								$new_phone = $_POST['new_phone'];
 								if (strcmp($new_phone,"")){
 									$query_update_phone = "update publisher set phone = '$new_phone' where user_email = '$row[user_email]';";
