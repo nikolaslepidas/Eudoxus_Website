@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/breadcrumbs.css">
         <link rel="stylesheet" href="css/communication_form.css">
-        <link rel="stylesheet" href="css/presentation_of_books.css">        
+        <link rel="stylesheet" href="css/presentation_of_books.css">
 		<link rel="stylesheet" href="css/bookOrder.css">
 
 		<title>Εύδοξος - Αναζήτηση</title>
@@ -21,7 +21,6 @@
 			<li>Αναζήτηση Συγγραμμάτων</li> 
 		</ul>
 	</div>
-
 
     <div class="container_com_form">
     <table>
@@ -69,7 +68,6 @@
         </tbody>
     </table>
     </div>
-
 
     <?php
     // Connect to the database

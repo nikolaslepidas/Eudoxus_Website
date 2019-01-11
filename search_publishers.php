@@ -7,7 +7,9 @@
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/breadcrumbs.css">
 		<link rel="stylesheet" href="css/communication_form.css">
-
+        <link rel="stylesheet" href="css/presentation_of_publishers.css">
+        <link rel="stylesheet" href="css/bookOrder.css">
+        
 		<title>Εύδοξος - Αναζήτηση</title>
         
 	</head>
@@ -17,54 +19,9 @@
 	<div class="wrapper">
 		<ul class="breadcrumb">
 			<li><a href="index.php">Αρχική</a></li>
-			<!--
-			<li><a href="#">Page2</a></li>
-			<li><a href="#">Page3</a></li>
-			-->
 			<li>Αναζήτηση Εκδοτών</li> 
 		</ul>
 	</div>
-
-    <?php
- // Connect to the database
- require_once 'mysql_connector.php';
-
-if (isset($_POST['publisher_search'])){
-
-    if ((isset($_POST['brand_name']))){
-        $brand_name= $_POST['brand_name'];
-        if (empty($brand_name)){
-            $brand_name= "%";
-        }
-    }
-
-    if (isset($_POST['city'])){
-        $city = $_POST['city'];
-        if (empty($city)){
-            $city = "%";
-        }
-    }
-
-    if (!((strcmp($brand_name,"%") == 0) && (strcmp($city,"%") == 0))){
-
-        $query = "select * from publisher where brand_name like '$brand_name' and city like '$city';";
-    
-        echo $query;
-        $result=mysqli_query($connection,$query);
-        //echo var_dump($result);
-        mysqli_data_seek($result, 0);
-    
-        for($i=0;$i<mysqli_num_rows($result);$i++){
-            $row = mysqli_fetch_assoc($result);
-            echo $row['brand_name'];
-            echo $row['city'];
-            echo $row['phone'];
-            echo $row['user_email'];
-        }
-    }
-}
-
-?>
 
     <div class="container_com_form">
     <table>
@@ -96,7 +53,87 @@ if (isset($_POST['publisher_search'])){
         </tbody>
     </table>
     </div>
-    
+
+<?php
+    // Connect to the database
+    require_once 'mysql_connector.php';
+
+    if (isset($_POST['publisher_search'])){
+
+        if ((isset($_POST['brand_name']))){
+            $brand_name= $_POST['brand_name'];
+            if (empty($brand_name)){
+                $brand_name= "%";
+            }
+        }
+
+        if (isset($_POST['city'])){
+            $city = $_POST['city'];
+            if (empty($city)){
+                $city = "%";
+            }
+        }
+
+        if (!((strcmp($brand_name,"%") == 0) && (strcmp($city,"%") == 0))){
+
+            $query = "select * from publisher where brand_name like '$brand_name' and city like '$city';";
+        
+            //echo $query;
+            $result=mysqli_query($connection,$query);
+            //echo var_dump($result);
+            mysqli_data_seek($result, 0);
+
+            $count = mysqli_num_rows($result);
+
+            echo "</div>
+            <div class='rows_of_results'>
+            
+            <p>Αριθμός αποτελεσμάτων: $count</p>
+            <hr>
+            </div>
+            </div>
+            ";
+
+            echo "<div class='padding_needed_for_footer'>
+            <div class='present_publisher'>";
+        
+            for($i=0;$i<mysqli_num_rows($result);$i++){
+                $row = mysqli_fetch_assoc($result);
+                /*
+                echo $row['brand_name'];
+                echo $row['city'];
+                echo $row['phone'];
+                echo $row['user_email'];
+                */
+                echo "
+                
+                <div class='publisher'>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><p>Επωνυμία:</p></td>
+                            <td>$row[brand_name]</td>
+                        </tr>
+                        <tr>
+                            <td><p>Πόλη:</p></td>
+                            <td>$row[city]</td>
+                        </tr>
+                        <tr>
+                            <td><p>Τηλέφωνο:</p></td>
+                            <td>$row[phone]</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                </div>
+                ";
+            }
+        }
+        echo "</div></div>";
+    }
+
+?>
 
 	<?php require_once './footer.php' ?>
 

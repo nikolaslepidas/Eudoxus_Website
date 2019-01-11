@@ -1,0 +1,35 @@
+div.present_publisher {
+    display: grid;
+    grid-template-columns: auto ;
+    grid-gap: 10px;
+    justify-items: center;    /* centralize tables */
+}
+
+div.publisher {
+    background-color: rgba(243, 243, 233, 0.226);
+    border-radius: 5%;
+    text-align: center;
+    padding: 10px;
+    /*border: 3px solid rgb(212, 96, 42);*/ 
+    box-shadow: 3px 6px 12px #888888;
+}
+
+div.publisher p {
+    font-weight: bold;
+    font-size: 1.0em;
+}
+
+div.rows_of_results {
+    display:block;
+    width: 100%;
+}
+
+div.rows_of_results p {
+    font-size: 1.0em;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.publisher td{
+    width: 300px !important;
+}
