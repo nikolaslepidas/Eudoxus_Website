@@ -1,3 +1,4 @@
+/* Publisher page style css */
 #publisher_info{
     float: left;
 }
@@ -51,3 +52,4 @@ div.container_grid_publisher_options button:hover {
 div.panel p {
     text-align: justify;
 }
+/* End of Publisher page style css */

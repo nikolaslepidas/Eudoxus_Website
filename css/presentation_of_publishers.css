@@ -1,3 +1,4 @@
+/* Presentation of publishers style css */
 div.present_publisher {
     display: grid;
     grid-template-columns: auto ;
@@ -33,3 +34,4 @@ div.rows_of_results p {
 div.publisher td{
     width: 300px !important;
 }
+/* End of Presentation of publishers style css */

@@ -1,3 +1,4 @@
+/* Student page style css */
 #student_info{
     float: left;
 }
@@ -51,3 +52,4 @@ div.container_grid_student_options button:hover {
 div.panel p {
     text-align: justify;
 }
+/* End of Student page style css */

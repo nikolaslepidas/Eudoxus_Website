@@ -1,3 +1,4 @@
+/* Presentantion of books page style css */
 div.present_book {
     display: grid;
     grid-template-columns: auto ;
@@ -33,3 +34,4 @@ div.rows_of_results p {
 div.book td{
     width: 300px !important;
 }
+/* End of Presentantion of books page style css */

@@ -1,33 +1,46 @@
+/* Body style css */
 body{
   overflow-y: auto;
   background-color: rgb(243, 243, 233);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* End of Body style css */
 
-/* Header */
+/* Header style css */
 #header{
   float: left;
   width: 100%;
   top: 0;
   background-color: rgb(243, 243, 233);
 }
+
 .logo-position {
   float: left;
 }
+
 .header-right{
   position: absolute;
   top:8px;
   right:100px;
   display: inline-block;
 }
-/*
-#search{
-  display: inline-block;
-}*/
+
 #sign-in-up{
   display: inline-block;
 }
-/* End of Header */
+/* End of Header style css */
+
+
+
+
+
+
+
+
+
+
+
+
 
 span.subtitle {
   font-size: 20px;
@@ -39,7 +52,17 @@ span.subtitle {
   float: left;  
 }
 
-/* Footer */
+
+
+
+
+
+
+
+
+
+
+/* Footer style css */
 div.container_grid_for_footer {
   width: 100%;
   display: grid;
@@ -61,10 +84,9 @@ div.footer_button img {
 div.footer_button a {
   padding: 20px !important;
 }
-/* End of Footer */
+/* End of Footer style css */
 
-
-/* CSS for navigation bar*/
+/* Navbar style css */
 #menu{
   float: right;
   width: 100%;
@@ -127,7 +149,7 @@ div.footer_button a {
 .dropdown ul li:hover .dropdown-content {
   display: block;
 }
-/* This is the css for the login and the sign up modals */
+/* End of Navbar style css */
 
 /* Css for all a tags */
 a {
@@ -160,6 +182,7 @@ button:hover {
 }
 /* End of set a style for all buttons */
 
+/* This is the css for the login and the sign up modals */
 /* Full-width input fields */
  input[type=text], input[type=password], input[type=email]{
   width: 100%;
@@ -177,7 +200,7 @@ button:hover {
   margin: 8px 0;
   border: 1px solid #ccc;
   box-sizing: border-box;
- }
+}
 
 /* Extra styles for the cancel button */
 .cancelbtn {
@@ -245,13 +268,7 @@ span.psw {
   color: red;
   cursor: pointer;
 }
-/*
-/* Add Zoom Animation 
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-*/
+
 @-webkit-keyframes animatezoom {
   from {-webkit-transform: scale(0)} 
   to {-webkit-transform: scale(1)}

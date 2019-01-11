@@ -1,3 +1,4 @@
+/* Communication form and search forms style css */
 div.container_com_form {
     width: 100%;
     display:grid;
@@ -24,4 +25,4 @@ div.container_com_form table tbody tr td select {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-
+/* End of Communication form and search forms style css */

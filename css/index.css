@@ -1,3 +1,4 @@
+/* Index/home page style css */
 /* Columns */
 #right-column {
 	width: 15%;
@@ -15,7 +16,7 @@
 }
 /* End of Columns */  
 
-/*CSS for news' table*/
+/* Newstable style css */
 #newstable {
   position: relative;
   width: 90%;
@@ -44,9 +45,9 @@
 .seemorenews {
   text-align: right;
 }
-/* End of news' table */
+/* End of Newstable style css */
 
-/* Persons grid */
+/* Persons grid style css */
 div.container_grid {
   display:grid;
   grid-template-columns: auto auto;
@@ -84,4 +85,5 @@ button.box span {
   font-weight: bold;
   text-align: center;
 }
-/* End of Persons grid */
+/* End of Persons grid style css */
+/* End of Index/home page style css */

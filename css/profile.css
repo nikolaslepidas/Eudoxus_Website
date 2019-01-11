@@ -1,4 +1,4 @@
-/* Grid for profile template */
+/* Grid for profile template style css */
 div.container_grid_profile {
     width: 100%;
     display: grid;
@@ -39,4 +39,4 @@ div.user_profile img {
     margin-bottom: 10%;
     width: 25%;
 }
-/* End of Grid for profile template */
+/* End of Grid for profile template style css */

@@ -1,3 +1,4 @@
+/* BookStore style css */
 #bookStore_info{
     float: left;
 }
@@ -51,3 +52,4 @@ div.container_grid_bookStore_options button:hover {
 div.panel p {
     text-align: justify;
 }
+/* End of BookStore style css */
