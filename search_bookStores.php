@@ -10,19 +10,16 @@
         <link rel="stylesheet" href="css/presentation_of_bookStores.css">
 		<link rel="stylesheet" href="css/bookOrder.css">
 
-		<title>Εύδοξος - Αναζήτηση</title>
+		<title>Εύδοξος - Αναζήτηση Σημείων Διανομής</title>
         
 	</head>
 	<body>
 
     <?php require_once './header.php' ?>
-	<div class="wrapper">
+    <!-- Breadcrumb -->
+    <div class="wrapper">
 		<ul class="breadcrumb">
 			<li><a href="index.php">Αρχική</a></li>
-			<!--
-			<li><a href="#">Page2</a></li>
-			<li><a href="#">Page3</a></li>
-			-->
 			<li>Αναζήτηση Σημείων Διανομής</li> 
 		</ul>
 	</div>
@@ -66,99 +63,99 @@
     </table>
     </div>
 
-<?php
-    // Connect to the database
-    require_once 'mysql_connector.php';
+    <?php
+        // Connect to the database
+        require_once 'mysql_connector.php';
 
-    if (isset($_POST['bookStore_search'])){
+        if (isset($_POST['bookStore_search'])){
 
-        if ((isset($_POST['name']))){
-            $name = $_POST['name'];
-            if (empty($name)){
-                $name = "%";
+            if ((isset($_POST['name']))){
+                $name = $_POST['name'];
+                if (empty($name)){
+                    $name = "%";
+                }
             }
-        }
 
-        if (isset($_POST['county'])){
-            $county = $_POST['county'];
-            if (empty($county)){
-                $county = "%";
+            if (isset($_POST['county'])){
+                $county = $_POST['county'];
+                if (empty($county)){
+                    $county = "%";
+                }
             }
-        }
 
-        if (isset($_POST['city'])){
-            $city = $_POST['city'];
-            if (empty($city)){
-                $city = "%";
+            if (isset($_POST['city'])){
+                $city = $_POST['city'];
+                if (empty($city)){
+                    $city = "%";
+                }
             }
-        }
 
-        if (!((strcmp($name,"%") == 0) && (strcmp($county,"%") == 0) && (strcmp($city,"%") == 0))){
+            if (!((strcmp($name,"%") == 0) && (strcmp($county,"%") == 0) && (strcmp($city,"%") == 0))){
 
-            $query = "select * from bookStore where name like '$name' and county like '$county' and city like '$city';";
-        
-            //echo $query;
-            $result=mysqli_query($connection,$query);
-            //echo var_dump($result);
-            mysqli_data_seek($result, 0);
-
-            $count = mysqli_num_rows($result);
-
-            echo "</div>
-            <div class='rows_of_results'>
+                $query = "select * from bookStore where name like '$name' and county like '$county' and city like '$city';";
             
-            <p>Αριθμός αποτελεσμάτων: $count</p>
-            <hr>
-            </div>
-            </div>
-            ";
+                //echo $query;
+                $result=mysqli_query($connection,$query);
+                //echo var_dump($result);
+                mysqli_data_seek($result, 0);
 
-            echo "<div class='padding_needed_for_footer'>
-            <div class='present_bookStore'>";
-        
-            for($i=0;$i<mysqli_num_rows($result);$i++){
-                $row = mysqli_fetch_assoc($result);
-                //echo $row['name'];
-                //echo $row['county'];
-                //echo $row['city'];
-                //echo $row['address'];
-                //echo $row['phone'];
-                echo "
+                $count = mysqli_num_rows($result);
+
+                echo "</div>
+                <div class='rows_of_results'>
                 
-                <div class='bookStore'>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td><p>Επωνυμία:</p></td>
-                            <td>$row[name]</td>
-                        </tr>
-                        <tr>
-                            <td><p>Νομός:</p></td>
-                            <td>$row[county]</td>
-                        </tr>
-                        <tr>
-                            <td><p>Πόλη:</p></td>
-                            <td>$row[city]</td>
-                        </tr>
-                        <tr>
-                            <td><p>Διεύθυνση:</p></td>
-                            <td>$row[address]</td>
-                        </tr>
-                        <tr>
-                            <td><p>Τηλέφωνο:</p></td>
-                            <td>$row[phone]</td>
-                        </tr>
-                    </tbody>
-                </table>
-
+                <p>Αριθμός αποτελεσμάτων: $count</p>
+                <hr>
+                </div>
                 </div>
                 ";
+
+                echo "<div class='padding_needed_for_footer'>
+                <div class='present_bookStore'>";
+            
+                for($i=0;$i<mysqli_num_rows($result);$i++){
+                    $row = mysqli_fetch_assoc($result);
+                    //echo $row['name'];
+                    //echo $row['county'];
+                    //echo $row['city'];
+                    //echo $row['address'];
+                    //echo $row['phone'];
+                    echo "
+                    
+                    <div class='bookStore'>
+
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><p>Επωνυμία:</p></td>
+                                <td>$row[name]</td>
+                            </tr>
+                            <tr>
+                                <td><p>Νομός:</p></td>
+                                <td>$row[county]</td>
+                            </tr>
+                            <tr>
+                                <td><p>Πόλη:</p></td>
+                                <td>$row[city]</td>
+                            </tr>
+                            <tr>
+                                <td><p>Διεύθυνση:</p></td>
+                                <td>$row[address]</td>
+                            </tr>
+                            <tr>
+                                <td><p>Τηλέφωνο:</p></td>
+                                <td>$row[phone]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    </div>
+                    ";
+                }
             }
+            echo "</div></div>";
         }
-        echo "</div></div>";
-    }
-?>
+    ?>
 
 	<?php require_once './footer.php' ?>
 

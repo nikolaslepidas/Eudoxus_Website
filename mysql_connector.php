@@ -1,18 +1,17 @@
-
 <?php
 
-$servername = "localhost";
-$db_username = "root";
-$db_password = "toor";
-$db_name = "sdi1600090";
+    $servername = "localhost";
+    $db_username = "root";
+    $db_password = "toor";
+    $db_name = "sdi1600090";
 
-// Establishing Connection with Server
-$connection = mysqli_connect($servername, $db_username, $db_password, $db_name);
+    // Establishing Connection with Server
+    $connection = mysqli_connect($servername, $db_username, $db_password, $db_name);
 
-// Check connection
-if ($connection->connect_error) {
-    die("Connection failed: " . $connection->connect_error);
-} 
-//echo "Connected successfully";
+    // Check connection
+    if ($connection->connect_error) {
+        die("Connection failed: " . $connection->connect_error);
+    } 
+    //echo "Connected successfully";
 
 ?>
