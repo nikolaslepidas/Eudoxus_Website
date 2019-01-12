@@ -31,9 +31,9 @@
         $books_length = count($books);
         $checked_books = array();
 
-        for ($i=0;$i<$books_length;$i++){
-            if (isset($_POST[$books[$i]])){
-                array_push($checked_books,$_POST[$books[$i]]);
+        for ($i = 0; $i < $books_length; $i++){                 // for all the books that are in the array of books (in a bigger web app we would take all the books from the db )
+            if (isset($_POST[$books[$i]])){                     // if the user chose the book added to the array of checked books
+                array_push($checked_books,$_POST[$books[$i]]);  
             }
         }
         $checked_books_length = count($checked_books);
@@ -41,25 +41,19 @@
         echo "
             <div class='padding_needed_for_footer'>
             ";
-        for ($j=0;$j<$checked_books_length;$j++){
-            //echo $checked_books[$j];
-            //echo "~";
+        for ($j = 0; $j < $checked_books_length; $j++){     // for every checked book that the user chose
             require_once './mysql_connector.php';
             
-            $book_info_from_db=mysqli_query($connection,"select * from book where bookTitle='$checked_books[$j]';");
-            //echo "select * from book where bookTitle='$checked_books[$j]';";
+            $book_info_from_db=mysqli_query($connection,"select * from book where bookTitle='$checked_books[$j]';"); // take the info of the book
             mysqli_data_seek($book_info_from_db,0);
             $row = mysqli_fetch_assoc($book_info_from_db);
             
-            //insertion of isbn to table student_has_book
-            $insertion=mysqli_query($connection,"update student_has_book set book_isbn=$row[isbn];");
-
+            //update of isbn to table student_has_book
+            mysqli_query($connection,"update student_has_book set book_isbn=$row[isbn];");  // update isbn with the current isbn because we put in the first place a wrong isbn
+                                                                                            // in order to fill the student_has_book table since isbn is foreign key and part of the primary key of the table
             $query="select * from book, bookstore, bookstore_has_book where bookstore_idbookstore=idbookstore and isbn=book_isbn  and isbn=$row[isbn];";
-            //echo $query;
             $bookstore_for_books=mysqli_query($connection,$query);
             mysqli_data_seek($bookstore_for_books,0);
-            //echo $checked_books_length;
-            //echo var_dump($bookstore_for_books);
             $row = mysqli_fetch_assoc($bookstore_for_books);
                 echo "
                 <button class='accordion'>$checked_books[$j]</button>
@@ -124,7 +118,6 @@
                     </div>
                     
                 ";
-            //}
 
         }
             echo "
@@ -139,7 +132,6 @@
     }else{
         /*
         echo "no post request got here";
-        echo var_dump($_POST);
         */
     }
 ?>

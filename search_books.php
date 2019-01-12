@@ -75,12 +75,12 @@
     // Connect to the database
     require_once 'mysql_connector.php';
 
-    if (isset($_POST['book_search'])){
+    if (isset($_POST['book_search'])){              // if the user pushed the search button
 
-        if ((isset($_POST['book_title']))){
-            $book_title = $_POST['book_title'];
-            if (empty($book_title)){
-                $book_title = "%";
+        if ((isset($_POST['book_title']))){         // if he wrote something in the title input field
+            $book_title = $_POST['book_title'];     // take what he wrote
+            if (empty($book_title)){                // if it is empty we have to put % in the book title in order to 
+                $book_title = "%";                  // search for every title 
             }
         }
 
@@ -104,15 +104,14 @@
                 $book_isbn = "%";
             }
         }
-
+        // if every field is empty and we have put % to every variable then the sql query will show all data from the db but we don't want that
+        // that is why we check these things below
         if (!((strcmp($book_title,"%") == 0) && (strcmp($book_isbn,"%") == 0) && (strcmp($book_publisher,"%") == 0) && (strcmp($book_writer,"%") == 0))){
 
             $query = "select * from book where bookTitle like '$book_title' and isbn like '$book_isbn' 
             and writer like '$book_writer' and publisher like '$book_publisher';";
         
-            //echo $query;
             $result=mysqli_query($connection,$query);
-            //echo var_dump($result);
             mysqli_data_seek($result, 0);
             
             $count = mysqli_num_rows($result);
@@ -129,14 +128,8 @@
             echo "<div class='padding_needed_for_footer'>
             <div class='present_book'>";
 
-            for($i=0;$i<mysqli_num_rows($result);$i++){
+            for($i = 0; $i < mysqli_num_rows($result); $i++){    //for every book we create the user's view
                 $row = mysqli_fetch_assoc($result);
-                /*
-                echo $row['title'];
-                echo $row['isbn'];
-                echo $row['publisher'];
-                echo $row['writer'];
-                */
                 echo "
                 
                 <div class='book'>

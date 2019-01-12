@@ -77,13 +77,9 @@
 
             if (!((strcmp($brand_name,"%") == 0) && (strcmp($city,"%") == 0))){
 
-                $query = "select * from publisher where brand_name like '$brand_name' and city like '$city';";
-            
-                //echo $query;
+                $query = "select * from publisher where brand_name like '$brand_name' and city like '$city';";   
                 $result=mysqli_query($connection,$query);
-                //echo var_dump($result);
                 mysqli_data_seek($result, 0);
-
                 $count = mysqli_num_rows($result);
 
                 echo "</div>
@@ -100,12 +96,6 @@
             
                 for($i=0;$i<mysqli_num_rows($result);$i++){
                     $row = mysqli_fetch_assoc($result);
-                    /*
-                    echo $row['brand_name'];
-                    echo $row['city'];
-                    echo $row['phone'];
-                    echo $row['user_email'];
-                    */
                     echo "
                     
                     <div class='publisher'>

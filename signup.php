@@ -34,6 +34,7 @@
 
                 } else {
                   $error = 'Παρακαλώ επιλέξτε τμήμα.';
+                  // below we use jquery 
                   echo "<script> 
                   $(function(){
                     $('#id02').show();

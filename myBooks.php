@@ -36,7 +36,6 @@
                 $student_courses="select * from student_has_book where student_user_email='$_SESSION[user_email]';";
 
                 $student_has_book_info=mysqli_query($connection, $student_courses);
-                //var_dump($student_has_book_info);
                 mysqli_data_seek($student_has_book_info,0);
                 $number_of_courses=mysqli_num_rows($student_has_book_info);
                 
