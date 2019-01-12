@@ -1,6 +1,6 @@
 /* Body style css */
 body{
-  overflow-y: auto;
+  overflow-y: scroll;
   background-color: rgb(243, 243, 233);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -31,17 +31,6 @@ body{
 /* End of Header style css */
 
 
-
-
-
-
-
-
-
-
-
-
-
 span.subtitle {
   font-size: 20px;
   font-weight: 600;
@@ -51,14 +40,6 @@ span.subtitle {
   width: 100%;
   float: left;  
 }
-
-
-
-
-
-
-
-
 
 
 
