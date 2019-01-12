@@ -65,7 +65,6 @@
                     if ($i == 0){ // we do this because the courses should match-connect with the student-user
                         // now we have to match this course with the student
                         $insertion=mysqli_query($connection,"insert into student_has_book (student_user_email,course_idcourse,book_isbn) values ('$_SESSION[user_email]',$row[idcourse],$row1[isbn]);");
-                        echo "insert into student_has_book (student_user_email,course_idcourse,book_isbn) values ('$_SESSION[user_email]',$row[idcourse],$row1[isbn]);";
                         // end of insertion
                         // we add the isbn of the first book for the course in the student_has_book table because we just have to put something since it's part of the 
                         // primary key of that table, but in the next step we update that field with the actual isbn of the book that the user chose
