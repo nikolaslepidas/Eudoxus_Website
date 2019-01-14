@@ -32,6 +32,19 @@
                   $query = "insert into student (user_email,university,department) values ('$register_email', '$university', '$department')";
                   mysqli_query($connection, $query);
 
+                  $message = 'Η εγγραφή ολοκληρώθηκε με επιτυχία.';
+                  // below we use jquery 
+                  echo "<script> 
+                  $(function(){
+                    $('#id02').show();
+                  });
+                  </script>";
+                  echo "<script> 
+                  $(function(){
+                    $('#registration_success').text('$message');
+                  });
+                  </script>";
+
                 } else {
                   $error = 'Παρακαλώ επιλέξτε τμήμα.';
                   // below we use jquery 
@@ -70,7 +83,20 @@
               $query = "insert into user (email,username,password,userGroup) values ('$register_email', '$username', '$password', '$userGroup')";
               mysqli_query($connection, $query);
               $query = "insert into publisher (user_email,brand_name,city,phone) values ('$register_email', '$name', '$city', '$phone')";
-              mysqli_query($connection, $query);           
+              mysqli_query($connection, $query);
+
+              $message = 'Η εγγραφή ολοκληρώθηκε με επιτυχία.';
+              // below we use jquery 
+              echo "<script> 
+              $(function(){
+                $('#id02').show();
+              });
+              </script>";
+              echo "<script> 
+              $(function(){
+                $('#registration_success').text('$message');
+              });
+              </script>";
       
             //userGroup none
             } else if (($userGroup = $_POST['userGroup']) == 'none') {
@@ -184,6 +210,10 @@
       <label id="matchpass"></label><br>
       <label id="registration_problem" style="color:red;">
       </label>
+      <label id="registration_success" style="color:green;">
+      </label>
+
+      
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
