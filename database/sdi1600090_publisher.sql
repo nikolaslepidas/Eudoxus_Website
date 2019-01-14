@@ -38,7 +38,7 @@ CREATE TABLE `publisher` (
 
 LOCK TABLES `publisher` WRITE;
 /*!40000 ALTER TABLE `publisher` DISABLE KEYS */;
-INSERT INTO `publisher` VALUES ('sofia@gmail.com','Εκδόσεις Μαρκάλας','Αθήνα','2102456985');
+INSERT INTO `publisher` VALUES ('nikolas.lepidas@gmail.com','Κλειδί','Αθήνα','2102430568'),('sofia@gmail.com','Εκδόσεις Μαρκάλας','Αθήνα','2102456985');
 /*!40000 ALTER TABLE `publisher` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-14 12:56:59
+-- Dump completed on 2019-01-14 13:14:39

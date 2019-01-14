@@ -37,7 +37,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('nikos.lamprinos@gmail.com','Νίκος Λαμπρινός','123','student'),('sofia@gmail.com','Σοφία Δημάκη','123','publisher');
+INSERT INTO `user` VALUES ('nikolas.lepidas@gmail.com','Νικόλας Λεπίδας','123','publisher'),('nikos.lamprinos@gmail.com','Νίκος Λαμπρινός','123','student'),('sofia@gmail.com','Σοφία Δημάκη','123','publisher');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-14 12:57:02
+-- Dump completed on 2019-01-14 13:14:42
