@@ -126,4 +126,4 @@
 </div>
 <!-- End of navbar -->
 
-<script src="./login_signup.js"></script>
+<script src="javascript/login_signup.js"></script>
