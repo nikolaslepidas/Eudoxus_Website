@@ -5,6 +5,7 @@
 This is a project in the course *Human Computer Interaction* where we had to redesign Eudoxus' website. The main purpose was to improve the
 User Interface (UI).
 
+Our Home Page:
 ![Home Page](https://github.com/nikolaslepidas/Eudoxus_Website/blob/master/Eudoxus.png)
 
 ## Front End
