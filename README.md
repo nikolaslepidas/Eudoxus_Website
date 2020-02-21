@@ -17,6 +17,8 @@ MySql
 ## Database Schema
 [Schema](https://drive.google.com/open?id=1Y6vIpN0tr9_ot132zwuA54mTKktJK9oy)
 
+## Development
+We developed this project in Windows 10 using XAMPP Control Panel v3.2.2
 
 ## New Home Page:
 ![New Home Page](https://github.com/nikolaslepidas/Eudoxus_Website/blob/master/Eudoxus.png)
