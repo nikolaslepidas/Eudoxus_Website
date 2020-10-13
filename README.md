@@ -27,3 +27,6 @@ We developed this project in Windows 10 using XAMPP Control Panel v3.2.2
 
 ## Old Home Page:
 ![Old Home Page](https://github.com/nikolaslepidas/Eudoxus_Website/blob/master/Old_Eudoxus.png)
+
+## More
+Please for more photos of the website feel free to go in the Screenshots folder and take a look!
